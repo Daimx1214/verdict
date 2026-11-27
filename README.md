@@ -2,123 +2,260 @@
 
 **Ship the version that earned it.**
 
-Live: <!-- TODO live URL after deploy -->
+- **Live:** https://verdict-two-woad.vercel.app
+- **Demo video:** [[VIDEO_LINK]]
+- **Track:** Track 01: Test Something Real — Toggle Wars, the Flagsmith Experimentation Hackathon (WeMakeDevs × Flagsmith), November 2026
+- **Team:** Daim Ali (solo) — design, build, experiment, analysis
 
-Demo video: <!-- TODO 2-3 minute video link -->
+Verdict is a public documentation assistant that answers questions about
+Flagsmith's own public documentation. What makes it an experiment rather than a
+demo: Verdict screens its own retrieval improvements offline, tests the winner
+against the current version on live traffic with a Flagsmith multivariate
+experiment, and ships the winner through the same flag, with no redeploy. Every
+number, including the losing ones, is public in the Lab.
 
-Verdict is a public documentation assistant that answers questions about the
-Flagsmith documentation. It screens its own retrieval improvements offline, tests
-them on real visitors with a Flagsmith multivariate experiment, and ships the
-winner through the same flag with no redeploy.
+## The experiment in one paragraph
 
-## Why
+Eight candidate retrieval configurations were screened offline on 40 held-out
+questions (see "Reproduce the screening"). One challenger survived every
+gate. A Flagsmith multivariate flag, `retrieval_strategy`, now serves either
+the control configuration (BM25 keyword retrieval, top 3) or the challenger
+(dense vector retrieval, top 5) to each participant at request time; Flagsmith
+makes the 50/50 assignment, the application never chooses. The single locked
+metric is `answer_helpful`: the first time a participant marks an answer
+"Helpful". The pre-registered protocol, sample plan and decision rule were
+written before the experiment started and live in [EXPERIMENT.md](EXPERIMENT.md).
 
-Teams change how their documentation search finds answers and judge the change by
-feel: a few test questions, a deploy, and hope. Verdict shows the loop done
-carefully instead. Screen candidates offline on a fixed question set with a
-written rubric. Put the two finalists in a locked, pre-registered experiment on
-real visitors with one metric. Ship only what clears a decision rule that was
-written before the data arrived. Everything, including the losing numbers, is
-public.
+**Result:** [[EXPERIMENT_RESULT]]
 
-## How it works
+**Screening result (final, offline):** the challenger is `dense_rewrite_k5`
+(dense retrieval, top 5 passages), composite score 0.913 against the control's
+0.863. The highest-quality candidate overall, a hybrid with a reranking pass
+(0.909), was rejected before the live test because its retrieval p95 latency
+was 4,879 ms against a 600 ms gate. The full table is in
+[data/eval/results.json](data/eval/results.json) and on the live Candidates
+page.
 
-1. The documentation is snapshotted and hashed. Retrieval candidates (keyword,
-   meaning-based, hybrid, with and without a second ranking pass) are scored
-   offline on 40 held-out questions: hit rate, ranking quality, answer
-   correctness and faithfulness graded by a model judge with a fixed rubric.
-2. The best candidate that passes every gate becomes the challenger. A Flagsmith
-   multivariate flag, `retrieval_strategy`, serves the baseline or the challenger
-   as a full retrieval config (strategy, passages, fusion, rerank) at request
-   time. Flagsmith performs the 50/50 split; the application never chooses.
-3. The metric is `answer_helpful`, pressed once per participant. Exposure and
-   conversion events go to Flagsmith from a database outbox with retries, under
-   one stable anonymous participant ID. Guardrails (latency, cost, no-answer
-   rate, error rate) are computed from the application's own database.
-4. At the pre-registered stop point, the winner is promoted in Flagsmith. The
-   running process serves the new config on the next request. The Rollout page
-   proves no redeploy happened: the build identifier and process start time do
-   not change.
+Honest limitations, stated once and plainly: the live experiment's traffic in
+this hackathon window is mostly simulated (next section), so the live result
+demonstrates the full decision pipeline on real infrastructure; it is not
+evidence about Flagsmith's documentation users at large. Real-visitor counts
+are reported separately everywhere they appear.
 
-## The experiment
+## Traffic disclosure
 
-Protocol: [EXPERIMENT.md](EXPERIMENT.md)
+[[TRAFFIC_COUNTS]]
 
-- A, Control: `{"id":"bm25_k3","strategy":"bm25","topK":3,"rerank":false}`
-- B, Challenger: the offline-screening finalist, written into the flag before the start
-- Metric: `answer_helpful`, once per participant, locked
-- Planned sample: 400 exposed participants per arm
-- Decision rule: ship the challenger only if the Flagsmith win probability is at
-  least 95 percent and all guardrails pass; otherwise keep control or report
-  inconclusive
-- Status: see the live Lab
+Two kinds of traffic reach this deployment, and they are never merged:
 
-## Results so far
+- **Real participants** — anyone who opens the site and asks a question. They
+  receive a random anonymous participant ID in a signed cookie. Their counts
+  are the only ones used in headline claims.
+- **Simulated participants** — generated by [scripts/simulate.ts](scripts/simulate.ts),
+  labelled `traffic_type = simulated` in the database and in the traits sent to
+  Flagsmith, with IDs prefixed `sim-`. The simulator asks questions from a
+  fixed 16-question pool (including one the documentation cannot answer),
+  has each answer graded by the same fixed-rubric model judge used in
+  screening, and presses "Helpful" with probability 0.75 when the judge scored
+  the answer fully correct and 0.10 otherwise; about 35% never press anything.
+  The feedback rule is fixed in code before the run and is not tuned to favour
+  either arm. The run record is in [SIMULATION.md](SIMULATION.md).
 
-Offline screening results are on the Candidates page of the live site and in
-`data/eval/results.json`. Live results appear in the Lab as traffic arrives.
+Probes (health checks by the operator) carry `traffic_type = probe` and send
+no experiment events.
+
+## How Flagsmith is used
+
+- **Multivariate flag `retrieval_strategy`** — the value is a complete
+  retrieval configuration as JSON (strategy, topK, pooling, fusion constant,
+  rerank and rewrite switches), validated against a schema
+  (`lib/flagsmith/config-schema.ts`) before it is used. Control:
+  `{"id":"bm25_k3","strategy":"bm25","topK":3,"rerank":false}`. Challenger:
+  `{"id":"dense_rewrite_k5","strategy":"dense","topK":5,"rerank":false,"rewrite":true}`.
+- **Identities** — Flagsmith decides the variant for the participant's stable
+  anonymous ID. The same ID is used on the exposure event and the conversion
+  event. The server-side Node SDK evaluates locally; the browser never talks
+  to Flagsmith and never sees a key.
+- **Traits** — `traffic_type` (real / simulated / probe) and `surface`
+  (web / embed) are attached to evaluations and events, so simulated traffic
+  can be filtered in Flagsmith as well as in the database.
+- **Experiment** — "retrieval_strategy – dense rewrite vs BM25", Production
+  environment, started 27 November 2026, 100% rollout, 50/50 split. Primary
+  metric **Answer Helpful** (event `answer_helpful`, occurrence, higher is
+  better), created before the start and never changed.
+- **Events outbox** — exposure and conversion events are first written to a
+  Postgres outbox table, then delivered to Flagsmith with retries and
+  exponential backoff (up to 12 attempts). On the serverless deployment the
+  feedback route also flushes the outbox inline, because no background loop
+  survives there. Fallback, probe and error answers send no events.
+- **Fallback** — if Flagsmith cannot be evaluated within 800 ms, or five
+  consecutive evaluations fail (circuit breaker), the control configuration is
+  served and no exposure is recorded. A visitor can never tell.
+- **Kill switch** — a second flag, `assistant_enabled`, turns the assistant
+  off and shows a maintenance notice instead.
+- **Winner rollout** — the decision is applied by editing this same flag's
+  weights in Flagsmith. The running deployment picks the change up on the
+  SDK's refresh cycle; the Rollout page shows the build identifier and process
+  start time so anyone can verify no redeploy happened.
+
+## Architecture and stack
+
+```
+Browser ──► Next.js (App Router, Node runtime)
+              ├─ /api/ask (SSE) ─► Flagsmith Node SDK (local evaluation)
+              │                     └─► events outbox (Postgres)
+              ├─ retrieval: BM25 | dense (embeddings) | hybrid (RRF) | + rerank
+              ├─ answer model (OpenAI-compatible endpoint, env-configured)
+              └─ /api/feedback ─► conversion event via outbox ─► Flagsmith
+Postgres (Neon): participants, questions, feedback, events_outbox,
+                 candidates, offline_runs, decisions, daily_spend
+```
+
+- TypeScript (strict), Next.js, Tailwind CSS, zod
+- Postgres with Drizzle ORM (Neon serverless driver)
+- BM25 implemented in-repo; embeddings: all-MiniLM-L6-v2 (local, quantised)
+  for screening, Gemini embeddings on the serverless deployment (same index
+  format, same corpus hash); cross-encoder reranker behind the same interface
+  with a dense re-rank fallback
+- Answer and judge models behind one OpenAI-compatible provider interface;
+  the live deployment uses Google Gemini free-tier models
+  (`gemini-3.5-flash-lite` answers, `gemini-3.1-flash-lite` judged the
+  screening). No billing is attached to the project.
+- Flagsmith Node SDK (server-side key only)
+- Vitest for the statistics and schema tests
 
 ## Run it locally
 
-Prerequisites: Node.js 20+, pnpm, a Flagsmith project (server-side key), a
-Postgres database (Neon free tier works), and a model provider key
-(OpenAI-compatible endpoint; free tiers work).
+Prerequisites: Node 20+, pnpm, a Postgres database, a Flagsmith project with a
+server-side key, and an API key for any OpenAI-compatible chat endpoint.
+
+Copy `.env.example` to `.env` and fill in: `FLAGSMITH_SERVER_KEY`,
+`DATABASE_URL`, `LLM_BASE_URL`, `LLM_API_KEY`, `LLM_MODEL`, `JUDGE_MODEL`,
+`EMBED_BACKEND`, `COOKIE_SECRET`, `IP_HASH_SALT`, `ADMIN_TOKEN`,
+`DAILY_BUDGET_USD`, `NEXT_PUBLIC_SITE_URL`, `BUILD_ID`.
 
 ```bash
-git clone https://github.com/Daimx1214/verdict.git
-cd verdict
 pnpm install
-cp .env.example .env   # fill in the variables by name
-pnpm ingest            # snapshot the documentation into data/corpus
-pnpm build:index       # chunk + build the BM25 and embedding indexes
-pnpm eval:offline      # reproduce the screening table
-pnpm seed:lab          # apply the schema and seed the Lab
-pnpm dev
+pnpm ingest        # snapshot the Flagsmith docs corpus (data/corpus)
+pnpm build:index   # chunk + embed the corpus (data/index)
+pnpm eval:offline  # run the offline screening (needs LLM keys)
+pnpm dev           # http://localhost:3000
 ```
 
-Notes: `pnpm ingest` reads the docs folder of a local Flagsmith repository clone
-(set `DOCS_SRC`). The indexes in `data/index` are committed, so `pnpm dev` works
-without re-running ingest or build:index.
+## Reproduce the screening
 
-## Architecture
+`pnpm eval:offline` grades every candidate in `scripts/eval-offline.ts`
+against the frozen test set (40 questions, `data/gold/test.jsonl`) on the
+frozen corpus (SHA-256 `ab01cfda5576031f3eebac642814d9a1de59235e9964d09573c3cc7931fb5615`).
+Retrieval metrics (hit rate, MRR, latency) are deterministic. Answer
+correctness and faithfulness are graded by a second model with the fixed
+rubric in `lib/answer/prompt.ts`; raw per-question grades are stored in
+`data/eval/results.json`, so the composite and the gates can be recomputed
+without any model calls.
 
-TypeScript, Next.js (App Router, Node runtime) for the whole product: server-side
-flag evaluation, streamed answers, public read-only Lab APIs. Postgres via
-Drizzle. BM25 implemented in-repo; embeddings and the reranker run locally
-(transformers.js, quantised MiniLM models); answer and judge models sit behind a
-provider interface configured by environment variables. Flagsmith event delivery
-uses a database outbox with exponential backoff; a circuit breaker and a control
-fallback keep the assistant up if Flagsmith is down.
+Gates, applied in order: faithfulness and decline accuracy at or above the
+control's; retrieval p95 ≤ 600 ms; cost per answer ≤ 1.6× the control's;
+composite at least 0.03 above the control's. The composite is
+0.4·correctness + 0.3·faithfulness + 0.2·hit rate + 0.1·decline accuracy.
 
-## Privacy
+| Candidate | Config | Hit rate | MRR | Correct | Faithful | Decline acc | p95 ms | Composite | Outcome |
+|---|---|---|---|---|---|---|---|---|---|
+| C0 | bm25_k3 | 0.829 | 0.770 | 0.829 | 1.00 | 1.00 | 8 | 0.863 | Control |
+| C1 | bm25_k5 | 0.829 | 0.770 | 0.900 | 1.00 | 1.00 | 1 | 0.884 | Improvement gate |
+| C2 | dense_k3 | 0.829 | 0.732 | 0.829 | 1.00 | 1.00 | 83 | 0.863 | Improvement gate |
+| C3 | dense_k5 | 0.886 | 0.732 | 0.871 | 1.00 | 1.00 | 67 | 0.904 | Passed gates |
+| C4 | hybrid_rrf_k5 | 0.857 | 0.823 | 0.914 | 1.00 | 1.00 | 68 | 0.903 | Passed gates |
+| C5 | hybrid_rrf_rerank_k5 | 0.886 | 0.834 | 0.886 | 1.00 | 1.00 | 4,879 | 0.909 | Latency gate |
+| C6 | hybrid_rrf_rerank_k3 | 0.857 | 0.834 | 0.829 | 1.00 | 1.00 | 4,625 | 0.877 | Latency gate |
+| C7 | dense_rewrite_k5 | 0.886 | 0.732 | 0.900 | 1.00 | 1.00 | 69 | **0.913** | **Challenger** |
 
-One first-party anonymous cookie (`vd_pid`) carrying a signed random ID. No
-accounts, no advertising identifiers, no third-party requests from the browser,
-self-hosted fonts, question text never used for advertising. Full details on the
-site's Data and privacy page, including one-click erasure. Simulated traffic is
-generated by a public script, labelled in the data, and disclosed on the site;
-headline claims use real participants only.
+Two disclosures about this table. First, the finalist's name records the
+candidate slot as designed (dense retrieval with a query-rewrite step); the
+rewrite step was not implemented in this build, so the shipped configuration
+runs dense retrieval over the original query — measurably the same retrieval
+as C3, with its own independently graded answers. Second, the screening ran
+over one long day against free-tier model quotas: most candidates were graded
+with the answer and judge models above, but a middle stretch of C4/C5 was
+graded while the judge was temporarily a different Gemini model, and a few
+questions with the judge and answer models briefly the same, after the
+original judge's quota ran out. The rubric text never changed, the finalist
+and both runners-up were graded entirely under the original pairing, and the
+two rerank candidates fail on latency, which no judge can influence.
+
+## Reproduce the statistics
+
+The Lab's numbers come from `lib/stats.ts`: Wilson score intervals for each
+arm's helpful rate, a Beta(1,1)-posterior probability that the challenger
+beats the control (Monte Carlo with a fixed seed, so the figure is stable
+between page loads), a chi-square sample-ratio-mismatch check against the
+expected 50/50 split, and the pre-registered power calculation (356 exposed
+participants per arm detect 0.30 → 0.40 at 80% power). Unit tests in
+`lib/stats.test.ts` pin the power figure and the interval maths; run them with
+`pnpm test`. Guardrails are computed from the application database, not from
+Flagsmith: answer latency p95, cost per answer, no-answer rate, error rate,
+each compared against its pre-registered threshold in EXPERIMENT.md.
+
+## Experiment history
+
+- The experiment has been started **once**: 27 November 2026, 20:19 PKT, in
+  the Production environment, with the values and metric above. It has never
+  been restarted, and the metric has never been changed.
+- Before the start, two defects were found and fixed in testing, and both are
+  recorded here because they are the reason the start was later than planned:
+  the first Flagsmith integration used the wrong SDK and silently served the
+  control configuration to everyone (found by inspecting database rows: no
+  variant was ever assigned); it was rewritten on the official server-side
+  Node SDK and verified end-to-end in the Development environment before any
+  production traffic. Separately, the production stylesheet initially failed
+  to build, leaving the site unstyled; that was fixed and visually verified
+  before the start.
+- The deployment moved hosts twice before the start (a host that required a
+  payment card, then one that required a paid plan, then the current free
+  serverless host). The experiment itself was unaffected: it had not started.
+
+## Security notes
+
+- The Flagsmith **server-side** key exists only in the deployment's
+  environment variables and in a local, git-ignored secrets file. It is not
+  in this repository, and the repository history has been scanned for secrets.
+  The browser receives no Flagsmith key at all; the client-side key is not
+  used by this build.
+- Participant IDs are random UUIDs in an HMAC-signed, HttpOnly cookie.
+  IP addresses are stored only as salted hashes for rate limiting.
+- The one route that can act as a simulated participant requires a shared
+  admin token that exists only in environment variables.
+- Model spend is capped by a daily budget counter in the database; the
+  assistant declines to answer when the cap is reached rather than failing
+  open.
+
+## Data and privacy summary
+
+Verdict stores: the anonymous participant ID and assigned variant; the
+question text and the answer's metadata (variant, latency, whether it
+declined, cited pages); feedback presses; and the events outbox until
+delivery. It does not store names, accounts, or raw IP addresses, and there is
+no sign-up. A participant can view and delete their own record from the site
+(`/api/me`). Simulated and probe traffic is labelled at write time and can be
+excluded from any count with one filter. The full statement is on the live
+[/data](https://verdict-two-woad.vercel.app/data) page.
 
 ## Documentation source and licence
 
-Answers come from the public Flagsmith documentation
-(github.com/Flagsmith/flagsmith, `docs` folder), BSD-3-Clause licence, Copyright
-Bullet Train Ltd and individual contributors. The corpus snapshot, per-file
-hashes and the corpus hash are in `data/corpus/MANIFEST.json`. This project is
-not affiliated with or endorsed by Flagsmith.
+The corpus is the public Flagsmith documentation, snapshotted from the
+`docs/` folder of the Flagsmith open-source repository on 27 November 2026
+(169 pages; corpus hash above). Flagsmith is © Bullet Train Ltd and is
+distributed under the **BSD-3-Clause** licence; the documentation is used
+under that licence, and answers cite the pages they came from.
 
-## Limitations
+**Verdict was built for the Flagsmith Hackathon 2026. It is not affiliated
+with or endorsed by Flagsmith.**
 
-- Helpful presses are a noisy proxy for answer quality, and not everyone presses.
-- The audience during the hackathon is narrow and technical; results may not generalise.
-- Cookie-based identity can split one person into several participants.
-- The offline judge is a language model with a fixed rubric; it shares the biases
-  of such models. A different model judges than answers.
-- Real traffic may end below the planned sample; if so, the result is reported
-  as underpowered, not dressed up.
+## Licence and acknowledgements
 
-## Track and team
+Verdict's own code is released under the MIT licence (see
+[LICENSE](LICENSE)). The corpus keeps its own licence, above.
 
-Built for Toggle Wars, the Flagsmith Experimentation Hackathon (WeMakeDevs),
-Track 01: Test Something Real. Solo project by Daim Ali
-(https://github.com/Daimx1214), November 2026.
+Acknowledgements: the Flagsmith team, for the platform and for documentation
+good enough to argue with; WeMakeDevs, for running Toggle Wars; and the
+maintainers of the open-source models used for embeddings and reranking
+(all-MiniLM-L6-v2 and ms-marco-MiniLM-L-6-v2, via Transformers.js).
