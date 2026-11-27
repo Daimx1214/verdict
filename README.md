@@ -3,7 +3,7 @@
 **Ship the version that earned it.**
 
 - **Live:** https://verdict-two-woad.vercel.app
-- **Demo video:** [[VIDEO_LINK]]
+- **Demo video:** https://drive.google.com/file/d/1F-MaQdkimfWRm5JsdgON7EDI0FS0yW8g/view?usp=drivesdk
 - **Track:** Track 01: Test Something Real — Toggle Wars, the Flagsmith Experimentation Hackathon (WeMakeDevs × Flagsmith), November 2026
 - **Team:** Daim Ali (solo) — design, build, experiment, analysis
 
