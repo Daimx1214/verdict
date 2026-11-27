@@ -1,0 +1,7 @@
+{
+ "model": "gemini-embedding-001",
+ "quantized": false,
+ "dim": 384,
+ "count": 733,
+ "corpus_hash": "ab01cfda5576031f3eebac642814d9a1de59235e9964d09573c3cc7931fb5615"
+}
