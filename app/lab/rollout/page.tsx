@@ -25,7 +25,7 @@ export default function RolloutPage() {
     } finally { setProbing(false); }
   }
   const latest = data?.decisions[data.decisions.length - 1];
-  const decided = data?.decisions.find((x) => x.phase === "shipped" || x.phase === "result");
+  const decided = data?.decisions.find((x) => x.phase === "shipped") || data?.decisions.find((x) => x.phase === "result");
   const steps = ["Locked", "Collecting", "Analysed", "Shipped"];
   const stepIdx = !data?.decisions.length ? 0 : decided ? (decided.phase === "shipped" ? 3 : 2) : 1;
   const up = data ? data.uptimeSeconds + tick * 0 : 0;
