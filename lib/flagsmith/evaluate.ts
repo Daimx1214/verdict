@@ -1,8 +1,9 @@
-import { createInstance } from "./client";
+import { evalIdentityFlags } from "./client";
 import { parseConfig, CONTROL_CONFIG, type RetrievalConfig } from "./config-schema";
 // Request-time evaluation with fallback + circuit breaker (Sections 4.4, 4.5).
-// Evaluation uses the plain flag call, which records NOTHING. Exposure is recorded
-// separately through the events outbox once an answer is actually shown (3.3, 8.4).
+// Evaluation uses the plain identity flag call, which records NOTHING. Exposure
+// is recorded separately through the events outbox once an answer is actually
+// shown (3.3, 8.4).
 let consecutiveFailures = 0;
 let breakerOpenUntil = 0;
 export interface Evaluation {
@@ -19,18 +20,16 @@ export async function evaluateFor(participantId: string, traits: Record<string, 
   const timeout = new Promise<null>((r) => setTimeout(() => r(null), 800));
   try {
     const work = (async (): Promise<Evaluation> => {
-      const inst = await createInstance(participantId, traits);
-      if (!inst) return FALLBACK;
-      const api = inst.api;
-      const flags = api.getAllFlags();
+      const flags = await evalIdentityFlags(participantId, traits);
+      if (!flags) return FALLBACK;
       const kill = flags["assistant_enabled"];
       const assistantEnabled = kill ? !!kill.enabled : true;
-      const assistantMessage = kill && typeof kill.value === "string" && kill.value ? kill.value : "We are making a change and will be back shortly.";
+      const assistantMessage = "We are making a change and will be back shortly.";
       const flag = flags["retrieval_strategy"];
       if (!flag) return { ...FALLBACK, assistantEnabled, assistantMessage };
       const cfg = parseConfig(flag.value);
       if (!cfg) return { ...FALLBACK, assistantEnabled, assistantMessage };
-      const inExp = flag.experiment?.inExperiment !== false;
+      const inExp = flag.inExperiment !== false;
       return {
         config: cfg,
         source: "flagsmith",
@@ -52,11 +51,12 @@ export async function evaluateFor(participantId: string, traits: Record<string, 
 
 export async function evaluateDefault(): Promise<{ config: RetrievalConfig | null; raw: string | null }> {
   try {
-    const inst = await createInstance(`probe-${Date.now()}`, { traffic_type: "probe", surface: "web" });
-    if (!inst) return { config: null, raw: null };
-    const api = inst.api;
-    const flag = api.getAllFlags()["retrieval_strategy"];
+    const flags = await evalIdentityFlags(`probe-${Date.now()}`, { traffic_type: "probe", surface: "web" });
+    if (!flags) return { config: null, raw: null };
+    const flag = flags["retrieval_strategy"];
     if (!flag) return { config: null, raw: null };
     return { config: parseConfig(flag.value), raw: typeof flag.value === "string" ? flag.value : JSON.stringify(flag.value) };
-  } catch { return { config: null, raw: null }; }
+  } catch {
+    return { config: null, raw: null };
+  }
 }
