@@ -69,11 +69,24 @@ export async function retrieve(question: string, cfg: RetrievalConfig): Promise<
     }
   }
   const top = rankedIds.slice(0, cfg.topK);
-  const passages: ScoredChunk[] = top.map((id, i) => ({
+  const rawPassages: ScoredChunk[] = top.map((id, i) => ({
     chunk: index.chunks[byId.get(id)!],
     score: scoreOf.get(id) || 0,
     rank: i + 1,
   }));
+  // Context assembly (post-experiment product fix, 27 Nov 2026): sections are
+  // often split across two chunks mid-sentence, which left the answer model
+  // with a fragment and caused borderline declines. Append the following
+  // chunk when it continues the same page. Retrieval ranking is unchanged;
+  // the experiment record was produced before this fix and is unaffected.
+  const passages: ScoredChunk[] = rawPassages.map((p) => {
+    const i = byId.get(p.chunk.id)!;
+    const next = index.chunks[i + 1];
+    if (next && next.url.split("#")[0] === p.chunk.url.split("#")[0]) {
+      return { ...p, chunk: { ...p.chunk, text: p.chunk.text + "\n" + next.text } };
+    }
+    return p;
+  });
   return {
     passages,
     retrievalMs: Math.round(performance.now() - started),

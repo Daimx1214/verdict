@@ -247,6 +247,14 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
   statistical winner at 83% probability and suggests rolling it out; the
   rollout followed the pre-registered rule (95% bar plus all guardrails),
   not the panel's suggestion.
+- Post-experiment product fix (27 November 2026, after the experiment had
+  completed and the submission was filed): documentation sections are often
+  split across two chunks mid-sentence, which left the answer model with a
+  fragment and caused borderline declines (for example, a Roman Urdu phrasing
+  of the identity-override question). Context assembly now appends the
+  following chunk when it continues the same page. Retrieval ranking, the
+  flag configuration and every recorded experiment number are unchanged;
+  the screening and experiment results above were produced before this fix.
 
 ## Security notes
 
