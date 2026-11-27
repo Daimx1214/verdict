@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, Lock } from "lucide-react";
 import Glyph from "@/components/layout/Glyph";
-import { armData, screeningResults } from "@/lib/lab-data";
+import { armData, experimentData, screeningResults } from "@/lib/lab-data";
 import { btnPrimary, btnSecondary, pct } from "@/components/ui/primitives";
 import { EXAMPLES } from "@/lib/examples";
 
@@ -10,6 +10,9 @@ export default async function Home() {
   const { control, challenger, totalQuestions, totalParticipants } = await armData("real").catch(() => ({ control: null, challenger: null, totalQuestions: 0, totalParticipants: 0 }));
   const screening = screeningResults() as { candidates?: unknown[] } | null;
   const started = (control?.exposed || 0) + (challenger?.exposed || 0) > 0;
+  const exp = await experimentData("simulated").catch(() => null);
+  const decided = exp?.phase === "Decided";
+  const simExposed = (exp?.control.exposed || 0) + (exp?.challenger.exposed || 0);
   return (
     <div className="mx-auto w-full max-w-[1120px] px-4 md:px-6">
       <section className="grid items-center gap-10 py-16 md:grid-cols-[1fr_auto] md:py-20">
@@ -54,6 +57,15 @@ export default async function Home() {
             <div className="rounded-md border border-border bg-surface p-4"><p className="text-[13px] font-medium text-ctrl">A Control helpful share</p><p className="mt-1 font-mono text-[32px] font-medium leading-9">{control ? pct(control.share) : "-"}</p><p className="text-[13px] text-ink-3">{control?.exposed} exposed</p></div>
             <div className="rounded-md border border-border bg-surface p-4"><p className="text-[13px] font-medium text-chal">B Challenger helpful share</p><p className="mt-1 font-mono text-[32px] font-medium leading-9">{challenger ? pct(challenger.share) : "-"}</p><p className="text-[13px] text-ink-3">{challenger?.exposed} exposed</p></div>
           </div>
+        ) : decided ? (
+          <div className="rounded-md border border-border bg-surface p-5 text-ink-2">
+            Decided. The experiment ran on simulated traffic ({simExposed} exposed participants) and the
+            pre-registered rule kept the control: the challenger did not reach the 95 percent
+            win-probability bar and failed the latency guardrail. The control now serves every
+            visitor from the same flag. Real visitors in the window: {totalParticipants}.{" "}
+            <Link href="/lab/experiment" className="text-accent underline">See the experiment</Link>{" "}
+            and the <Link href="/lab/rollout" className="text-accent underline">rollout record</Link>.
+          </div>
         ) : (
           <div className="rounded-md border border-border bg-surface p-5 text-ink-2">
             Not started. {screening ? "Offline screening is complete: eight candidates scored, one finalist chosen. " : "Offline screening runs first. "}
@@ -70,7 +82,7 @@ export default async function Home() {
             <div><dt className="text-[13px] font-semibold uppercase tracking-[0.08em] text-ink-3">Hypothesis</dt><dd className="mt-1 text-[15px] text-ink-2">A retrieval pipeline chosen by offline screening makes more visitors mark an answer as helpful than the keyword baseline.</dd></div>
             <div><dt className="text-[13px] font-semibold uppercase tracking-[0.08em] text-ink-3">Metric</dt><dd className="mt-1 font-mono text-[15px] text-ink-2">answer_helpful, once per participant</dd></div>
             <div><dt className="text-[13px] font-semibold uppercase tracking-[0.08em] text-ink-3">Decision rule</dt><dd className="mt-1 text-[15px] text-ink-2">Ship the challenger only at 95 percent win probability in Flagsmith with every guardrail passing. Otherwise keep control, or report inconclusive.</dd></div>
-            <div><dt className="text-[13px] font-semibold uppercase tracking-[0.08em] text-ink-3">Status</dt><dd className="mt-1 text-[15px] text-ink-2">{started ? "Collecting" : "Screening"}</dd></div>
+            <div><dt className="text-[13px] font-semibold uppercase tracking-[0.08em] text-ink-3">Status</dt><dd className="mt-1 text-[15px] text-ink-2">{decided ? "Decided — control kept" : started ? "Collecting" : "Screening"}</dd></div>
           </dl>
           <Link href="/method" className="mt-4 inline-block text-accent hover:underline">Read the method</Link>
         </div>
