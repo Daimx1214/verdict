@@ -1,5 +1,6 @@
 import { loadIndex } from "./index-loader";
 import { embedQuery, rerankScores } from "./embed";
+import { completeChat } from "../answer/provider";
 import type { RetrievalConfig } from "../flagsmith/config-schema";
 import type { ScoredChunk } from "./types";
 // Retrieval strategies - Specification 6.4.
@@ -20,18 +21,45 @@ function denseRank(qv: Float32Array): { idx: number; score: number }[] {
   }
   return out.sort((a, b) => b.score - a.score);
 }
+// Non-Latin-script questions (for example Urdu script) cannot match an
+// English corpus with keyword retrieval. Translate such a question to
+// English for ranking only; the answer prompt still receives the original
+// question, so the reply stays in the visitor's language. Post-experiment
+// product fix (28 November 2026): all experiment traffic was English, so
+// nothing the experiment measured changes. Falls back to the original
+// question on any translation failure.
+const NON_LATIN = /[\u0600-\u06FF\u0750-\u077F\u08A0-\u08FF\u0900-\u097F\u4E00-\u9FFF\u0400-\u04FF]/;
+async function rankQuestionFor(question: string): Promise<string> {
+  if (!NON_LATIN.test(question)) return question;
+  for (let attempt = 0; attempt < 2; attempt++) {
+    try {
+      const { text } = await completeChat(
+        [
+          { role: "system", content: "Translate the user's question into English. Output only the translated question, nothing else." },
+          { role: "user", content: question },
+        ],
+        { maxTokens: 150, timeoutMs: 8000 },
+      );
+      const t = text.trim();
+      if (t.length >= 3) return t;
+    } catch { /* retry once after a short pause, then fall back */ }
+    if (attempt === 0) await new Promise((r) => setTimeout(r, 2500));
+  }
+  return question;
+}
 export async function retrieve(question: string, cfg: RetrievalConfig): Promise<RetrievalResult> {
   const started = performance.now();
   const index = loadIndex();
   const byId = new Map(index.chunks.map((c, i) => [c.id, i]));
-  const bm = index.bm25.search(question) as { id: string; score: number }[];
+  const rankQuestion = await rankQuestionFor(question);
+  const bm = index.bm25.search(rankQuestion) as { id: string; score: number }[];
   const bmIds = bm.map((r) => r.id);
   let usedDense = false, usedRerank = false;
   let rankedIds: string[] = bmIds;
   let scoreOf = new Map(bm.map((r) => [r.id, r.score]));
 
   if (cfg.strategy === "dense" || cfg.strategy === "hybrid") {
-    const qv = await embedQuery(question);
+    const qv = await embedQuery(rankQuestion);
     if (qv) {
       usedDense = true;
       const dense = denseRank(qv);

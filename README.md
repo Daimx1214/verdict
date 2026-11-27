@@ -264,8 +264,13 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
   prompt, and are left as documented limitations rather than silently
   changing what the experiment tested. The same audit fixed a Lab
   experiment page defect that briefly showed one traffic view's numbers
-  under another view's label while data loaded. Retrieval ranking, the
-  flag configuration and every recorded experiment number are unchanged;
+  under another view's label while data loaded, and added retrieval-side
+  translation for non-Latin-script questions (for example Urdu script),
+  which keyword retrieval over an English corpus could not match at all;
+  the answer prompt still receives the visitor's original question, and
+  all experiment traffic was English, so nothing measured changes.
+  Retrieval ranking, the flag configuration and every recorded experiment
+  number are unchanged;
   the screening and experiment results above were produced before these
   fixes.
 
