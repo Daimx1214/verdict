@@ -29,10 +29,10 @@ const retrieval = JSON.parse(readFileSync(join(ROOT, "data/eval/retrieval-result
 const progressPath = join(ROOT, "data/eval/screening-progress.json");
 const progress: Record<string, Record<string, unknown>> = existsSync(progressPath) ? JSON.parse(readFileSync(progressPath, "utf8")) : {};
 
-async function withRetry<T>(fn: () => Promise<T>, tries = 4): Promise<T> {
+async function withRetry<T>(fn: () => Promise<T>, tries = 9): Promise<T> {
   let last: unknown;
   for (let i = 0; i < tries; i++) {
-    try { return await fn(); } catch (e) { last = e; await new Promise((r) => setTimeout(r, 2000 * (i + 1))); }
+    try { return await fn(); } catch (e) { last = e; await new Promise((r) => setTimeout(r, Math.min(30000, 3000 * (i + 1)))); }
   }
   throw last;
 }

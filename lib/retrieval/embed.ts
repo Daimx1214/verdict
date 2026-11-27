@@ -3,7 +3,28 @@
 type Extractor = (text: string, opts: { pooling: string; normalize: boolean }) => Promise<{ data: Float32Array }>;
 let embedder: Extractor | null = null;
 let embedderFailed = false;
+// Serverless backend: when EMBED_BACKEND=gemini, query embeddings come from the
+// Gemini embedding API (same key/base as the LLM provider) and the index must be
+// the Gemini variant (scripts/build-index-gemini.ts). Vectors are L2-normalised
+// to match the local pipeline's normalize:true behaviour.
+async function embedQueryGemini(text: string): Promise<Float32Array | null> {
+  try {
+    const base = process.env.LLM_BASE_URL || "https://generativelanguage.googleapis.com/v1beta/openai";
+    const res = await fetch(`${base}/embeddings`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", Authorization: `Bearer ${process.env.LLM_API_KEY || ""}` },
+      body: JSON.stringify({ model: process.env.EMBED_MODEL || "gemini-embedding-001", input: text, dimensions: 384 }),
+    });
+    if (!res.ok) return null;
+    const json = await res.json();
+    const v = json.data?.[0]?.embedding as number[] | undefined;
+    if (!v) return null;
+    let n = 0; for (const x of v) n += x * x; n = Math.sqrt(n) || 1;
+    return Float32Array.from(v.map((x) => x / n));
+  } catch { return null; }
+}
 export async function embedQuery(text: string): Promise<Float32Array | null> {
+  if (process.env.EMBED_BACKEND === "gemini") return embedQueryGemini(text);
   if (embedderFailed) return null;
   try {
     if (!embedder) {

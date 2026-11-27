@@ -17,13 +17,16 @@ export function loadIndex(): LoadedIndex {
   if (cached) return cached;
   const base = join(process.cwd(), "data", "index");
   const chunks = JSON.parse(readFileSync(join(base, "chunks.json"), "utf8")) as Chunk[];
-  const meta = JSON.parse(readFileSync(join(base, "vectors-meta.json"), "utf8"));
+  // EMBED_BACKEND=gemini selects the Gemini-embedding variant of the vectors
+  // (serverless deploys); default is the local MiniLM index.
+  const gemini = process.env.EMBED_BACKEND === "gemini";
+  const meta = JSON.parse(readFileSync(join(base, gemini ? "vectors-gemini-meta.json" : "vectors-meta.json"), "utf8"));
   const manifest = JSON.parse(readFileSync(join(process.cwd(), "data", "corpus", "MANIFEST.json"), "utf8"));
   const corpusHash: string = meta.corpus_hash || meta.corpusHash;
   if (manifest.corpus_hash && corpusHash && manifest.corpus_hash !== corpusHash) {
     throw new Error("corpus/index hash mismatch");
   }
-  const buf = readFileSync(join(base, "vectors.bin"));
+  const buf = readFileSync(join(base, gemini ? "vectors-gemini.bin" : "vectors.bin"));
   const vectors = new Float32Array(buf.buffer, buf.byteOffset, buf.byteLength / 4);
   const bm25 = new BM25Index(chunks.map((c) => ({ id: c.id, text: `${c.pageTitle} ${c.headingPath} ${c.text}` })));
   cached = { chunks, bm25, vectors, dim: meta.dim, corpusHash, embeddingModel: meta.model };

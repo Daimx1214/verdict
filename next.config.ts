@@ -1,6 +1,11 @@
 import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   serverExternalPackages: ["@xenova/transformers", "pg"],
+  // Serverless (Gemini embedding backend): alias the local-models package to a
+  // stub so it is excluded from the function bundle entirely.
+  ...(process.env.EMBED_BACKEND === "gemini"
+    ? { turbopack: { resolveAlias: { "@xenova/transformers": "./lib/retrieval/transformers-stub.ts" } } }
+    : {}),
   async headers() {
     const base = [
       { key: "X-Content-Type-Options", value: "nosniff" },

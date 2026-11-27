@@ -6,6 +6,7 @@ import { questions, feedback, participants, eventsOutbox } from "@/lib/db/schema
 import { eq } from "drizzle-orm";
 import { COOKIE_NAME, decodeCookie, trafficOf } from "@/lib/privacy/cookie";
 import { hit } from "@/lib/privacy/rate-limit";
+import { flushOutboxOnce } from "@/lib/db/outbox";
 
 export const runtime = "nodejs";
 const schema = z.object({
@@ -42,6 +43,8 @@ export async function POST(req: NextRequest) {
         type: "conversion", participantId: pid,
         payload: { traits: { traffic_type: trafficOf(pid), surface: p.surface || "web" } },
       });
+      // Deliver promptly even where no background loop persists (serverless).
+      await flushOutboxOnce();
     }
   }
   return Response.json({ ok: true });
