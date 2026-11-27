@@ -26,7 +26,23 @@ metric is `answer_helpful`: the first time a participant marks an answer
 "Helpful". The pre-registered protocol, sample plan and decision rule were
 written before the experiment started and live in [EXPERIMENT.md](EXPERIMENT.md).
 
-**Result:** [[EXPERIMENT_RESULT]]
+**Result:** On the locked metric, the challenger converted 43.8% of exposed
+participants (63 of 144) against the control's 37.7% (60 of 159), a difference
+of +6.0 points with a 95% interval of −5.0 to +17.0. Flagsmith puts the
+challenger's probability of being best at 83%; this application's own
+posterior gives 85.7%. Both are below the pre-registered 95% bar, and the
+challenger also failed guardrail G1 (end-to-end latency p95 1,497 ms against
+the control's 935 ms — a ratio of 1.60 against a limit of 1.5), while passing
+G2 (cost), G3 (no-answer rate: 8.5% against the control's 29.4%) and G4
+(error rate, +1.6 points against a +2 limit). **Decision, per the rule written
+before the start: keep the control.** The experiment was completed in
+Flagsmith on 27 November 2026 with the control rolled out to 100% through the
+same flag and no redeploy; the live Rollout page shows the decision record and
+the configuration now being served. No sample-ratio mismatch was detected
+(χ² = 0.74, p = 0.39). The test reached 303 of the planned 800 exposed
+participants, so it was underpowered for effects smaller than the one
+observed; the honest summary is "a promising challenger that did not earn the
+rollout", not a proven tie.
 
 **Screening result (final, offline):** the challenger is `dense_rewrite_k5`
 (dense retrieval, top 5 passages), composite score 0.913 against the control's
@@ -44,7 +60,14 @@ are reported separately everywhere they appear.
 
 ## Traffic disclosure
 
-[[TRAFFIC_COUNTS]]
+**Counts for the window reported here (27 November 2026): real participants
+0. Simulated participants: 644 created, 303 exposed (control 159, challenger
+144); 937 questions stored, 413 answered and 524 lost to model-provider
+errors.** The build and the screening took most of the hackathon window, so
+the experiment ran on its final day and the link was not promoted anywhere
+before the decision. Every live figure in this README and in the Lab's
+simulated view comes from the runs documented in
+[SIMULATION.md](SIMULATION.md).
 
 Two kinds of traffic reach this deployment, and they are never merged:
 
@@ -212,6 +235,16 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
 - The deployment moved hosts twice before the start (a host that required a
   payment card, then one that required a paid plan, then the current free
   serverless host). The experiment itself was unaffected: it had not started.
+- During data collection, a parallelised simulation burst hit the model
+  provider's rate limit: about 56% of the day's questions errored, at similar
+  rates in both arms, and a slower sequential top-up run followed. Final
+  exposure was 303 of the planned 800 participants. The full record is in
+  SIMULATION.md.
+- The experiment was completed on 27 November 2026 with the control rolled
+  out to 100%. Flagsmith's own results panel labels the challenger its
+  statistical winner at 83% probability and suggests rolling it out; the
+  rollout followed the pre-registered rule (95% bar plus all guardrails),
+  not the panel's suggestion.
 
 ## Security notes
 
