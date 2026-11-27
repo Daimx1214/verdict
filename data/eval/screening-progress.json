@@ -1993,6 +1993,5066 @@
    "tokensIn": 1138,
    "tokensOut": 18,
    "costUsd": 0
+  },
+  "test-15": {
+   "id": "test-15",
+   "question": "What is the difference between a project segment and a feature-specific segment?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "Frequently Asked Questions"
+   ],
+   "judgeReason": "The answer accurately captures all the key differences and similarities between project segments and feature-specific segments as described in the provided passages.",
+   "tokensIn": 1028,
+   "tokensOut": 117,
+   "costUsd": 0
+  },
+  "test-16": {
+   "id": "test-16",
+   "question": "Why are segment definitions not included in API responses when using remote evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer accurately explains that segment definitions are excluded from remote evaluation API responses to prevent the exposure of potentially sensitive or proprietary information.",
+   "tokensIn": 935,
+   "tokensOut": 42,
+   "costUsd": 0
+  },
+  "test-13": {
+   "id": "test-13",
+   "question": "Why are no segment overrides applied when my user is not identified?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Mobile App Versioning",
+    "Run an Experiment"
+   ],
+   "judgeReason": "The answer accurately explains that segments rely on identity traits and that identifying the user is necessary for overrides to function, citing the provided passage.",
+   "tokensIn": 1123,
+   "tokensOut": 58,
+   "costUsd": 0
+  },
+  "test-18": {
+   "id": "test-18",
+   "question": "What is a percentage (staged) rollout used for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Targeting and Rollouts",
+    "Segment Rule Operators"
+   ],
+   "judgeReason": "The answer accurately describes the purpose of percentage rollouts as stated in the provided passages.",
+   "tokensIn": 1062,
+   "tokensOut": 69,
+   "costUsd": 0
+  },
+  "test-14": {
+   "id": "test-14",
+   "question": "Does the order of rules inside a segment matter?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer correctly states that the order matters and is evaluated from top to bottom, citing the provided passage.",
+   "tokensIn": 1087,
+   "tokensOut": 35,
+   "costUsd": 0
+  },
+  "test-20": {
+   "id": "test-20",
+   "question": "What machine learning model does Flagsmith use to automatically recommend which flags to delete?",
+   "goldPages": [],
+   "category": "concepts",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Import and Export",
+    "Scheduled Flags",
+    "GitLab Integration"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 643,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-21": {
+   "id": "test-21",
+   "question": "In the JavaScript SDK, what does the cacheFlags option do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the functionality of the cacheFlags option as detailed in the provided passages.",
+   "tokensIn": 1459,
+   "tokensOut": 137,
+   "costUsd": 0
+  },
+  "test-17": {
+   "id": "test-17",
+   "question": "How do environments work in the Flagsmith data model?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/data-model"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Data Model",
+    "Data Model"
+   ],
+   "judgeReason": "The answer accurately summarizes the role of environments in the Flagsmith data model using the provided passages.",
+   "tokensIn": 904,
+   "tokensOut": 78,
+   "costUsd": 0
+  },
+  "test-22": {
+   "id": "test-22",
+   "question": "What is the defaultFlags option in the JavaScript SDK for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Server Side SDKs",
+    "Server Side SDKs",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the purpose of the defaultFlags option as stated in the provided passages.",
+   "tokensIn": 1934,
+   "tokensOut": 42,
+   "costUsd": 0
+  },
+  "test-24": {
+   "id": "test-24",
+   "question": "In a Flagsmith experiment, what is the difference between getExperimentFlag and trackEvent?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Statistics Glossary",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks"
+   ],
+   "judgeReason": "The provided passages do not contain information about the functions 'getExperimentFlag' or 'trackEvent', so the model correctly declined to answer.",
+   "tokensIn": 1095,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-23": {
+   "id": "test-23",
+   "question": "What happens when flagsmith.init is called with no cache available and the API returns an invalid response?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith iOS SDK",
+    "SDKs & Implementation - FAQ"
+   ],
+   "judgeReason": "The answer accurately reflects the information provided in the passage regarding the behavior of flagsmith.init since version 4.0.0.",
+   "tokensIn": 1164,
+   "tokensOut": 54,
+   "costUsd": 0
+  },
+  "test-26": {
+   "id": "test-26",
+   "question": "Which minimum version of the Node.js SDK supports Flagsmith experimentation?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Experimentation",
+    "Segment Rule Operators",
+    "Help and Support"
+   ],
+   "judgeReason": "The answer states it could not find the information, but the reference answer provides specific version details that were available to be retrieved if the model had access to external knowledge or if the context provided was sufficient.",
+   "tokensIn": 1119,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-19": {
+   "id": "test-19",
+   "question": "If I increase a segment's percentage split from 30 percent to 40 percent, will identities already in the segment stay in it?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Create an Experiment",
+    "Example: Testing a PayPal Button"
+   ],
+   "judgeReason": "The answer correctly explains that identities remain in the segment because the hashing is deterministic and the segment ID remains constant, ensuring consistent behavior when the percentage split is increased.",
+   "tokensIn": 1113,
+   "tokensOut": 86,
+   "costUsd": 0
+  },
+  "test-27": {
+   "id": "test-27",
+   "question": "Which type of environment key must I use to run a server-side SDK in local evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Edge Proxy",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer incorrectly states the information is not in the documentation, even though the passages explain that server-side SDKs (which use server-side keys) are the ones that can operate in Local Evaluation mode.",
+   "tokensIn": 942,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-28": {
+   "id": "test-28",
+   "question": "What is the Environment Document used by server-side SDKs?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "SDKs Overview",
+    "Edge Proxy"
+   ],
+   "judgeReason": "The answer identifies how the document is used but fails to explain what it is (a JSON document containing flag configuration and segment definitions) as requested by the question.",
+   "tokensIn": 1102,
+   "tokensOut": 24,
+   "costUsd": 0
+  },
+  "test-30": {
+   "id": "test-30",
+   "question": "How do I use the Flagsmith SDK in a COBOL program running on a mainframe?",
+   "goldPages": [],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Testing with Feature Flags",
+    "SDKs Overview",
+    "Testing with Feature Flags"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 965,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-31": {
+   "id": "test-31",
+   "question": "Why might my application not see flag changes immediately, and how can it be notified of updates without repeatedly calling the API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith JavaScript SDK",
+    "Integration Approaches"
+   ],
+   "judgeReason": "The answer accurately explains why flag changes are not seen immediately due to caching and provides the correct method (real-time updates) to receive notifications without repeated API calls, citing the provided passages.",
+   "tokensIn": 957,
+   "tokensOut": 162,
+   "costUsd": 0
+  },
+  "test-32": {
+   "id": "test-32",
+   "question": "What subscription is required for real-time flag updates, and where are they enabled?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith iOS SDK",
+    "Real-time flag updates"
+   ],
+   "judgeReason": "The answer correctly identifies the subscription and dashboard settings, but fails to mention that the application must also opt in via its SDK, which is a key part of the reference answer and provided passages.",
+   "tokensIn": 1053,
+   "tokensOut": 66,
+   "costUsd": 0
+  },
+  "test-33": {
+   "id": "test-33",
+   "question": "A feature in my project has been tagged Stale. How do I remove the tag, or keep a feature from being marked stale?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately explains how to remove the stale tag and how to prevent a feature from being marked as stale using the provided passages.",
+   "tokensIn": 1010,
+   "tokensOut": 81,
+   "costUsd": 0
+  },
+  "test-25": {
+   "id": "test-25",
+   "question": "Why must exposures and conversion events in an experiment use the same user identifier?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Run an Experiment",
+    "Run an Experiment",
+    "Run an Experiment"
+   ],
+   "judgeReason": "The answer correctly identifies that exposures and conversion events are joined per identity, which is the reason they must use the same identifier.",
+   "tokensIn": 1427,
+   "tokensOut": 21,
+   "costUsd": 0
+  },
+  "test-35": {
+   "id": "test-35",
+   "question": "How can I make a flag change take effect automatically at a future time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/scheduled-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Scheduled Flags"
+   ],
+   "judgeReason": "The answer accurately describes the two methods for scheduling flag changes and mentions the plan requirements as per the reference answer and passages.",
+   "tokensIn": 853,
+   "tokensOut": 154,
+   "costUsd": 0
+  },
+  "test-36": {
+   "id": "test-36",
+   "question": "In the React SDK, how can I initialise Flagsmith without immediately fetching flags?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the 'preventFetch' option as described in the provided passage.",
+   "tokensIn": 1327,
+   "tokensOut": 25,
+   "costUsd": 0
+  },
+  "test-29": {
+   "id": "test-29",
+   "question": "What information does the JavaScript SDK onChange callback receive when flags are retrieved?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the parameters received by the onChange callback based on the provided documentation.",
+   "tokensIn": 1209,
+   "tokensOut": 101,
+   "costUsd": 0
+  },
+  "test-38": {
+   "id": "test-38",
+   "question": "How should I pass a user's email address when querying feature flags for that user?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Role-based access control",
+    "SCIM provisioning"
+   ],
+   "judgeReason": "The answer correctly identifies the method to use and cites the provided passage.",
+   "tokensIn": 1106,
+   "tokensOut": 29,
+   "costUsd": 0
+  },
+  "test-39": {
+   "id": "test-39",
+   "question": "How do I open a Flagsmith support ticket by phone, and what are the phone support hours?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Jira Integration",
+    "Jira Integration",
+    "Connect a Warehouse"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 856,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-40": {
+   "id": "test-40",
+   "question": "Why did Flagsmith email me a coupon code for 50 percent off, and how do I redeem it?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Run Flagsmith Locally with a Coding Agent",
+    "When to use Feature Flags",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 3357,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-34": {
+   "id": "test-34",
+   "question": "What plan and prerequisite does Stale Flag Detection require?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Stale Flag Detection",
+    "Flag Dependencies"
+   ],
+   "judgeReason": "The answer accurately identifies the required plans and the prerequisite mentioned in the provided passages.",
+   "tokensIn": 837,
+   "tokensOut": 37,
+   "costUsd": 0
+  },
+  "test-37": {
+   "id": "test-37",
+   "question": "My JavaScript app does not pick up new flags on its own. What does startListening do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Datadog Integration",
+    "Cohort Synchronisation",
+    "Flag Naming Conventions"
+   ],
+   "judgeReason": "The provided passages do not contain information about the 'startListening' method, so the model correctly declined to answer.",
+   "tokensIn": 1220,
+   "tokensOut": 11,
+   "costUsd": 0
+  }
+ },
+ "C3": {
+  "test-03": {
+   "id": "test-03",
+   "question": "In the Docker Compose setup, which port serves the combined frontend dashboard and REST API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Docker",
+    "MCP Server",
+    "MCP Server",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "The answer correctly identifies port 8000 as the port used for the dashboard and API, supported by the provided passages.",
+   "tokensIn": 2670,
+   "tokensOut": 23,
+   "costUsd": 0
+  },
+  "test-01": {
+   "id": "test-01",
+   "question": "Where do I log in to use the Flagsmith SaaS platform?",
+   "goldPages": [
+    "https://docs.flagsmith.com/getting-started/quick-start"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Quick Start",
+    "Platform Architecture",
+    "Platform Architecture",
+    "Infrastructure & API - FAQ",
+    "Platform Architecture"
+   ],
+   "judgeReason": "The answer correctly identifies the login URL for the SaaS platform as provided in the source text.",
+   "tokensIn": 1765,
+   "tokensOut": 22,
+   "costUsd": 0
+  },
+  "test-04": {
+   "id": "test-04",
+   "question": "To access a Docker-hosted Flagsmith instance remotely, which dashboard environment variable tells the dashboard where the REST API is located?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Edge Proxy",
+    "Docker",
+    "Running Flagsmith on Flagsmith",
+    "Docker"
+   ],
+   "judgeReason": "The answer correctly identifies the API_URL environment variable as the required configuration to point the dashboard to the REST API.",
+   "tokensIn": 1875,
+   "tokensOut": 27,
+   "costUsd": 0
+  },
+  "test-06": {
+   "id": "test-06",
+   "question": "What must I set so I can log in to the Django admin of a Docker install with an email and password?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Django Admin",
+    "Docker",
+    "Initial Setup",
+    "Authentication",
+    "Authentication"
+   ],
+   "judgeReason": "The answer correctly identifies the required environment variable and the need to restart the application, citing the provided passage.",
+   "tokensIn": 1602,
+   "tokensOut": 45,
+   "costUsd": 0
+  },
+  "test-05": {
+   "id": "test-05",
+   "question": "Which CPU architectures are Flagsmith Docker images built for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "CVEs and Vulnerabilities",
+    "Enterprise Edition",
+    "Organisations Import and Export",
+    "Enterprise Edition"
+   ],
+   "judgeReason": "The answer correctly identifies the CPU architectures supported by Flagsmith Docker images as stated in the provided passages.",
+   "tokensIn": 1646,
+   "tokensOut": 47,
+   "costUsd": 0
+  },
+  "test-08": {
+   "id": "test-08",
+   "question": "What does the Flagsmith coding-agent setup prompt do to get an A/B test running?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/set-up-with-a-coding-agent"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Set Up an Experiment with a Coding Agent",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Connect ClickHouse",
+    "Connect PostgreSQL",
+    "Experimentation"
+   ],
+   "judgeReason": "The answer accurately summarizes the steps performed by the Flagsmith coding-agent setup prompt as described in the provided passages.",
+   "tokensIn": 1990,
+   "tokensOut": 139,
+   "costUsd": 0
+  },
+  "test-07": {
+   "id": "test-07",
+   "question": "What is an experiment metric in Flagsmith, and what aggregation types can it use?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/create-metrics"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Create Metrics",
+    " Mcp Tool Catalogue",
+    "Experimentation",
+    "Statistics Glossary",
+    "Create an Experiment"
+   ],
+   "judgeReason": "The answer accurately defines what a metric is and lists the four aggregation types with their descriptions as provided in the passages.",
+   "tokensIn": 1739,
+   "tokensOut": 137,
+   "costUsd": 0
+  },
+  "test-10": {
+   "id": "test-10",
+   "question": "How do I install Flagsmith on a Synology NAS using the Synology Package Center?",
+   "goldPages": [],
+   "category": "setup",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Kubernetes and OpenShift",
+    "Server Side SDKs",
+    "Flagsmith Flutter SDK",
+    "Run an Experiment",
+    "Server Side SDKs"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 2320,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-09": {
+   "id": "test-09",
+   "question": "Which data warehouses can I connect to Flagsmith for experimentation data?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/connect-a-warehouse"
+   ],
+   "category": "setup",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    " Events Catalogue",
+    "Platform Architecture",
+    "Experimentation",
+    "Connect Databricks",
+    "Kubernetes and OpenShift"
+   ],
+   "judgeReason": "The answer is correct as far as it goes, but it misses the built-in Flagsmith database mentioned in the reference answer and supported by the provided passages.",
+   "tokensIn": 2085,
+   "tokensOut": 21,
+   "costUsd": 0
+  },
+  "test-11": {
+   "id": "test-11",
+   "question": "What is an identity override in Flagsmith?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/identities"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Edge Proxy",
+    "Identities",
+    "Segments",
+    "Identities",
+    "Segments"
+   ],
+   "judgeReason": "The answer accurately defines identity overrides using the provided passages and explains how they are managed.",
+   "tokensIn": 1618,
+   "tokensOut": 67,
+   "costUsd": 0
+  },
+  "test-13": {
+   "id": "test-13",
+   "question": "Why are no segment overrides applied when my user is not identified?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Mobile App Versioning",
+    "Run an Experiment",
+    "Change Requests",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "The answer accurately explains that segments rely on identity traits and that identifying the user is necessary for overrides to function, citing the provided passage.",
+   "tokensIn": 1755,
+   "tokensOut": 59,
+   "costUsd": 0
+  },
+  "test-02": {
+   "id": "test-02",
+   "question": "How can I try out Flagsmith experimentation in a self-hosted Docker install without connecting a data warehouse?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Kubernetes and OpenShift",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Experimentation",
+    "Self-Hosting and Open Source"
+   ],
+   "judgeReason": "The answer accurately describes the steps to enable experimentation using the Flagsmith database as a storage backend for self-hosted instances, citing the relevant passages.",
+   "tokensIn": 1580,
+   "tokensOut": 151,
+   "costUsd": 0
+  },
+  "test-14": {
+   "id": "test-14",
+   "question": "Does the order of rules inside a segment matter?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview",
+    "Upgrades and Rollbacks",
+    "System Limits"
+   ],
+   "judgeReason": "The answer correctly explains that the order of rules matters and provides the examples from the passage to illustrate why.",
+   "tokensIn": 1718,
+   "tokensOut": 117,
+   "costUsd": 0
+  },
+  "test-15": {
+   "id": "test-15",
+   "question": "What is the difference between a project segment and a feature-specific segment?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "Frequently Asked Questions",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks"
+   ],
+   "judgeReason": "The answer accurately captures the differences and similarities between project segments and feature-specific segments as described in the provided passages.",
+   "tokensIn": 1666,
+   "tokensOut": 92,
+   "costUsd": 0
+  },
+  "test-17": {
+   "id": "test-17",
+   "question": "How do environments work in the Flagsmith data model?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/data-model"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Data Model",
+    "Data Model",
+    "Defensive Coding and Designing for Failure",
+    "Import and Export"
+   ],
+   "judgeReason": "The answer accurately describes how environments work in the Flagsmith data model using the provided passages.",
+   "tokensIn": 1365,
+   "tokensOut": 107,
+   "costUsd": 0
+  },
+  "test-16": {
+   "id": "test-16",
+   "question": "Why are segment definitions not included in API responses when using remote evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview",
+    "SDKs Overview",
+    "Server Side SDKs"
+   ],
+   "judgeReason": "The answer accurately explains that segment definitions are excluded from remote evaluation API responses to protect potentially sensitive or proprietary information.",
+   "tokensIn": 1798,
+   "tokensOut": 51,
+   "costUsd": 0
+  },
+  "test-19": {
+   "id": "test-19",
+   "question": "If I increase a segment's percentage split from 30 percent to 40 percent, will identities already in the segment stay in it?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Create an Experiment",
+    "Example: Testing a PayPal Button",
+    "Rollout by Percentage",
+    "Rollout by Percentage"
+   ],
+   "judgeReason": "The answer correctly identifies that identities remain in the segment due to the consistent segment ID and hashing mechanism, as supported by the provided passage.",
+   "tokensIn": 1618,
+   "tokensOut": 37,
+   "costUsd": 0
+  },
+  "test-20": {
+   "id": "test-20",
+   "question": "What machine learning model does Flagsmith use to automatically recommend which flags to delete?",
+   "goldPages": [],
+   "category": "concepts",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Import and Export",
+    "Scheduled Flags",
+    "GitLab Integration",
+    "Quick Start",
+    "Deploying Flagsmith on Google Cloud"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1208,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-18": {
+   "id": "test-18",
+   "question": "What is a percentage (staged) rollout used for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Targeting and Rollouts",
+    "Segment Rule Operators",
+    "Targeting and Rollouts",
+    "Rollout by Percentage"
+   ],
+   "judgeReason": "The answer accurately summarizes the purpose of staged rollouts using the provided passages.",
+   "tokensIn": 1409,
+   "tokensOut": 93,
+   "costUsd": 0
+  },
+  "test-12": {
+   "id": "test-12",
+   "question": "Can one identity belong to several segments at the same time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Cohort Synchronisation",
+    "Segments",
+    "User & Identity Management - FAQ",
+    "SAML single sign-on (SSO)",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "The answer correctly confirms that an identity can belong to multiple segments and cites the supporting passage.",
+   "tokensIn": 1712,
+   "tokensOut": 18,
+   "costUsd": 0
+  },
+  "test-23": {
+   "id": "test-23",
+   "question": "What happens when flagsmith.init is called with no cache available and the API returns an invalid response?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith iOS SDK",
+    "SDKs & Implementation - FAQ",
+    "Flagsmith Android/Kotlin SDK",
+    "Billing and API Usage"
+   ],
+   "judgeReason": "The answer accurately reflects the information provided in the passage regarding the behavior of flagsmith.init since version 4.0.0.",
+   "tokensIn": 1861,
+   "tokensOut": 40,
+   "costUsd": 0
+  },
+  "test-21": {
+   "id": "test-21",
+   "question": "In the JavaScript SDK, what does the cacheFlags option do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith React SDK"
+   ],
+   "judgeReason": "The answer accurately describes the functionality of the cacheFlags option and the associated flow as provided in the passages.",
+   "tokensIn": 2390,
+   "tokensOut": 183,
+   "costUsd": 0
+  },
+  "test-22": {
+   "id": "test-22",
+   "question": "What is the defaultFlags option in the JavaScript SDK for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Server Side SDKs",
+    "Server Side SDKs",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the purpose of the defaultFlags option as supported by the provided passages.",
+   "tokensIn": 2907,
+   "tokensOut": 59,
+   "costUsd": 0
+  },
+  "test-25": {
+   "id": "test-25",
+   "question": "Why must exposures and conversion events in an experiment use the same user identifier?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Run an Experiment",
+    "Run an Experiment",
+    "Run an Experiment",
+    "Set Up an Experiment with a Coding Agent",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "The answer correctly identifies that events are joined by identity, but it fails to explain the consequence of using different identifiers (that attribution will fail), which is a key part of the reference answer.",
+   "tokensIn": 3462,
+   "tokensOut": 16,
+   "costUsd": 0
+  },
+  "test-24": {
+   "id": "test-24",
+   "question": "In a Flagsmith experiment, what is the difference between getExperimentFlag and trackEvent?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Statistics Glossary",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks",
+    "Frequently Asked Questions",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "The provided passages contain enough information to infer the roles of these functions in the context of an experiment, so the model should not have declined.",
+   "tokensIn": 3107,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-28": {
+   "id": "test-28",
+   "question": "What is the Environment Document used by server-side SDKs?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "SDKs Overview",
+    "Edge Proxy",
+    "Billing and API Usage",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer accurately defines the Environment Document based on the provided passages.",
+   "tokensIn": 1760,
+   "tokensOut": 82,
+   "costUsd": 0
+  },
+  "test-26": {
+   "id": "test-26",
+   "question": "Which minimum version of the Node.js SDK supports Flagsmith experimentation?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Experimentation",
+    "Segment Rule Operators",
+    "Help and Support",
+    "Deploying Flagsmith on Google Cloud",
+    "Help and Support"
+   ],
+   "judgeReason": "The answer fails to provide the specific version requested, instead directing the user to documentation that was not fully provided in the context.",
+   "tokensIn": 1716,
+   "tokensOut": 32,
+   "costUsd": 0
+  },
+  "test-30": {
+   "id": "test-30",
+   "question": "How do I use the Flagsmith SDK in a COBOL program running on a mainframe?",
+   "goldPages": [],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Testing with Feature Flags",
+    "SDKs Overview",
+    "Testing with Feature Flags",
+    "Segment Rule Operators",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1630,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-27": {
+   "id": "test-27",
+   "question": "Which type of environment key must I use to run a server-side SDK in local evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Edge Proxy",
+    "SDKs Overview",
+    "SDKs Overview",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer correctly identifies that a Server-side SDK key is required for Local Evaluation mode and cites the supporting passage.",
+   "tokensIn": 1696,
+   "tokensOut": 23,
+   "costUsd": 0
+  },
+  "test-31": {
+   "id": "test-31",
+   "question": "Why might my application not see flag changes immediately, and how can it be notified of updates without repeatedly calling the API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith JavaScript SDK",
+    "Integration Approaches",
+    "Billing and API Usage",
+    "Run an Experiment"
+   ],
+   "judgeReason": "The answer accurately explains why flag changes might not be seen immediately (caching) and provides the correct steps to enable real-time updates as described in the passages.",
+   "tokensIn": 1399,
+   "tokensOut": 167,
+   "costUsd": 0
+  },
+  "test-29": {
+   "id": "test-29",
+   "question": "What information does the JavaScript SDK onChange callback receive when flags are retrieved?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the parameters received by the onChange callback as specified in the provided documentation.",
+   "tokensIn": 2177,
+   "tokensOut": 87,
+   "costUsd": 0
+  },
+  "test-33": {
+   "id": "test-33",
+   "question": "A feature in my project has been tagged Stale. How do I remove the tag, or keep a feature from being marked stale?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately explains how to remove the stale tag and how to prevent a feature from being marked as stale, citing the provided passages correctly.",
+   "tokensIn": 1402,
+   "tokensOut": 93,
+   "costUsd": 0
+  },
+  "test-34": {
+   "id": "test-34",
+   "question": "What plan and prerequisite does Stale Flag Detection require?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Stale Flag Detection",
+    "Flag Dependencies",
+    "Stale Flag Detection",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately identifies the required plans and the prerequisite mentioned in the provided passages.",
+   "tokensIn": 1329,
+   "tokensOut": 37,
+   "costUsd": 0
+  },
+  "test-32": {
+   "id": "test-32",
+   "question": "What subscription is required for real-time flag updates, and where are they enabled?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith iOS SDK",
+    "Real-time flag updates",
+    "Real-time flag updates",
+    "Real-time flag updates"
+   ],
+   "judgeReason": "The answer correctly identifies the subscription and dashboard settings, but fails to mention that applications must also opt in via their respective SDKs as noted in the reference answer and passage 1.",
+   "tokensIn": 1706,
+   "tokensOut": 68,
+   "costUsd": 0
+  },
+  "test-35": {
+   "id": "test-35",
+   "question": "How can I make a flag change take effect automatically at a future time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/scheduled-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Experimental: Updating Flags",
+    "Feature Flags Lifecycles"
+   ],
+   "judgeReason": "The answer accurately describes the methods for scheduling flag changes and includes all necessary details from the provided passages.",
+   "tokensIn": 1489,
+   "tokensOut": 299,
+   "costUsd": 0
+  },
+  "test-38": {
+   "id": "test-38",
+   "question": "How should I pass a user's email address when querying feature flags for that user?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Role-based access control",
+    "SCIM provisioning",
+    "Email Setup",
+    "SCIM provisioning"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the identify method and cites the provided passage.",
+   "tokensIn": 1881,
+   "tokensOut": 29,
+   "costUsd": 0
+  },
+  "test-39": {
+   "id": "test-39",
+   "question": "How do I open a Flagsmith support ticket by phone, and what are the phone support hours?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Jira Integration",
+    "Jira Integration",
+    "Connect a Warehouse",
+    "Help and Support",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1386,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-40": {
+   "id": "test-40",
+   "question": "Why did Flagsmith email me a coupon code for 50 percent off, and how do I redeem it?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Run Flagsmith Locally with a Coding Agent",
+    "When to use Feature Flags",
+    "Set Up an Experiment with a Coding Agent",
+    "SCIM provisioning",
+    "When to use Feature Flags"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 3931,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-36": {
+   "id": "test-36",
+   "question": "In the React SDK, how can I initialise Flagsmith without immediately fetching flags?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the 'preventFetch' option in 'flagsmith.init' to initialize the SDK without immediately fetching flags, as supported by the provided passages.",
+   "tokensIn": 1897,
+   "tokensOut": 25,
+   "costUsd": 0
+  },
+  "test-37": {
+   "id": "test-37",
+   "question": "My JavaScript app does not pick up new flags on its own. What does startListening do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Datadog Integration",
+    "Cohort Synchronisation",
+    "Flag Naming Conventions",
+    "Set Up an Experiment with a Coding Agent",
+    "Sizing and Scaling"
+   ],
+   "judgeReason": "The provided passages do not contain information about the 'startListening' function, so the model correctly stated it could not find the information, even though the reference answer suggests it should be known.",
+   "tokensIn": 3264,
+   "tokensOut": 11,
+   "costUsd": 0
+  }
+ },
+ "C4": {
+  "test-03": {
+   "id": "test-03",
+   "question": "In the Docker Compose setup, which port serves the combined frontend dashboard and REST API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Docker",
+    "MCP Server",
+    "MCP Server",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "The answer correctly identifies port 8000 as the port used for the dashboard and API, supported by the provided passages.",
+   "tokensIn": 2670,
+   "tokensOut": 23,
+   "costUsd": 0
+  },
+  "test-02": {
+   "id": "test-02",
+   "question": "How can I try out Flagsmith experimentation in a self-hosted Docker install without connecting a data warehouse?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Kubernetes and OpenShift",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Experimentation",
+    "Self-Hosting and Open Source"
+   ],
+   "judgeReason": "The answer accurately describes the steps to enable experimentation using the Flagsmith database in a self-hosted environment, including the necessary configuration and the warning regarding production use.",
+   "tokensIn": 1580,
+   "tokensOut": 160,
+   "costUsd": 0
+  },
+  "test-05": {
+   "id": "test-05",
+   "question": "Which CPU architectures are Flagsmith Docker images built for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "CVEs and Vulnerabilities",
+    "Enterprise Edition",
+    "Organisations Import and Export",
+    "Enterprise Edition"
+   ],
+   "judgeReason": "The answer accurately lists the CPU architectures supported by Flagsmith Docker images as stated in the provided passages.",
+   "tokensIn": 1646,
+   "tokensOut": 47,
+   "costUsd": 0
+  },
+  "test-04": {
+   "id": "test-04",
+   "question": "To access a Docker-hosted Flagsmith instance remotely, which dashboard environment variable tells the dashboard where the REST API is located?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Edge Proxy",
+    "Docker",
+    "Running Flagsmith on Flagsmith",
+    "Docker"
+   ],
+   "judgeReason": "The answer correctly identifies the API_URL environment variable as the mechanism to inform the dashboard of the REST API's location, as supported by the provided passages.",
+   "tokensIn": 1875,
+   "tokensOut": 32,
+   "costUsd": 0
+  },
+  "test-07": {
+   "id": "test-07",
+   "question": "What is an experiment metric in Flagsmith, and what aggregation types can it use?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/create-metrics"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Create Metrics",
+    " Mcp Tool Catalogue",
+    "Experimentation",
+    "Statistics Glossary",
+    "Create an Experiment"
+   ],
+   "judgeReason": "The answer accurately defines an experiment metric and lists the four aggregation types with their descriptions as provided in the passages.",
+   "tokensIn": 1739,
+   "tokensOut": 148,
+   "costUsd": 0
+  },
+  "test-08": {
+   "id": "test-08",
+   "question": "What does the Flagsmith coding-agent setup prompt do to get an A/B test running?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/set-up-with-a-coding-agent"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Set Up an Experiment with a Coding Agent",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Connect ClickHouse",
+    "Connect PostgreSQL",
+    "Experimentation"
+   ],
+   "judgeReason": "The answer accurately summarizes the steps performed by the Flagsmith coding-agent setup prompt as described in the provided passages.",
+   "tokensIn": 1990,
+   "tokensOut": 127,
+   "costUsd": 0
+  },
+  "test-09": {
+   "id": "test-09",
+   "question": "Which data warehouses can I connect to Flagsmith for experimentation data?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/connect-a-warehouse"
+   ],
+   "category": "setup",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    " Events Catalogue",
+    "Platform Architecture",
+    "Experimentation",
+    "Connect Databricks",
+    "Kubernetes and OpenShift"
+   ],
+   "judgeReason": "The answer is correct as far as it goes, but it misses the built-in Flagsmith database mentioned in the reference answer and supported by the provided passages.",
+   "tokensIn": 2085,
+   "tokensOut": 21,
+   "costUsd": 0
+  },
+  "test-06": {
+   "id": "test-06",
+   "question": "What must I set so I can log in to the Django admin of a Docker install with an email and password?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Django Admin",
+    "Docker",
+    "Initial Setup",
+    "Authentication",
+    "Authentication"
+   ],
+   "judgeReason": "The answer correctly identifies the required environment variable and mentions the need to restart the service, as supported by the provided passages.",
+   "tokensIn": 1602,
+   "tokensOut": 43,
+   "costUsd": 0
+  },
+  "test-10": {
+   "id": "test-10",
+   "question": "How do I install Flagsmith on a Synology NAS using the Synology Package Center?",
+   "goldPages": [],
+   "category": "setup",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Kubernetes and OpenShift",
+    "Server Side SDKs",
+    "Flagsmith Flutter SDK",
+    "Run an Experiment",
+    "Server Side SDKs"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 2320,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-11": {
+   "id": "test-11",
+   "question": "What is an identity override in Flagsmith?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/identities"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Edge Proxy",
+    "Identities",
+    "Segments",
+    "Identities",
+    "Segments"
+   ],
+   "judgeReason": "The answer accurately defines identity overrides using the provided passages.",
+   "tokensIn": 1618,
+   "tokensOut": 46,
+   "costUsd": 0
+  },
+  "test-13": {
+   "id": "test-13",
+   "question": "Why are no segment overrides applied when my user is not identified?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Mobile App Versioning",
+    "Run an Experiment",
+    "Change Requests",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "The answer accurately explains that segments rely on identity traits, requiring user identification to apply overrides, and correctly notes that flags default to environment settings if the user is unidentified.",
+   "tokensIn": 1755,
+   "tokensOut": 58,
+   "costUsd": 0
+  },
+  "test-01": {
+   "id": "test-01",
+   "question": "Where do I log in to use the Flagsmith SaaS platform?",
+   "goldPages": [
+    "https://docs.flagsmith.com/getting-started/quick-start"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Quick Start",
+    "Platform Architecture",
+    "Platform Architecture",
+    "Infrastructure & API - FAQ",
+    "Platform Architecture"
+   ],
+   "judgeReason": "The answer correctly identifies the login URL for the SaaS platform as provided in the source text.",
+   "tokensIn": 1765,
+   "tokensOut": 22,
+   "costUsd": 0
+  },
+  "test-16": {
+   "id": "test-16",
+   "question": "Why are segment definitions not included in API responses when using remote evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview",
+    "SDKs Overview",
+    "Server Side SDKs"
+   ],
+   "judgeReason": "The answer accurately explains that segment definitions are excluded from remote evaluation API responses to protect potentially sensitive or proprietary information.",
+   "tokensIn": 1798,
+   "tokensOut": 36,
+   "costUsd": 0
+  },
+  "test-14": {
+   "id": "test-14",
+   "question": "Does the order of rules inside a segment matter?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview",
+    "Upgrades and Rollbacks",
+    "System Limits"
+   ],
+   "judgeReason": "The answer correctly explains that the order of rules matters and provides the examples from the passage to illustrate why.",
+   "tokensIn": 1718,
+   "tokensOut": 115,
+   "costUsd": 0
+  },
+  "test-15": {
+   "id": "test-15",
+   "question": "What is the difference between a project segment and a feature-specific segment?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "Frequently Asked Questions",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks"
+   ],
+   "judgeReason": "The answer accurately identifies the key differences and similarities between project segments and feature-specific segments as described in the provided passages.",
+   "tokensIn": 1666,
+   "tokensOut": 72,
+   "costUsd": 0
+  },
+  "test-18": {
+   "id": "test-18",
+   "question": "What is a percentage (staged) rollout used for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Targeting and Rollouts",
+    "Segment Rule Operators",
+    "Targeting and Rollouts",
+    "Rollout by Percentage"
+   ],
+   "judgeReason": "The answer accurately summarizes the purpose of staged rollouts using the provided passages.",
+   "tokensIn": 1409,
+   "tokensOut": 129,
+   "costUsd": 0
+  },
+  "test-19": {
+   "id": "test-19",
+   "question": "If I increase a segment's percentage split from 30 percent to 40 percent, will identities already in the segment stay in it?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Create an Experiment",
+    "Example: Testing a PayPal Button",
+    "Rollout by Percentage",
+    "Rollout by Percentage"
+   ],
+   "judgeReason": "The answer correctly identifies that identities remain in the segment due to the segment ID remaining constant, which ensures a consistent experience.",
+   "tokensIn": 1618,
+   "tokensOut": 35,
+   "costUsd": 0
+  },
+  "test-20": {
+   "id": "test-20",
+   "question": "What machine learning model does Flagsmith use to automatically recommend which flags to delete?",
+   "goldPages": [],
+   "category": "concepts",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Import and Export",
+    "Scheduled Flags",
+    "GitLab Integration",
+    "Quick Start",
+    "Deploying Flagsmith on Google Cloud"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1208,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-21": {
+   "id": "test-21",
+   "question": "In the JavaScript SDK, what does the cacheFlags option do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith React SDK"
+   ],
+   "judgeReason": "The answer accurately describes the functionality of the cacheFlags option as defined in the provided passages.",
+   "tokensIn": 2390,
+   "tokensOut": 74,
+   "costUsd": 0
+  },
+  "test-17": {
+   "id": "test-17",
+   "question": "How do environments work in the Flagsmith data model?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/data-model"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Data Model",
+    "Data Model",
+    "Defensive Coding and Designing for Failure",
+    "Import and Export"
+   ],
+   "judgeReason": "The answer accurately describes how environments work in the Flagsmith data model using the provided passages.",
+   "tokensIn": 1365,
+   "tokensOut": 99,
+   "costUsd": 0
+  },
+  "test-22": {
+   "id": "test-22",
+   "question": "What is the defaultFlags option in the JavaScript SDK for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Server Side SDKs",
+    "Server Side SDKs",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the purpose of the defaultFlags option as defined in the provided documentation.",
+   "tokensIn": 2907,
+   "tokensOut": 38,
+   "costUsd": 0
+  },
+  "test-24": {
+   "id": "test-24",
+   "question": "In a Flagsmith experiment, what is the difference between getExperimentFlag and trackEvent?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Statistics Glossary",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks",
+    "Frequently Asked Questions",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "The provided passages contain enough information to infer the roles of these functions in the context of an experiment, so the model should not have declined.",
+   "tokensIn": 3107,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-25": {
+   "id": "test-25",
+   "question": "Why must exposures and conversion events in an experiment use the same user identifier?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Run an Experiment",
+    "Run an Experiment",
+    "Run an Experiment",
+    "Set Up an Experiment with a Coding Agent",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "The answer correctly identifies that exposures and conversion events must use the same identifier because they are joined per identity, as stated in the provided passages.",
+   "tokensIn": 3462,
+   "tokensOut": 20,
+   "costUsd": 0
+  },
+  "test-23": {
+   "id": "test-23",
+   "question": "What happens when flagsmith.init is called with no cache available and the API returns an invalid response?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith iOS SDK",
+    "SDKs & Implementation - FAQ",
+    "Flagsmith Android/Kotlin SDK",
+    "Billing and API Usage"
+   ],
+   "judgeReason": "The answer accurately reflects the information provided in the passage regarding the behavior of the flagsmith.init promise.",
+   "tokensIn": 1861,
+   "tokensOut": 38,
+   "costUsd": 0
+  },
+  "test-28": {
+   "id": "test-28",
+   "question": "What is the Environment Document used by server-side SDKs?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "SDKs Overview",
+    "Edge Proxy",
+    "Billing and API Usage",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer accurately describes the Environment Document based on the provided passages.",
+   "tokensIn": 1760,
+   "tokensOut": 94,
+   "costUsd": 0
+  },
+  "test-29": {
+   "id": "test-29",
+   "question": "What information does the JavaScript SDK onChange callback receive when flags are retrieved?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the parameters received by the onChange callback as specified in the provided documentation.",
+   "tokensIn": 2177,
+   "tokensOut": 87,
+   "costUsd": 0
+  },
+  "test-30": {
+   "id": "test-30",
+   "question": "How do I use the Flagsmith SDK in a COBOL program running on a mainframe?",
+   "goldPages": [],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Testing with Feature Flags",
+    "SDKs Overview",
+    "Testing with Feature Flags",
+    "Segment Rule Operators",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1630,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-27": {
+   "id": "test-27",
+   "question": "Which type of environment key must I use to run a server-side SDK in local evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Edge Proxy",
+    "SDKs Overview",
+    "SDKs Overview",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer correctly identifies that a Server-side SDK Key is required for local evaluation mode and cites the provided passage.",
+   "tokensIn": 1696,
+   "tokensOut": 36,
+   "costUsd": 0
+  },
+  "test-31": {
+   "id": "test-31",
+   "question": "Why might my application not see flag changes immediately, and how can it be notified of updates without repeatedly calling the API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith JavaScript SDK",
+    "Integration Approaches",
+    "Billing and API Usage",
+    "Run an Experiment"
+   ],
+   "judgeReason": "The answer accurately explains why flag changes aren't seen immediately due to caching and provides the steps to enable real-time updates as described in the passages.",
+   "tokensIn": 1399,
+   "tokensOut": 154,
+   "costUsd": 0
+  },
+  "test-37": {
+   "id": "test-37",
+   "question": "My JavaScript app does not pick up new flags on its own. What does startListening do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Datadog Integration",
+    "Cohort Synchronisation",
+    "Flag Naming Conventions",
+    "Set Up an Experiment with a Coding Agent",
+    "Sizing and Scaling"
+   ],
+   "judgeReason": "The provided passages do not contain information about the 'startListening' function, so the model correctly stated it could not find the information, even though the reference answer suggests it should be known.",
+   "tokensIn": 3264,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-39": {
+   "id": "test-39",
+   "question": "How do I open a Flagsmith support ticket by phone, and what are the phone support hours?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Jira Integration",
+    "Jira Integration",
+    "Connect a Warehouse",
+    "Help and Support",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1386,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-40": {
+   "id": "test-40",
+   "question": "Why did Flagsmith email me a coupon code for 50 percent off, and how do I redeem it?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Run Flagsmith Locally with a Coding Agent",
+    "When to use Feature Flags",
+    "Set Up an Experiment with a Coding Agent",
+    "SCIM provisioning",
+    "When to use Feature Flags"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 3931,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-12": {
+   "id": "test-12",
+   "question": "Can one identity belong to several segments at the same time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Cohort Synchronisation",
+    "Segments",
+    "User & Identity Management - FAQ",
+    "SAML single sign-on (SSO)",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "The answer correctly and faithfully answers the question based on the provided passages.",
+   "tokensIn": 1712,
+   "tokensOut": 18,
+   "costUsd": 0
+  },
+  "test-26": {
+   "id": "test-26",
+   "question": "Which minimum version of the Node.js SDK supports Flagsmith experimentation?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Experimentation",
+    "Segment Rule Operators",
+    "Help and Support",
+    "Deploying Flagsmith on Google Cloud",
+    "Help and Support"
+   ],
+   "judgeReason": "The provided passages do not specify the exact minimum version (9.1.0), so the answer correctly cites passage [1] directing to the documentation, though it lacks the specific version number from the reference answer.",
+   "tokensIn": 1716,
+   "tokensOut": 33,
+   "costUsd": 0
+  },
+  "test-32": {
+   "id": "test-32",
+   "question": "What subscription is required for real-time flag updates, and where are they enabled?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith iOS SDK",
+    "Real-time flag updates",
+    "Real-time flag updates",
+    "Real-time flag updates"
+   ],
+   "judgeReason": "The answer accurately states that an Enterprise subscription is required and provides the exact steps in the dashboard to enable real-time flag updates, matching both the reference answer and passages.",
+   "tokensIn": 1706,
+   "tokensOut": 68,
+   "costUsd": 0
+  },
+  "test-33": {
+   "id": "test-33",
+   "question": "A feature in my project has been tagged Stale. How do I remove the tag, or keep a feature from being marked stale?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately and faithfully explains how to remove the Stale tag and how to prevent a feature from being marked as stale using permanent tags based on the provided passages.",
+   "tokensIn": 1402,
+   "tokensOut": 76,
+   "costUsd": 0
+  },
+  "test-34": {
+   "id": "test-34",
+   "question": "What plan and prerequisite does Stale Flag Detection require?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Stale Flag Detection",
+    "Flag Dependencies",
+    "Stale Flag Detection",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately provides the required plans and prerequisite as stated in the reference answer and passages.",
+   "tokensIn": 1329,
+   "tokensOut": 37,
+   "costUsd": 0
+  },
+  "test-35": {
+   "id": "test-35",
+   "question": "How can I make a flag change take effect automatically at a future time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/scheduled-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Experimental: Updating Flags",
+    "Feature Flags Lifecycles"
+   ],
+   "judgeReason": "The answer correctly and faithfully explains how to use scheduled flags to apply flag changes automatically at a future time.",
+   "tokensIn": 1489,
+   "tokensOut": 172,
+   "costUsd": 0
+  },
+  "test-38": {
+   "id": "test-38",
+   "question": "How should I pass a user's email address when querying feature flags for that user?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Role-based access control",
+    "SCIM provisioning",
+    "Email Setup",
+    "SCIM provisioning"
+   ],
+   "judgeReason": "The answer accurately states the method to use and how the email acts as the Identity ID, directly matching the reference answer and supported by the context.",
+   "tokensIn": 1881,
+   "tokensOut": 29,
+   "costUsd": 0
+  },
+  "test-36": {
+   "id": "test-36",
+   "question": "In the React SDK, how can I initialise Flagsmith without immediately fetching flags?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the 'preventFetch' option in 'flagsmith.init' to initialize the SDK without fetching flags, as supported by the provided passages.",
+   "tokensIn": 1897,
+   "tokensOut": 27,
+   "costUsd": 0
+  }
+ },
+ "C5": {
+  "test-04": {
+   "id": "test-04",
+   "question": "To access a Docker-hosted Flagsmith instance remotely, which dashboard environment variable tells the dashboard where the REST API is located?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Edge Proxy",
+    "Docker",
+    "Running Flagsmith on Flagsmith",
+    "Docker"
+   ],
+   "judgeReason": "The answer correctly identifies the API_URL environment variable as the one used to point the dashboard to the REST API, as supported by the provided passage.",
+   "tokensIn": 1875,
+   "tokensOut": 32,
+   "costUsd": 0
+  },
+  "test-06": {
+   "id": "test-06",
+   "question": "What must I set so I can log in to the Django admin of a Docker install with an email and password?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Django Admin",
+    "Docker",
+    "Initial Setup",
+    "Authentication",
+    "Authentication"
+   ],
+   "judgeReason": "The answer correctly identifies the required environment variable and mentions the need to restart the service, as supported by the provided passages.",
+   "tokensIn": 1602,
+   "tokensOut": 43,
+   "costUsd": 0
+  },
+  "test-10": {
+   "id": "test-10",
+   "question": "How do I install Flagsmith on a Synology NAS using the Synology Package Center?",
+   "goldPages": [],
+   "category": "setup",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Kubernetes and OpenShift",
+    "Server Side SDKs",
+    "Flagsmith Flutter SDK",
+    "Run an Experiment",
+    "Server Side SDKs"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 2320,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-12": {
+   "id": "test-12",
+   "question": "Can one identity belong to several segments at the same time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Cohort Synchronisation",
+    "Segments",
+    "User & Identity Management - FAQ",
+    "SAML single sign-on (SSO)",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "The answer correctly confirms that an identity can belong to multiple segments and cites the supporting passage.",
+   "tokensIn": 1712,
+   "tokensOut": 18,
+   "costUsd": 0
+  },
+  "test-13": {
+   "id": "test-13",
+   "question": "Why are no segment overrides applied when my user is not identified?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Mobile App Versioning",
+    "Run an Experiment",
+    "Change Requests",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "The answer accurately explains that segment overrides require user identification because they are based on identity traits, and it cites the provided passage correctly.",
+   "tokensIn": 1755,
+   "tokensOut": 58,
+   "costUsd": 0
+  },
+  "test-14": {
+   "id": "test-14",
+   "question": "Does the order of rules inside a segment matter?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview",
+    "Upgrades and Rollbacks",
+    "System Limits"
+   ],
+   "judgeReason": "The answer correctly states that the order of rules matters and provides the same example as the reference answer, supported by the provided passages.",
+   "tokensIn": 1718,
+   "tokensOut": 74,
+   "costUsd": 0
+  },
+  "test-17": {
+   "id": "test-17",
+   "question": "How do environments work in the Flagsmith data model?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/data-model"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Data Model",
+    "Data Model",
+    "Defensive Coding and Designing for Failure",
+    "Import and Export"
+   ],
+   "judgeReason": "The answer accurately describes the role of environments in the Flagsmith data model using the provided passages.",
+   "tokensIn": 1365,
+   "tokensOut": 111,
+   "costUsd": 0
+  },
+  "test-18": {
+   "id": "test-18",
+   "question": "What is a percentage (staged) rollout used for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Targeting and Rollouts",
+    "Segment Rule Operators",
+    "Targeting and Rollouts",
+    "Rollout by Percentage"
+   ],
+   "judgeReason": "The answer accurately summarizes the purpose of staged rollouts using the provided passages.",
+   "tokensIn": 1409,
+   "tokensOut": 114,
+   "costUsd": 0
+  },
+  "test-20": {
+   "id": "test-20",
+   "question": "What machine learning model does Flagsmith use to automatically recommend which flags to delete?",
+   "goldPages": [],
+   "category": "concepts",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Import and Export",
+    "Scheduled Flags",
+    "GitLab Integration",
+    "Quick Start",
+    "Deploying Flagsmith on Google Cloud"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1208,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-01": {
+   "id": "test-01",
+   "question": "Where do I log in to use the Flagsmith SaaS platform?",
+   "goldPages": [
+    "https://docs.flagsmith.com/getting-started/quick-start"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Quick Start",
+    "Platform Architecture",
+    "Platform Architecture",
+    "Infrastructure & API - FAQ",
+    "Platform Architecture"
+   ],
+   "judgeReason": "The answer accurately states the login URL for the Flagsmith SaaS platform based directly on the provided context.",
+   "tokensIn": 1765,
+   "tokensOut": 22,
+   "costUsd": 0
+  },
+  "test-02": {
+   "id": "test-02",
+   "question": "How can I try out Flagsmith experimentation in a self-hosted Docker install without connecting a data warehouse?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Kubernetes and OpenShift",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Experimentation",
+    "Self-Hosting and Open Source"
+   ],
+   "judgeReason": "The answer correctly and faithfully answers the prompt using facts entirely supported by the provided passages.",
+   "tokensIn": 1580,
+   "tokensOut": 181,
+   "costUsd": 0
+  },
+  "test-03": {
+   "id": "test-03",
+   "question": "In the Docker Compose setup, which port serves the combined frontend dashboard and REST API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Docker",
+    "MCP Server",
+    "MCP Server",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "The answer correctly identifies port 8000, which is fully supported by the provided passages.",
+   "tokensIn": 2670,
+   "tokensOut": 23,
+   "costUsd": 0
+  },
+  "test-05": {
+   "id": "test-05",
+   "question": "Which CPU architectures are Flagsmith Docker images built for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "CVEs and Vulnerabilities",
+    "Enterprise Edition",
+    "Organisations Import and Export",
+    "Enterprise Edition"
+   ],
+   "judgeReason": "The answer accurately lists all three CPU architectures mentioned in the reference answer and supported by the context.",
+   "tokensIn": 1646,
+   "tokensOut": 47,
+   "costUsd": 0
+  },
+  "test-07": {
+   "id": "test-07",
+   "question": "What is an experiment metric in Flagsmith, and what aggregation types can it use?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/create-metrics"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Create Metrics",
+    " Mcp Tool Catalogue",
+    "Experimentation",
+    "Statistics Glossary",
+    "Create an Experiment"
+   ],
+   "judgeReason": "The answer accurately describes what an experiment metric is and correctly lists all four aggregation types with their definitions based on the provided passages.",
+   "tokensIn": 1739,
+   "tokensOut": 147,
+   "costUsd": 0
+  },
+  "test-23": {
+   "id": "test-23",
+   "question": "What happens when flagsmith.init is called with no cache available and the API returns an invalid response?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith iOS SDK",
+    "SDKs & Implementation - FAQ",
+    "Flagsmith Android/Kotlin SDK",
+    "Billing and API Usage"
+   ],
+   "judgeReason": "The answer accurately states that the promise will reject, fully matching the reference answer and supported by the provided text.",
+   "tokensIn": 1861,
+   "tokensOut": 27,
+   "costUsd": 0
+  },
+  "test-25": {
+   "id": "test-25",
+   "question": "Why must exposures and conversion events in an experiment use the same user identifier?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Run an Experiment",
+    "Run an Experiment",
+    "Run an Experiment",
+    "Set Up an Experiment with a Coding Agent",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "The answer correctly and faithfully states that exposures and conversion events are joined per identity, matching the reference answer and source passage.",
+   "tokensIn": 3462,
+   "tokensOut": 24,
+   "costUsd": 0
+  },
+  "test-28": {
+   "id": "test-28",
+   "question": "What is the Environment Document used by server-side SDKs?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "SDKs Overview",
+    "Edge Proxy",
+    "Billing and API Usage",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer accurately describes the Environment Document and its use in Local Evaluation mode based directly on the provided passages.",
+   "tokensIn": 1760,
+   "tokensOut": 97,
+   "costUsd": 0
+  },
+  "test-30": {
+   "id": "test-30",
+   "question": "How do I use the Flagsmith SDK in a COBOL program running on a mainframe?",
+   "goldPages": [],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Testing with Feature Flags",
+    "SDKs Overview",
+    "Testing with Feature Flags",
+    "Segment Rule Operators",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1630,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-33": {
+   "id": "test-33",
+   "question": "A feature in my project has been tagged Stale. How do I remove the tag, or keep a feature from being marked stale?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately explains how to remove the Stale tag and how to prevent a feature from being marked as stale, fully supported by the context.",
+   "tokensIn": 1402,
+   "tokensOut": 104,
+   "costUsd": 0
+  },
+  "test-39": {
+   "id": "test-39",
+   "question": "How do I open a Flagsmith support ticket by phone, and what are the phone support hours?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Jira Integration",
+    "Jira Integration",
+    "Connect a Warehouse",
+    "Help and Support",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1386,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-40": {
+   "id": "test-40",
+   "question": "Why did Flagsmith email me a coupon code for 50 percent off, and how do I redeem it?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Run Flagsmith Locally with a Coding Agent",
+    "When to use Feature Flags",
+    "Set Up an Experiment with a Coding Agent",
+    "SCIM provisioning",
+    "When to use Feature Flags"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 3931,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-08": {
+   "id": "test-08",
+   "question": "What does the Flagsmith coding-agent setup prompt do to get an A/B test running?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/set-up-with-a-coding-agent"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Set Up an Experiment with a Coding Agent",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Connect ClickHouse",
+    "Connect PostgreSQL",
+    "Experimentation"
+   ],
+   "judgeReason": "The answer accurately summarizes the steps performed by the coding-agent setup prompt as described in the provided passages.",
+   "tokensIn": 1990,
+   "tokensOut": 143,
+   "costUsd": 0
+  },
+  "test-16": {
+   "id": "test-16",
+   "question": "Why are segment definitions not included in API responses when using remote evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview",
+    "SDKs Overview",
+    "Server Side SDKs"
+   ],
+   "judgeReason": "The answer accurately explains that segment definitions are excluded from remote evaluation API responses to protect potentially sensitive or proprietary information.",
+   "tokensIn": 1798,
+   "tokensOut": 35,
+   "costUsd": 0
+  },
+  "test-09": {
+   "id": "test-09",
+   "question": "Which data warehouses can I connect to Flagsmith for experimentation data?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/connect-a-warehouse"
+   ],
+   "category": "setup",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    " Events Catalogue",
+    "Platform Architecture",
+    "Experimentation",
+    "Connect Databricks",
+    "Kubernetes and OpenShift"
+   ],
+   "judgeReason": "The answer is correct as far as it goes, but it misses the built-in Flagsmith database mentioned in the reference answer and supported by the provided passages.",
+   "tokensIn": 2085,
+   "tokensOut": 21,
+   "costUsd": 0
+  },
+  "test-11": {
+   "id": "test-11",
+   "question": "What is an identity override in Flagsmith?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/identities"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Edge Proxy",
+    "Identities",
+    "Segments",
+    "Identities",
+    "Segments"
+   ],
+   "judgeReason": "The answer accurately defines an identity override using the provided passages.",
+   "tokensIn": 1618,
+   "tokensOut": 38,
+   "costUsd": 0
+  },
+  "test-15": {
+   "id": "test-15",
+   "question": "What is the difference between a project segment and a feature-specific segment?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "Frequently Asked Questions",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks"
+   ],
+   "judgeReason": "The answer accurately describes the differences and similarities between project segments and feature-specific segments as provided in the passages.",
+   "tokensIn": 1666,
+   "tokensOut": 107,
+   "costUsd": 0
+  },
+  "test-19": {
+   "id": "test-19",
+   "question": "If I increase a segment's percentage split from 30 percent to 40 percent, will identities already in the segment stay in it?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Create an Experiment",
+    "Example: Testing a PayPal Button",
+    "Rollout by Percentage",
+    "Rollout by Percentage"
+   ],
+   "judgeReason": "The answer correctly explains that identities remain in the segment because the hashing process is deterministic and the segment ID remains constant, supported by the provided passage.",
+   "tokensIn": 1618,
+   "tokensOut": 82,
+   "costUsd": 0
+  },
+  "test-21": {
+   "id": "test-21",
+   "question": "In the JavaScript SDK, what does the cacheFlags option do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith React SDK"
+   ],
+   "judgeReason": "The answer accurately describes the functionality of the cacheFlags option and the associated flow as detailed in the provided passages.",
+   "tokensIn": 2390,
+   "tokensOut": 175,
+   "costUsd": 0
+  },
+  "test-22": {
+   "id": "test-22",
+   "question": "What is the defaultFlags option in the JavaScript SDK for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Server Side SDKs",
+    "Server Side SDKs",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the purpose of the defaultFlags option based on the provided passages.",
+   "tokensIn": 2907,
+   "tokensOut": 59,
+   "costUsd": 0
+  },
+  "test-24": {
+   "id": "test-24",
+   "question": "In a Flagsmith experiment, what is the difference between getExperimentFlag and trackEvent?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Statistics Glossary",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks",
+    "Frequently Asked Questions",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "The provided passages contain enough information to infer the roles of these functions in the context of an experiment, so the model should not have declined.",
+   "tokensIn": 3107,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-26": {
+   "id": "test-26",
+   "question": "Which minimum version of the Node.js SDK supports Flagsmith experimentation?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Experimentation",
+    "Segment Rule Operators",
+    "Help and Support",
+    "Deploying Flagsmith on Google Cloud",
+    "Help and Support"
+   ],
+   "judgeReason": "The provided passages do not contain the specific version number required for experimentation, and the answer fails to provide the information requested.",
+   "tokensIn": 1716,
+   "tokensOut": 28,
+   "costUsd": 0
+  },
+  "test-27": {
+   "id": "test-27",
+   "question": "Which type of environment key must I use to run a server-side SDK in local evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Edge Proxy",
+    "SDKs Overview",
+    "SDKs Overview",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer correctly identifies that a Server-side SDK Key is required for local evaluation mode and cites the provided passage.",
+   "tokensIn": 1696,
+   "tokensOut": 36,
+   "costUsd": 0
+  },
+  "test-29": {
+   "id": "test-29",
+   "question": "What information does the JavaScript SDK onChange callback receive when flags are retrieved?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the parameters received by the onChange callback as specified in the provided documentation.",
+   "tokensIn": 2177,
+   "tokensOut": 87,
+   "costUsd": 0
+  },
+  "test-31": {
+   "id": "test-31",
+   "question": "Why might my application not see flag changes immediately, and how can it be notified of updates without repeatedly calling the API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith JavaScript SDK",
+    "Integration Approaches",
+    "Billing and API Usage",
+    "Run an Experiment"
+   ],
+   "judgeReason": "The answer accurately explains why flag changes might not be seen immediately due to caching and provides the correct steps to enable real-time updates as described in the passages.",
+   "tokensIn": 1399,
+   "tokensOut": 148,
+   "costUsd": 0
+  },
+  "test-32": {
+   "id": "test-32",
+   "question": "What subscription is required for real-time flag updates, and where are they enabled?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith iOS SDK",
+    "Real-time flag updates",
+    "Real-time flag updates",
+    "Real-time flag updates"
+   ],
+   "judgeReason": "The answer correctly identifies the subscription and dashboard settings, but fails to mention that applications must also opt in via their respective SDKs as noted in the reference answer and passage 1.",
+   "tokensIn": 1706,
+   "tokensOut": 68,
+   "costUsd": 0
+  },
+  "test-34": {
+   "id": "test-34",
+   "question": "What plan and prerequisite does Stale Flag Detection require?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Stale Flag Detection",
+    "Flag Dependencies",
+    "Stale Flag Detection",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately identifies the required plans and the prerequisite mentioned in the provided passages.",
+   "tokensIn": 1329,
+   "tokensOut": 37,
+   "costUsd": 0
+  },
+  "test-35": {
+   "id": "test-35",
+   "question": "How can I make a flag change take effect automatically at a future time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/scheduled-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Experimental: Updating Flags",
+    "Feature Flags Lifecycles"
+   ],
+   "judgeReason": "The answer accurately describes the two methods for scheduling flag changes and correctly identifies the plan requirements based on the provided passages.",
+   "tokensIn": 1489,
+   "tokensOut": 175,
+   "costUsd": 0
+  },
+  "test-36": {
+   "id": "test-36",
+   "question": "In the React SDK, how can I initialise Flagsmith without immediately fetching flags?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the 'preventFetch' option in 'flagsmith.init' to prevent immediate flag fetching, as supported by the provided passages.",
+   "tokensIn": 1897,
+   "tokensOut": 25,
+   "costUsd": 0
+  },
+  "test-37": {
+   "id": "test-37",
+   "question": "My JavaScript app does not pick up new flags on its own. What does startListening do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Datadog Integration",
+    "Cohort Synchronisation",
+    "Flag Naming Conventions",
+    "Set Up an Experiment with a Coding Agent",
+    "Sizing and Scaling"
+   ],
+   "judgeReason": "The provided passages do not contain information about the 'startListening' function, so the model correctly stated it could not find the information, even though the reference answer suggests it should be known.",
+   "tokensIn": 3264,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-38": {
+   "id": "test-38",
+   "question": "How should I pass a user's email address when querying feature flags for that user?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Role-based access control",
+    "SCIM provisioning",
+    "Email Setup",
+    "SCIM provisioning"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the identify method and cites the provided passage.",
+   "tokensIn": 1881,
+   "tokensOut": 29,
+   "costUsd": 0
+  }
+ },
+ "C6": {
+  "test-07": {
+   "id": "test-07",
+   "question": "What is an experiment metric in Flagsmith, and what aggregation types can it use?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/create-metrics"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Create Metrics",
+    " Mcp Tool Catalogue",
+    "Experimentation"
+   ],
+   "judgeReason": "The answer correctly and accurately defines an experiment metric in Flagsmith and lists all four of its aggregation types with correct descriptions based on the passages.",
+   "tokensIn": 1269,
+   "tokensOut": 114,
+   "costUsd": 0
+  },
+  "test-01": {
+   "id": "test-01",
+   "question": "Where do I log in to use the Flagsmith SaaS platform?",
+   "goldPages": [
+    "https://docs.flagsmith.com/getting-started/quick-start"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Quick Start",
+    "Platform Architecture",
+    "Platform Architecture"
+   ],
+   "judgeReason": "The answer is correct but incomplete as it omits the information about self-hosting provided in the reference answer.",
+   "tokensIn": 1188,
+   "tokensOut": 22,
+   "costUsd": 0
+  },
+  "test-02": {
+   "id": "test-02",
+   "question": "How can I try out Flagsmith experimentation in a self-hosted Docker install without connecting a data warehouse?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Kubernetes and OpenShift",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "The answer accurately describes the process for trying out experimentation in a self-hosted Docker install using the Flagsmith database as described in the provided passages.",
+   "tokensIn": 1010,
+   "tokensOut": 89,
+   "costUsd": 0
+  },
+  "test-03": {
+   "id": "test-03",
+   "question": "In the Docker Compose setup, which port serves the combined frontend dashboard and REST API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Docker",
+    "MCP Server"
+   ],
+   "judgeReason": "The answer correctly identifies port 8000 as the port used for the combined service based on the provided passages.",
+   "tokensIn": 1096,
+   "tokensOut": 25,
+   "costUsd": 0
+  },
+  "test-04": {
+   "id": "test-04",
+   "question": "To access a Docker-hosted Flagsmith instance remotely, which dashboard environment variable tells the dashboard where the REST API is located?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Edge Proxy",
+    "Docker"
+   ],
+   "judgeReason": "The answer correctly identifies the API_URL environment variable as the one used to point the dashboard to the REST API, as supported by the provided passage.",
+   "tokensIn": 1236,
+   "tokensOut": 27,
+   "costUsd": 0
+  },
+  "test-05": {
+   "id": "test-05",
+   "question": "Which CPU architectures are Flagsmith Docker images built for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "CVEs and Vulnerabilities",
+    "Enterprise Edition"
+   ],
+   "judgeReason": "The answer accurately lists the CPU architectures provided in the source text.",
+   "tokensIn": 1088,
+   "tokensOut": 38,
+   "costUsd": 0
+  },
+  "test-06": {
+   "id": "test-06",
+   "question": "What must I set so I can log in to the Django admin of a Docker install with an email and password?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Django Admin",
+    "Docker",
+    "Initial Setup"
+   ],
+   "judgeReason": "The answer correctly identifies the required environment variable and the need to restart the service as specified in the provided passages.",
+   "tokensIn": 1131,
+   "tokensOut": 43,
+   "costUsd": 0
+  },
+  "test-08": {
+   "id": "test-08",
+   "question": "What does the Flagsmith coding-agent setup prompt do to get an A/B test running?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/set-up-with-a-coding-agent"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Set Up an Experiment with a Coding Agent",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Connect ClickHouse"
+   ],
+   "judgeReason": "The answer accurately summarizes the steps of the coding-agent setup prompt as described in the provided passages.",
+   "tokensIn": 1264,
+   "tokensOut": 127,
+   "costUsd": 0
+  },
+  "test-09": {
+   "id": "test-09",
+   "question": "Which data warehouses can I connect to Flagsmith for experimentation data?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/connect-a-warehouse"
+   ],
+   "category": "setup",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    " Events Catalogue",
+    "Platform Architecture",
+    "Experimentation"
+   ],
+   "judgeReason": "The answer omits PostgreSQL, which is identified as a supported warehouse in the reference answer and supported by the file paths in the provided passage.",
+   "tokensIn": 1414,
+   "tokensOut": 32,
+   "costUsd": 0
+  },
+  "test-10": {
+   "id": "test-10",
+   "question": "How do I install Flagsmith on a Synology NAS using the Synology Package Center?",
+   "goldPages": [],
+   "category": "setup",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Kubernetes and OpenShift",
+    "Server Side SDKs",
+    "Flagsmith Flutter SDK"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1298,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-11": {
+   "id": "test-11",
+   "question": "What is an identity override in Flagsmith?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/identities"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Edge Proxy",
+    "Identities",
+    "Segments"
+   ],
+   "judgeReason": "The answer accurately defines identity overrides based on the provided passages.",
+   "tokensIn": 1054,
+   "tokensOut": 58,
+   "costUsd": 0
+  },
+  "test-12": {
+   "id": "test-12",
+   "question": "Can one identity belong to several segments at the same time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Cohort Synchronisation",
+    "Segments",
+    "User & Identity Management - FAQ"
+   ],
+   "judgeReason": "The answer correctly confirms that an identity can belong to multiple segments and cites the supporting passage.",
+   "tokensIn": 1138,
+   "tokensOut": 18,
+   "costUsd": 0
+  },
+  "test-13": {
+   "id": "test-13",
+   "question": "Why are no segment overrides applied when my user is not identified?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Mobile App Versioning",
+    "Run an Experiment"
+   ],
+   "judgeReason": "The answer accurately explains that segment overrides require user identification because they rely on identity traits, as stated in the provided passage.",
+   "tokensIn": 1123,
+   "tokensOut": 57,
+   "costUsd": 0
+  },
+  "test-14": {
+   "id": "test-14",
+   "question": "Does the order of rules inside a segment matter?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer correctly states that the order of rules matters and explains that the evaluation order affects identity selection, supported by the provided passages.",
+   "tokensIn": 1087,
+   "tokensOut": 32,
+   "costUsd": 0
+  },
+  "test-15": {
+   "id": "test-15",
+   "question": "What is the difference between a project segment and a feature-specific segment?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "Frequently Asked Questions"
+   ],
+   "judgeReason": "The answer accurately captures all the differences and similarities between project segments and feature-specific segments as described in the provided passages.",
+   "tokensIn": 1028,
+   "tokensOut": 142,
+   "costUsd": 0
+  },
+  "test-16": {
+   "id": "test-16",
+   "question": "Why are segment definitions not included in API responses when using remote evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer accurately explains that segment definitions are excluded from remote evaluation API responses to prevent the exposure of potentially sensitive or proprietary information.",
+   "tokensIn": 935,
+   "tokensOut": 42,
+   "costUsd": 0
+  },
+  "test-17": {
+   "id": "test-17",
+   "question": "How do environments work in the Flagsmith data model?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/data-model"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Data Model",
+    "Data Model"
+   ],
+   "judgeReason": "The answer accurately describes how environments work in the Flagsmith data model using the provided passages.",
+   "tokensIn": 904,
+   "tokensOut": 99,
+   "costUsd": 0
+  },
+  "test-18": {
+   "id": "test-18",
+   "question": "What is a percentage (staged) rollout used for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Targeting and Rollouts",
+    "Segment Rule Operators"
+   ],
+   "judgeReason": "The answer accurately summarizes the purpose of staged rollouts using the provided passages.",
+   "tokensIn": 1062,
+   "tokensOut": 63,
+   "costUsd": 0
+  },
+  "test-19": {
+   "id": "test-19",
+   "question": "If I increase a segment's percentage split from 30 percent to 40 percent, will identities already in the segment stay in it?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Create an Experiment",
+    "Example: Testing a PayPal Button"
+   ],
+   "judgeReason": "The answer correctly explains that identities remain in the segment due to the consistent hashing algorithm and the fact that the segment ID does not change.",
+   "tokensIn": 1113,
+   "tokensOut": 55,
+   "costUsd": 0
+  },
+  "test-20": {
+   "id": "test-20",
+   "question": "What machine learning model does Flagsmith use to automatically recommend which flags to delete?",
+   "goldPages": [],
+   "category": "concepts",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Import and Export",
+    "Scheduled Flags",
+    "GitLab Integration"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 643,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-21": {
+   "id": "test-21",
+   "question": "In the JavaScript SDK, what does the cacheFlags option do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the functionality of the cacheFlags option and its requirements based on the provided passages.",
+   "tokensIn": 1459,
+   "tokensOut": 67,
+   "costUsd": 0
+  },
+  "test-22": {
+   "id": "test-22",
+   "question": "What is the defaultFlags option in the JavaScript SDK for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Server Side SDKs",
+    "Server Side SDKs",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the purpose of the defaultFlags option as stated in the provided passages.",
+   "tokensIn": 1934,
+   "tokensOut": 41,
+   "costUsd": 0
+  },
+  "test-23": {
+   "id": "test-23",
+   "question": "What happens when flagsmith.init is called with no cache available and the API returns an invalid response?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith iOS SDK",
+    "SDKs & Implementation - FAQ"
+   ],
+   "judgeReason": "The answer accurately reflects the information provided in the passage regarding the behavior of flagsmith.init since version 4.0.0.",
+   "tokensIn": 1164,
+   "tokensOut": 54,
+   "costUsd": 0
+  },
+  "test-24": {
+   "id": "test-24",
+   "question": "In a Flagsmith experiment, what is the difference between getExperimentFlag and trackEvent?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Statistics Glossary",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks"
+   ],
+   "judgeReason": "The provided passages do not contain information about the functions 'getExperimentFlag' or 'trackEvent', so the model correctly declined to answer.",
+   "tokensIn": 1095,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-25": {
+   "id": "test-25",
+   "question": "Why must exposures and conversion events in an experiment use the same user identifier?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Run an Experiment",
+    "Run an Experiment",
+    "Run an Experiment"
+   ],
+   "judgeReason": "The answer correctly identifies that exposures and conversion events are joined per identity, which is the reason they must use the same identifier.",
+   "tokensIn": 1427,
+   "tokensOut": 21,
+   "costUsd": 0
+  },
+  "test-26": {
+   "id": "test-26",
+   "question": "Which minimum version of the Node.js SDK supports Flagsmith experimentation?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Experimentation",
+    "Segment Rule Operators",
+    "Help and Support"
+   ],
+   "judgeReason": "The answer states it could not find the information, but the reference answer provides specific version details that were available to be retrieved if the model had access to external knowledge or if the context provided was sufficient.",
+   "tokensIn": 1119,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-27": {
+   "id": "test-27",
+   "question": "Which type of environment key must I use to run a server-side SDK in local evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Edge Proxy",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer incorrectly states the information is not in the documentation, even though the passages explain that server-side SDKs (which use server-side keys) are the ones that can operate in Local Evaluation mode.",
+   "tokensIn": 942,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-28": {
+   "id": "test-28",
+   "question": "What is the Environment Document used by server-side SDKs?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "SDKs Overview",
+    "Edge Proxy"
+   ],
+   "judgeReason": "The answer identifies how the document is used but fails to explain what it is (a JSON document containing flag configuration and segment definitions) as requested by the question.",
+   "tokensIn": 1102,
+   "tokensOut": 24,
+   "costUsd": 0
+  },
+  "test-29": {
+   "id": "test-29",
+   "question": "What information does the JavaScript SDK onChange callback receive when flags are retrieved?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the parameters received by the onChange callback as specified in the provided documentation.",
+   "tokensIn": 1209,
+   "tokensOut": 95,
+   "costUsd": 0
+  },
+  "test-30": {
+   "id": "test-30",
+   "question": "How do I use the Flagsmith SDK in a COBOL program running on a mainframe?",
+   "goldPages": [],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Testing with Feature Flags",
+    "SDKs Overview",
+    "Testing with Feature Flags"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 965,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-31": {
+   "id": "test-31",
+   "question": "Why might my application not see flag changes immediately, and how can it be notified of updates without repeatedly calling the API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith JavaScript SDK",
+    "Integration Approaches"
+   ],
+   "judgeReason": "The answer accurately explains why flag changes are not seen immediately due to caching and provides the correct steps and requirements for enabling real-time updates as described in the passages.",
+   "tokensIn": 957,
+   "tokensOut": 147,
+   "costUsd": 0
+  },
+  "test-32": {
+   "id": "test-32",
+   "question": "What subscription is required for real-time flag updates, and where are they enabled?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith iOS SDK",
+    "Real-time flag updates"
+   ],
+   "judgeReason": "The answer correctly identifies the subscription and dashboard settings, but fails to mention that the application must also opt in via its SDK, which is a key part of the reference answer and provided passages.",
+   "tokensIn": 1053,
+   "tokensOut": 66,
+   "costUsd": 0
+  },
+  "test-33": {
+   "id": "test-33",
+   "question": "A feature in my project has been tagged Stale. How do I remove the tag, or keep a feature from being marked stale?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately explains how to remove the stale tag and how to prevent features from being marked as stale using permanent tags, as supported by the provided passages.",
+   "tokensIn": 1010,
+   "tokensOut": 81,
+   "costUsd": 0
+  },
+  "test-34": {
+   "id": "test-34",
+   "question": "What plan and prerequisite does Stale Flag Detection require?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Stale Flag Detection",
+    "Flag Dependencies"
+   ],
+   "judgeReason": "The answer accurately identifies the required plans and the prerequisite of Feature Versioning as stated in the provided passages.",
+   "tokensIn": 837,
+   "tokensOut": 43,
+   "costUsd": 0
+  },
+  "test-35": {
+   "id": "test-35",
+   "question": "How can I make a flag change take effect automatically at a future time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/scheduled-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Scheduled Flags"
+   ],
+   "judgeReason": "The answer accurately describes the two methods for scheduling flag changes and correctly identifies the plan requirements based on the provided passages.",
+   "tokensIn": 853,
+   "tokensOut": 186,
+   "costUsd": 0
+  },
+  "test-36": {
+   "id": "test-36",
+   "question": "In the React SDK, how can I initialise Flagsmith without immediately fetching flags?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the 'preventFetch' option as described in the provided passage.",
+   "tokensIn": 1327,
+   "tokensOut": 25,
+   "costUsd": 0
+  },
+  "test-37": {
+   "id": "test-37",
+   "question": "My JavaScript app does not pick up new flags on its own. What does startListening do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Datadog Integration",
+    "Cohort Synchronisation",
+    "Flag Naming Conventions"
+   ],
+   "judgeReason": "The provided passages do not contain information about the 'startListening' method, so the model correctly declined to answer.",
+   "tokensIn": 1220,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-38": {
+   "id": "test-38",
+   "question": "How should I pass a user's email address when querying feature flags for that user?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Role-based access control",
+    "SCIM provisioning"
+   ],
+   "judgeReason": "The answer correctly identifies the method to use and cites the provided passage.",
+   "tokensIn": 1106,
+   "tokensOut": 29,
+   "costUsd": 0
+  },
+  "test-39": {
+   "id": "test-39",
+   "question": "How do I open a Flagsmith support ticket by phone, and what are the phone support hours?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Jira Integration",
+    "Jira Integration",
+    "Connect a Warehouse"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 856,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-40": {
+   "id": "test-40",
+   "question": "Why did Flagsmith email me a coupon code for 50 percent off, and how do I redeem it?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Run Flagsmith Locally with a Coding Agent",
+    "When to use Feature Flags",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 3357,
+   "tokensOut": 11,
+   "costUsd": 0
+  }
+ },
+ "C7": {
+  "test-01": {
+   "id": "test-01",
+   "question": "Where do I log in to use the Flagsmith SaaS platform?",
+   "goldPages": [
+    "https://docs.flagsmith.com/getting-started/quick-start"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Quick Start",
+    "Platform Architecture",
+    "Platform Architecture",
+    "Infrastructure & API - FAQ",
+    "Platform Architecture"
+   ],
+   "judgeReason": "The answer correctly identifies the login URL for the SaaS platform as provided in the source text.",
+   "tokensIn": 1765,
+   "tokensOut": 22,
+   "costUsd": 0
+  },
+  "test-02": {
+   "id": "test-02",
+   "question": "How can I try out Flagsmith experimentation in a self-hosted Docker install without connecting a data warehouse?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Kubernetes and OpenShift",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Experimentation",
+    "Self-Hosting and Open Source"
+   ],
+   "judgeReason": "The answer accurately describes the steps to enable experimentation using the Flagsmith database as a storage backend for self-hosted instances, as supported by the provided passages.",
+   "tokensIn": 1580,
+   "tokensOut": 167,
+   "costUsd": 0
+  },
+  "test-03": {
+   "id": "test-03",
+   "question": "In the Docker Compose setup, which port serves the combined frontend dashboard and REST API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Docker",
+    "MCP Server",
+    "MCP Server",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "The answer correctly identifies port 8000 as the port used for the dashboard and API, supported by the provided passages.",
+   "tokensIn": 2670,
+   "tokensOut": 23,
+   "costUsd": 0
+  },
+  "test-04": {
+   "id": "test-04",
+   "question": "To access a Docker-hosted Flagsmith instance remotely, which dashboard environment variable tells the dashboard where the REST API is located?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "Edge Proxy",
+    "Docker",
+    "Running Flagsmith on Flagsmith",
+    "Docker"
+   ],
+   "judgeReason": "The answer correctly identifies the API_URL environment variable as the required configuration to point the dashboard to the REST API.",
+   "tokensIn": 1875,
+   "tokensOut": 22,
+   "costUsd": 0
+  },
+  "test-05": {
+   "id": "test-05",
+   "question": "Which CPU architectures are Flagsmith Docker images built for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Docker",
+    "CVEs and Vulnerabilities",
+    "Enterprise Edition",
+    "Organisations Import and Export",
+    "Enterprise Edition"
+   ],
+   "judgeReason": "The answer accurately lists the CPU architectures supported by Flagsmith Docker images as stated in the provided passages.",
+   "tokensIn": 1646,
+   "tokensOut": 47,
+   "costUsd": 0
+  },
+  "test-06": {
+   "id": "test-06",
+   "question": "What must I set so I can log in to the Django admin of a Docker install with an email and password?",
+   "goldPages": [
+    "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Django Admin",
+    "Docker",
+    "Initial Setup",
+    "Authentication",
+    "Authentication"
+   ],
+   "judgeReason": "The answer correctly identifies the required environment variable and mentions the need to restart the service, as supported by the provided passages.",
+   "tokensIn": 1602,
+   "tokensOut": 43,
+   "costUsd": 0
+  },
+  "test-07": {
+   "id": "test-07",
+   "question": "What is an experiment metric in Flagsmith, and what aggregation types can it use?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/create-metrics"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Create Metrics",
+    " Mcp Tool Catalogue",
+    "Experimentation",
+    "Statistics Glossary",
+    "Create an Experiment"
+   ],
+   "judgeReason": "The answer accurately defines what an experiment metric is and lists the four aggregation types supported by Flagsmith, citing the provided passages.",
+   "tokensIn": 1739,
+   "tokensOut": 163,
+   "costUsd": 0
+  },
+  "test-08": {
+   "id": "test-08",
+   "question": "What does the Flagsmith coding-agent setup prompt do to get an A/B test running?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/set-up-with-a-coding-agent"
+   ],
+   "category": "setup",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Set Up an Experiment with a Coding Agent",
+    "Run Flagsmith Locally with a Coding Agent",
+    "Connect ClickHouse",
+    "Connect PostgreSQL",
+    "Experimentation"
+   ],
+   "judgeReason": "The answer accurately summarizes the steps taken by the coding-agent setup prompt as described in the provided passages.",
+   "tokensIn": 1990,
+   "tokensOut": 126,
+   "costUsd": 0
+  },
+  "test-09": {
+   "id": "test-09",
+   "question": "Which data warehouses can I connect to Flagsmith for experimentation data?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/connect-a-warehouse"
+   ],
+   "category": "setup",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    " Events Catalogue",
+    "Platform Architecture",
+    "Experimentation",
+    "Connect Databricks",
+    "Kubernetes and OpenShift"
+   ],
+   "judgeReason": "The answer is correct as far as it goes, but it misses the built-in Flagsmith database mentioned in the reference answer and supported by the provided passages.",
+   "tokensIn": 2085,
+   "tokensOut": 21,
+   "costUsd": 0
+  },
+  "test-10": {
+   "id": "test-10",
+   "question": "How do I install Flagsmith on a Synology NAS using the Synology Package Center?",
+   "goldPages": [],
+   "category": "setup",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Kubernetes and OpenShift",
+    "Server Side SDKs",
+    "Flagsmith Flutter SDK",
+    "Run an Experiment",
+    "Server Side SDKs"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 2320,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-11": {
+   "id": "test-11",
+   "question": "What is an identity override in Flagsmith?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/identities"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Edge Proxy",
+    "Identities",
+    "Segments",
+    "Identities",
+    "Segments"
+   ],
+   "judgeReason": "The answer accurately defines identity overrides based on the provided passages.",
+   "tokensIn": 1618,
+   "tokensOut": 67,
+   "costUsd": 0
+  },
+  "test-12": {
+   "id": "test-12",
+   "question": "Can one identity belong to several segments at the same time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Cohort Synchronisation",
+    "Segments",
+    "User & Identity Management - FAQ",
+    "SAML single sign-on (SSO)",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "The answer correctly confirms that an identity can belong to multiple segments and cites the supporting passage.",
+   "tokensIn": 1712,
+   "tokensOut": 18,
+   "costUsd": 0
+  },
+  "test-13": {
+   "id": "test-13",
+   "question": "Why are no segment overrides applied when my user is not identified?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Mobile App Versioning",
+    "Run an Experiment",
+    "Change Requests",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "The answer accurately explains that segments rely on identity traits, requiring user identification to apply overrides, and correctly notes that flags default to environment settings if the user is unidentified.",
+   "tokensIn": 1755,
+   "tokensOut": 57,
+   "costUsd": 0
+  },
+  "test-14": {
+   "id": "test-14",
+   "question": "Does the order of rules inside a segment matter?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview",
+    "Upgrades and Rollbacks",
+    "System Limits"
+   ],
+   "judgeReason": "The answer correctly explains that the order of rules matters and provides the exact examples from the passage to illustrate why.",
+   "tokensIn": 1718,
+   "tokensOut": 117,
+   "costUsd": 0
+  },
+  "test-15": {
+   "id": "test-15",
+   "question": "What is the difference between a project segment and a feature-specific segment?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "Frequently Asked Questions",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks"
+   ],
+   "judgeReason": "The answer accurately captures the differences and similarities between project segments and feature-specific segments as described in the provided passages.",
+   "tokensIn": 1666,
+   "tokensOut": 101,
+   "costUsd": 0
+  },
+  "test-16": {
+   "id": "test-16",
+   "question": "Why are segment definitions not included in API responses when using remote evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/segments"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Segments",
+    "Segments",
+    "SDKs Overview",
+    "SDKs Overview",
+    "Server Side SDKs"
+   ],
+   "judgeReason": "The answer accurately explains that segment definitions are excluded from remote evaluation API responses to protect potentially sensitive or proprietary information.",
+   "tokensIn": 1798,
+   "tokensOut": 51,
+   "costUsd": 0
+  },
+  "test-17": {
+   "id": "test-17",
+   "question": "How do environments work in the Flagsmith data model?",
+   "goldPages": [
+    "https://docs.flagsmith.com/flagsmith-concepts/data-model"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Data Model",
+    "Data Model",
+    "Defensive Coding and Designing for Failure",
+    "Import and Export"
+   ],
+   "judgeReason": "The answer accurately describes how environments work in the Flagsmith data model using the provided passages.",
+   "tokensIn": 1365,
+   "tokensOut": 97,
+   "costUsd": 0
+  },
+  "test-18": {
+   "id": "test-18",
+   "question": "What is a percentage (staged) rollout used for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Targeting and Rollouts",
+    "Segment Rule Operators",
+    "Targeting and Rollouts",
+    "Rollout by Percentage"
+   ],
+   "judgeReason": "The answer accurately summarizes the purpose of percentage rollouts using the provided passages.",
+   "tokensIn": 1409,
+   "tokensOut": 125,
+   "costUsd": 0
+  },
+  "test-19": {
+   "id": "test-19",
+   "question": "If I increase a segment's percentage split from 30 percent to 40 percent, will identities already in the segment stay in it?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+   ],
+   "category": "concepts",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Rollout by Percentage",
+    "Create an Experiment",
+    "Example: Testing a PayPal Button",
+    "Rollout by Percentage",
+    "Rollout by Percentage"
+   ],
+   "judgeReason": "The answer correctly confirms that identities remain in the segment and cites the supporting passage.",
+   "tokensIn": 1618,
+   "tokensOut": 14,
+   "costUsd": 0
+  },
+  "test-20": {
+   "id": "test-20",
+   "question": "What machine learning model does Flagsmith use to automatically recommend which flags to delete?",
+   "goldPages": [],
+   "category": "concepts",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Import and Export",
+    "Scheduled Flags",
+    "GitLab Integration",
+    "Quick Start",
+    "Deploying Flagsmith on Google Cloud"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1208,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-21": {
+   "id": "test-21",
+   "question": "In the JavaScript SDK, what does the cacheFlags option do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith React SDK"
+   ],
+   "judgeReason": "The answer accurately describes the functionality of the cacheFlags option and its requirements as stated in the provided passages.",
+   "tokensIn": 2390,
+   "tokensOut": 90,
+   "costUsd": 0
+  },
+  "test-22": {
+   "id": "test-22",
+   "question": "What is the defaultFlags option in the JavaScript SDK for?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Server Side SDKs",
+    "Server Side SDKs",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the purpose of the defaultFlags option as defined in the provided passages.",
+   "tokensIn": 2907,
+   "tokensOut": 38,
+   "costUsd": 0
+  },
+  "test-23": {
+   "id": "test-23",
+   "question": "What happens when flagsmith.init is called with no cache available and the API returns an invalid response?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith iOS SDK",
+    "SDKs & Implementation - FAQ",
+    "Flagsmith Android/Kotlin SDK",
+    "Billing and API Usage"
+   ],
+   "judgeReason": "The answer accurately reflects the information provided in the passage regarding the behavior of flagsmith.init since version 4.0.0.",
+   "tokensIn": 1861,
+   "tokensOut": 40,
+   "costUsd": 0
+  },
+  "test-24": {
+   "id": "test-24",
+   "question": "In a Flagsmith experiment, what is the difference between getExperimentFlag and trackEvent?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Statistics Glossary",
+    "Feature Flags & Remote Config - FAQ",
+    "Upgrades and Rollbacks",
+    "Frequently Asked Questions",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "The provided passages contain enough information to infer the roles of these functions in the context of an experiment, so the model should not have declined.",
+   "tokensIn": 3107,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-25": {
+   "id": "test-25",
+   "question": "Why must exposures and conversion events in an experiment use the same user identifier?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Run an Experiment",
+    "Run an Experiment",
+    "Run an Experiment",
+    "Set Up an Experiment with a Coding Agent",
+    "Set Up an Experiment with a Coding Agent"
+   ],
+   "judgeReason": "The answer correctly identifies that exposures and conversion events are joined per identity, which is the reason they must share the same identifier.",
+   "tokensIn": 3462,
+   "tokensOut": 21,
+   "costUsd": 0
+  },
+  "test-26": {
+   "id": "test-26",
+   "question": "Which minimum version of the Node.js SDK supports Flagsmith experimentation?",
+   "goldPages": [
+    "https://docs.flagsmith.com/experimentation/run-an-experiment"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Experimentation",
+    "Segment Rule Operators",
+    "Help and Support",
+    "Deploying Flagsmith on Google Cloud",
+    "Help and Support"
+   ],
+   "judgeReason": "The answer correctly identifies that the information is in the 'Run an Experiment' documentation but fails to provide the specific version number requested.",
+   "tokensIn": 1716,
+   "tokensOut": 33,
+   "costUsd": 0
+  },
+  "test-27": {
+   "id": "test-27",
+   "question": "Which type of environment key must I use to run a server-side SDK in local evaluation mode?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "Edge Proxy",
+    "SDKs Overview",
+    "SDKs Overview",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer correctly identifies that a server-side SDK key is required for local evaluation mode and cites the provided passages.",
+   "tokensIn": 1696,
+   "tokensOut": 49,
+   "costUsd": 0
+  },
+  "test-28": {
+   "id": "test-28",
+   "question": "What is the Environment Document used by server-side SDKs?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+   ],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs Overview",
+    "SDKs Overview",
+    "Edge Proxy",
+    "Billing and API Usage",
+    "SDKs Overview"
+   ],
+   "judgeReason": "The answer accurately describes the Environment Document based on the provided passages.",
+   "tokensIn": 1760,
+   "tokensOut": 93,
+   "costUsd": 0
+  },
+  "test-29": {
+   "id": "test-29",
+   "question": "What information does the JavaScript SDK onChange callback receive when flags are retrieved?",
+   "goldPages": [
+    "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+   ],
+   "category": "sdk",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer accurately describes the parameters received by the onChange callback as specified in the provided documentation.",
+   "tokensIn": 2177,
+   "tokensOut": 87,
+   "costUsd": 0
+  },
+  "test-30": {
+   "id": "test-30",
+   "question": "How do I use the Flagsmith SDK in a COBOL program running on a mainframe?",
+   "goldPages": [],
+   "category": "sdk",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Testing with Feature Flags",
+    "SDKs Overview",
+    "Testing with Feature Flags",
+    "Segment Rule Operators",
+    "Run Flagsmith Locally with a Coding Agent"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1630,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-31": {
+   "id": "test-31",
+   "question": "Why might my application not see flag changes immediately, and how can it be notified of updates without repeatedly calling the API?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith JavaScript SDK",
+    "Integration Approaches",
+    "Billing and API Usage",
+    "Run an Experiment"
+   ],
+   "judgeReason": "The answer accurately explains why flag changes aren't seen immediately due to caching and provides the correct steps to enable real-time updates as described in the passages.",
+   "tokensIn": 1399,
+   "tokensOut": 148,
+   "costUsd": 0
+  },
+  "test-32": {
+   "id": "test-32",
+   "question": "What subscription is required for real-time flag updates, and where are they enabled?",
+   "goldPages": [
+    "https://docs.flagsmith.com/performance/real-time-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 0.5,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Real-time flag updates",
+    "Flagsmith iOS SDK",
+    "Real-time flag updates",
+    "Real-time flag updates",
+    "Real-time flag updates"
+   ],
+   "judgeReason": "The answer is missing the key detail that applications must also opt in via their specific SDK to receive the updates.",
+   "tokensIn": 1706,
+   "tokensOut": 71,
+   "costUsd": 0
+  },
+  "test-33": {
+   "id": "test-33",
+   "question": "A feature in my project has been tagged Stale. How do I remove the tag, or keep a feature from being marked stale?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection",
+    "Tagging",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately explains how to remove the stale tag and how to prevent a feature from being marked as stale using the provided passages.",
+   "tokensIn": 1402,
+   "tokensOut": 76,
+   "costUsd": 0
+  },
+  "test-34": {
+   "id": "test-34",
+   "question": "What plan and prerequisite does Stale Flag Detection require?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/stale-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Stale Flag Detection",
+    "Stale Flag Detection",
+    "Flag Dependencies",
+    "Stale Flag Detection",
+    "Stale Flag Detection"
+   ],
+   "judgeReason": "The answer accurately identifies the required plans and the prerequisite mentioned in the provided passages.",
+   "tokensIn": 1329,
+   "tokensOut": 37,
+   "costUsd": 0
+  },
+  "test-35": {
+   "id": "test-35",
+   "question": "How can I make a flag change take effect automatically at a future time?",
+   "goldPages": [
+    "https://docs.flagsmith.com/managing-flags/scheduled-flags"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Scheduled Flags",
+    "Experimental: Updating Flags",
+    "Feature Flags Lifecycles"
+   ],
+   "judgeReason": "The answer accurately describes the two methods for scheduling flag changes and correctly identifies the plan requirements based on the provided passages.",
+   "tokensIn": 1489,
+   "tokensOut": 159,
+   "costUsd": 0
+  },
+  "test-36": {
+   "id": "test-36",
+   "question": "In the React SDK, how can I initialise Flagsmith without immediately fetching flags?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK",
+    "Flagsmith React SDK",
+    "Flagsmith JavaScript SDK"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the 'preventFetch' option in 'flagsmith.init' to prevent immediate flag fetching, as supported by the provided passages.",
+   "tokensIn": 1897,
+   "tokensOut": 25,
+   "costUsd": 0
+  },
+  "test-37": {
+   "id": "test-37",
+   "question": "My JavaScript app does not pick up new flags on its own. What does startListening do?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 0,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "Datadog Integration",
+    "Cohort Synchronisation",
+    "Flag Naming Conventions",
+    "Set Up an Experiment with a Coding Agent",
+    "Sizing and Scaling"
+   ],
+   "judgeReason": "The provided passages do not contain information about the 'startListening' function, so the model correctly stated it could not find the information, even though the reference answer suggests it should be known.",
+   "tokensIn": 3264,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-38": {
+   "id": "test-38",
+   "question": "How should I pass a user's email address when querying feature flags for that user?",
+   "goldPages": [
+    "https://docs.flagsmith.com/support/faq/sdks-implementation"
+   ],
+   "category": "troubleshooting",
+   "hit": true,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": null,
+   "retrievedTitles": [
+    "SDKs & Implementation - FAQ",
+    "Role-based access control",
+    "SCIM provisioning",
+    "Email Setup",
+    "SCIM provisioning"
+   ],
+   "judgeReason": "The answer correctly identifies the use of the identify method and cites the provided passage.",
+   "tokensIn": 1881,
+   "tokensOut": 29,
+   "costUsd": 0
+  },
+  "test-39": {
+   "id": "test-39",
+   "question": "How do I open a Flagsmith support ticket by phone, and what are the phone support hours?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Jira Integration",
+    "Jira Integration",
+    "Connect a Warehouse",
+    "Help and Support",
+    "Cohort Synchronisation"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 1386,
+   "tokensOut": 11,
+   "costUsd": 0
+  },
+  "test-40": {
+   "id": "test-40",
+   "question": "Why did Flagsmith email me a coupon code for 50 percent off, and how do I redeem it?",
+   "goldPages": [],
+   "category": "troubleshooting",
+   "hit": false,
+   "correctness": 1,
+   "faithfulness": 1,
+   "declinedCorrectly": true,
+   "retrievedTitles": [
+    "Run Flagsmith Locally with a Coding Agent",
+    "When to use Feature Flags",
+    "Set Up an Experiment with a Coding Agent",
+    "SCIM provisioning",
+    "When to use Feature Flags"
+   ],
+   "judgeReason": "Declined an unanswerable question.",
+   "tokensIn": 3931,
+   "tokensOut": 11,
+   "costUsd": 0
   }
  }
 }
