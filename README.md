@@ -247,14 +247,27 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
   statistical winner at 83% probability and suggests rolling it out; the
   rollout followed the pre-registered rule (95% bar plus all guardrails),
   not the panel's suggestion.
-- Post-experiment product fix (27 November 2026, after the experiment had
-  completed and the submission was filed): documentation sections are often
-  split across two chunks mid-sentence, which left the answer model with a
-  fragment and caused borderline declines (for example, a Roman Urdu phrasing
-  of the identity-override question). Context assembly now appends the
-  following chunk when it continues the same page. Retrieval ranking, the
+- Post-experiment product fixes (27-28 November 2026, after the experiment
+  had completed and the submission was filed): documentation sections are
+  often split across chunks mid-sentence, which left the answer model with
+  a fragment and caused borderline declines (for example, a Roman Urdu
+  phrasing of the identity-override question). Context assembly now widens
+  each retrieved passage with same-page context only: the following chunk,
+  the previous chunk, and the page's opening chunk when the passage sits
+  deeper in the page. A deep audit on 28 November 2026 (the 60-question
+  gold sets plus natural and edge-case questions, judge-graded) measured
+  the effect: fully correct answers rose from 50/60 to 55/60, with no
+  regressions and no invented answers in either run. The remaining gold
+  failures are three questions whose page BM25 does not rank in the top 3
+  at all and two answers that omit one element present in the passages;
+  both are properties of the recorded control arm and the fixed answer
+  prompt, and are left as documented limitations rather than silently
+  changing what the experiment tested. The same audit fixed a Lab
+  experiment page defect that briefly showed one traffic view's numbers
+  under another view's label while data loaded. Retrieval ranking, the
   flag configuration and every recorded experiment number are unchanged;
-  the screening and experiment results above were produced before this fix.
+  the screening and experiment results above were produced before these
+  fixes.
 
 ## Security notes
 

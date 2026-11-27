@@ -18,9 +18,10 @@ interface Exp {
 export default function ExperimentPage() {
   const [traffic, setTraffic] = useState<"real" | "simulated" | "all">("real");
   const [data, setData] = useState<Exp | null>(null);
+  const [dataTraffic, setDataTraffic] = useState(traffic);
   useEffect(() => {
     let live = true;
-    const load = () => fetch(`/api/lab/experiment?traffic=${traffic}`).then((r) => r.json()).then((j) => { if (live) setData(j); }).catch(() => {});
+    const load = () => fetch(`/api/lab/experiment?traffic=${traffic}`).then((r) => r.json()).then((j) => { if (live) { setData(j); setDataTraffic(traffic); } }).catch(() => {});
     load();
     const t = setInterval(load, 15000);
     return () => { live = false; clearInterval(t); };
@@ -34,7 +35,7 @@ export default function ExperimentPage() {
         {data?.locked ? <Badge kind="locked">Locked</Badge> : <Badge kind="neutral">Not started</Badge>}
         <div className="ml-auto"><Segmented label="Traffic" value={traffic} onChange={setTraffic} options={[{ v: "real", label: "Real" }, { v: "simulated", label: "Simulated" }, { v: "all", label: "All" }]} /></div>
       </div>
-      {!data ? <div className="skeleton mt-8 h-64 rounded" aria-hidden="true" /> : (
+      {!data || dataTraffic !== traffic ? <div className="skeleton mt-8 h-64 rounded" aria-hidden="true" /> : (
         <>
           <div className="mt-4"><Alert kind="info">Traffic in view: {total} participants ({traffic}). Simulated traffic is disclosed and always shown separately.</Alert></div>
           {data.srm.p < 0.001 && total > 0 && <div className="mt-4"><Alert kind="danger">The split looks unbalanced (p = {data.srm.p.toFixed(4)}). Do not use this result until the cause is found.</Alert></div>}

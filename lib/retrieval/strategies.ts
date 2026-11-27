@@ -74,18 +74,29 @@ export async function retrieve(question: string, cfg: RetrievalConfig): Promise<
     score: scoreOf.get(id) || 0,
     rank: i + 1,
   }));
-  // Context assembly (post-experiment product fix, 27 Nov 2026): sections are
-  // often split across two chunks mid-sentence, which left the answer model
-  // with a fragment and caused borderline declines. Append the following
-  // chunk when it continues the same page. Retrieval ranking is unchanged;
-  // the experiment record was produced before this fix and is unaffected.
+  // Context assembly (post-experiment product fixes, 27 Nov 2026): sections
+  // are often split across chunks mid-sentence, which left the answer model
+  // with a fragment and caused borderline declines. Each retrieved passage
+  // is widened with same-page context only: the page's opening chunk (where
+  // definitions and introductions live) when the passage sits deeper in the
+  // page, the previous chunk, and the following chunk. Retrieval ranking is
+  // unchanged; the experiment record was produced before these fixes and is
+  // unaffected.
   const passages: ScoredChunk[] = rawPassages.map((p) => {
     const i = byId.get(p.chunk.id)!;
-    const next = index.chunks[i + 1];
-    if (next && next.url.split("#")[0] === p.chunk.url.split("#")[0]) {
-      return { ...p, chunk: { ...p.chunk, text: p.chunk.text + "\n" + next.text } };
-    }
-    return p;
+    const pageBase = p.chunk.url.split("#")[0];
+    const samePage = (j: number) =>
+      j >= 0 && j < index.chunks.length && index.chunks[j].url.split("#")[0] === pageBase;
+    let pageFirst = i;
+    while (samePage(pageFirst - 1)) pageFirst--;
+    const parts: string[] = [];
+    if (i - pageFirst > 1) parts.push(index.chunks[pageFirst].text);
+    if (samePage(i - 1) && i - 1 !== pageFirst) parts.push(index.chunks[i - 1].text);
+    else if (samePage(i - 1) && parts.length === 0) parts.push(index.chunks[i - 1].text);
+    parts.push(p.chunk.text);
+    if (samePage(i + 1)) parts.push(index.chunks[i + 1].text);
+    if (parts.length === 1) return p;
+    return { ...p, chunk: { ...p.chunk, text: parts.join("\n") } };
   });
   return {
     passages,
