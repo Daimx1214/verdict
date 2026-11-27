@@ -9,8 +9,8 @@
     "lint": "eslint",
     "test": "vitest run",
     "eval:offline": "tsx scripts/eval-offline.ts",
-    "ingest": "tsx scripts/ingest.ts",
-    "build:index": "tsx scripts/build-index.ts",
+    "ingest": "node scripts/ingest.mjs",
+    "build:index": "node scripts/chunk.mjs && node scripts/embed.mjs",
     "simulate": "tsx scripts/simulate.ts",
     "seed:lab": "tsx scripts/seed-lab.ts"
   },

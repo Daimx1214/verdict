@@ -51,7 +51,7 @@ async function grade(candidate: (typeof CANDIDATES)[number], q: Gold) {
     reason = declined ? "Declined an unanswerable question." : "Answered an unanswerable question.";
   } else {
     const judgeUser = `QUESTION\n${q.question}\n\nREFERENCE ANSWER\n${q.reference_answer}\n\nPASSAGES\n${passages.map((p, i) => `[${i + 1}] ${p.text}`).join("\n\n")}\n\nANSWER\n${ans.text}`;
-    const j = await withRetry(() => completeChat([{ role: "system", content: JUDGE_SYSTEM }, { role: "user", content: judgeUser }], { model: JUDGE_MODEL, maxTokens: 300 }));
+    const j = await withRetry(() => completeChat([{ role: "system", content: JUDGE_SYSTEM }, { role: "user", content: judgeUser }], { model: JUDGE_MODEL, maxTokens: 800 }));
     try {
       const parsed = JSON.parse(j.text.slice(j.text.indexOf("{"), j.text.lastIndexOf("}") + 1));
       correctness = Number(parsed.correctness) || 0;
@@ -76,13 +76,14 @@ async function main() {
     console.log(`${cand.id}: ${qs.length} questions to grade`);
     // small concurrency pool
     const queue = [...qs];
-    const workers = Array.from({ length: 3 }, async () => {
+    const workers = Array.from({ length: 1 }, async () => {
       for (;;) {
         const q = queue.shift(); if (!q) return;
         try {
           progress[cand.id][q.id] = await grade(cand, q);
           writeFileSync(progressPath, JSON.stringify(progress, null, 1));
           console.log(`${cand.id} ${q.id} done`);
+          await new Promise((r) => setTimeout(r, 3500)); // pace under the free-tier rate limit
         } catch (e) { console.error(`${cand.id} ${q.id} FAILED`, e instanceof Error ? e.message : e); }
       }
     });
