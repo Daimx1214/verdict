@@ -256,10 +256,12 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
   the previous chunk, and the page's opening chunk when the passage sits
   deeper in the page. A deep audit on 28 November 2026 (the 60-question
   gold sets plus natural and edge-case questions, judge-graded) measured
-  the effect: fully correct answers rose from 50/60 to 55/60, with no
-  regressions and no invented answers in either run. The remaining gold
+  the effect: fully correct answers rose from 50/60 to 53/60 on a clean
+  full re-run of the shipped code, with no invented or wrong answers in
+  any run (two further answers sit on the correct/partial grading
+  boundary and flip between runs). The remaining gold
   failures are three questions whose page BM25 does not rank in the top 3
-  at all and two answers that omit one element present in the passages;
+  at all and a few answers that omit one element present in the passages;
   both are properties of the recorded control arm and the fixed answer
   prompt, and are left as documented limitations rather than silently
   changing what the experiment tested. The same audit fixed a Lab
