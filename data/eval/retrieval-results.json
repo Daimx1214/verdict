@@ -1,0 +1,129 @@
+{
+  "generated_at": "2026-11-27T07:09:09.001Z",
+  "corpus_hash": "ab01cfda5576031f3eebac642814d9a1de59235e9964d09573c3cc7931fb5615",
+  "embedding_model": "Xenova/all-MiniLM-L6-v2",
+  "rerank_method": "cross-encoder Xenova/ms-marco-MiniLM-L-6-v2 over the hybrid pool",
+  "notes": [
+    "Retrieval metrics only; no LLM was run, so correctness/faithfulness/decline-accuracy from spec section 7.2 are not part of this screening.",
+    "hitRate and MRR are computed over the 35 answerable test questions; latency over all 40 test questions.",
+    "MRR uses the full candidate ranking (pool order before the topK cut-off), per spec 7.2.",
+    "C7: the rewrite modifier was skipped as instructed; C7 numbers are identical to C3 (dense k5) by construction."
+  ],
+  "questions_total": 40,
+  "questions_answerable": 35,
+  "candidates": {
+    "C0": {
+      "name": "Baseline (control)",
+      "config": {
+        "strategy": "bm25",
+        "topK": 3
+      },
+      "hitRate": 0.8286,
+      "mrr": 0.7696,
+      "latency_p50_ms": 0.6,
+      "latency_p95_ms": 7.9
+    },
+    "C1": {
+      "name": "Keyword wide",
+      "config": {
+        "strategy": "bm25",
+        "topK": 5
+      },
+      "hitRate": 0.8286,
+      "mrr": 0.7696,
+      "latency_p50_ms": 0.5,
+      "latency_p95_ms": 0.8
+    },
+    "C2": {
+      "name": "Dense narrow",
+      "config": {
+        "strategy": "dense",
+        "topK": 3
+      },
+      "hitRate": 0.8286,
+      "mrr": 0.7323,
+      "latency_p50_ms": 12.9,
+      "latency_p95_ms": 83.3
+    },
+    "C3": {
+      "name": "Dense wide",
+      "config": {
+        "strategy": "dense",
+        "topK": 5
+      },
+      "hitRate": 0.8857,
+      "mrr": 0.7323,
+      "latency_p50_ms": 6.1,
+      "latency_p95_ms": 66.8
+    },
+    "C4": {
+      "name": "Hybrid",
+      "config": {
+        "strategy": "hybrid",
+        "pool": 30,
+        "rrfK": 60,
+        "topK": 5
+      },
+      "hitRate": 0.8571,
+      "mrr": 0.8234,
+      "latency_p50_ms": 6.9,
+      "latency_p95_ms": 68.3
+    },
+    "C5": {
+      "name": "Hybrid + rerank wide",
+      "config": {
+        "strategy": "hybrid",
+        "pool": 30,
+        "rrfK": 60,
+        "rerank": true,
+        "topK": 5
+      },
+      "hitRate": 0.8857,
+      "mrr": 0.8343,
+      "latency_p50_ms": 3597.9,
+      "latency_p95_ms": 4878.8
+    },
+    "C6": {
+      "name": "Hybrid + rerank narrow",
+      "config": {
+        "strategy": "hybrid",
+        "pool": 30,
+        "rrfK": 60,
+        "rerank": true,
+        "topK": 3
+      },
+      "hitRate": 0.8571,
+      "mrr": 0.8343,
+      "latency_p50_ms": 3481.8,
+      "latency_p95_ms": 4625.1
+    },
+    "C7": {
+      "name": "Dense + rewrite (rewrite skipped: evaluated as dense k5)",
+      "config": {
+        "strategy": "dense",
+        "topK": 5,
+        "rewrite": "skipped"
+      },
+      "hitRate": 0.8857,
+      "mrr": 0.7323,
+      "latency_p50_ms": 4.8,
+      "latency_p95_ms": 69.2
+    }
+  },
+  "challenger_pick": {
+    "id": "C5",
+    "name": "Hybrid + rerank wide",
+    "config": {
+      "strategy": "hybrid",
+      "pool": 30,
+      "rrfK": 60,
+      "rerank": true,
+      "topK": 5
+    },
+    "hitRate": 0.8857,
+    "mrr": 0.8343,
+    "latency_p50_ms": 3597.9,
+    "latency_p95_ms": 4878.8,
+    "rule": "highest hitRate, tie-break MRR, among C1-C7 (C0 baseline excluded)"
+  }
+}

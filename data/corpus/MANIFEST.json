@@ -1,0 +1,1360 @@
+{
+  "generated_at": "2026-11-27T06:58:57.937Z",
+  "source": "github.com/Flagsmith/flagsmith docs/docs (BSD-3-Clause)",
+  "file_count": 169,
+  "corpus_hash": "ab01cfda5576031f3eebac642814d9a1de59235e9964d09573c3cc7931fb5615",
+  "files": [
+    {
+      "source_path": "administration-and-security/access-control/adfs.md",
+      "corpus_path": "administration-and-security/access-control/adfs.md",
+      "title": "ADFS",
+      "url": "https://docs.flagsmith.com/administration-and-security/access-control/adfs",
+      "sha256": "0417d0f5e9ba0e4cb988fa7acd967f783a85e4df7a8097b71851d56eabd13376",
+      "bytes": 198
+    },
+    {
+      "source_path": "administration-and-security/access-control/index.md",
+      "corpus_path": "administration-and-security/access-control/index.md",
+      "title": "Authentication",
+      "url": "https://docs.flagsmith.com/administration-and-security/access-control",
+      "sha256": "db8fed0b511b589054965661bb4194017fff670ed00134fed1f4fe9a451d009d",
+      "bytes": 2373
+    },
+    {
+      "source_path": "administration-and-security/access-control/ldap.md",
+      "corpus_path": "administration-and-security/access-control/ldap.md",
+      "title": "LDAP",
+      "url": "https://docs.flagsmith.com/administration-and-security/access-control/ldap",
+      "sha256": "ef0e7d05160fe72727ae22fbea1a23ea12c44b81b672f0bd768ea6c0916c74c4",
+      "bytes": 22683
+    },
+    {
+      "source_path": "administration-and-security/access-control/oauth.md",
+      "corpus_path": "administration-and-security/access-control/oauth.md",
+      "title": "OAuth",
+      "url": "https://docs.flagsmith.com/administration-and-security/access-control/oauth",
+      "sha256": "5d7fcfcfd93ae68ef5d2c3e9a64f339b4ce53360eb5b660d98c2b8bfd25a3ea2",
+      "bytes": 1988
+    },
+    {
+      "source_path": "administration-and-security/access-control/okta.md",
+      "corpus_path": "administration-and-security/access-control/okta.md",
+      "title": "Okta",
+      "url": "https://docs.flagsmith.com/administration-and-security/access-control/okta",
+      "sha256": "4861426cf011b0b3b80b3731e307ca7bda4e02f75ef860177403d12808313659",
+      "bytes": 1919
+    },
+    {
+      "source_path": "administration-and-security/access-control/rbac.md",
+      "corpus_path": "administration-and-security/access-control/rbac.md",
+      "title": "Role-based access control",
+      "url": "https://docs.flagsmith.com/administration-and-security/access-control/rbac",
+      "sha256": "74db72131877093008f8d3596cf754f5637cc308c7fb2c2ea26b6596524004b3",
+      "bytes": 18227
+    },
+    {
+      "source_path": "administration-and-security/access-control/saml.md",
+      "corpus_path": "administration-and-security/access-control/saml.md",
+      "title": "SAML single sign-on (SSO)",
+      "url": "https://docs.flagsmith.com/administration-and-security/access-control/saml",
+      "sha256": "57e99de022e56698512d252b86e0afb26aa7ca54eeb0f6d9f1afefda38ba3b97",
+      "bytes": 9893
+    },
+    {
+      "source_path": "administration-and-security/access-control/scim.md",
+      "corpus_path": "administration-and-security/access-control/scim.md",
+      "title": "SCIM provisioning",
+      "url": "https://docs.flagsmith.com/administration-and-security/access-control/scim",
+      "sha256": "f3158c1e412ee4912b45b8d56d2cfa0fc867c256f100b39fd8a0d39bd12e69fc",
+      "bytes": 12554
+    },
+    {
+      "source_path": "administration-and-security/billing-api-usage.md",
+      "corpus_path": "administration-and-security/billing-api-usage.md",
+      "title": "Billing and API Usage",
+      "url": "https://docs.flagsmith.com/administration-and-security/billing-api-usage",
+      "sha256": "762de96e48b7158dffbdfcb2949746d29506a56501cf115cf5b8e526be4abcd9",
+      "bytes": 6994
+    },
+    {
+      "source_path": "administration-and-security/data-management/bulk-import-and-export.md",
+      "corpus_path": "administration-and-security/data-management/bulk-import-and-export.md",
+      "title": "Bulk Import and Export",
+      "url": "https://docs.flagsmith.com/administration-and-security/data-management/bulk-import-and-export",
+      "sha256": "c97a9ec98a8ed860bc5c3e02370e71b69f5afd5e3202d337e17e2812098e1f4c",
+      "bytes": 3017
+    },
+    {
+      "source_path": "administration-and-security/data-management/import-and-export.md",
+      "corpus_path": "administration-and-security/data-management/import-and-export.md",
+      "title": "Import and Export",
+      "url": "https://docs.flagsmith.com/administration-and-security/data-management/import-and-export",
+      "sha256": "d12441e8120cec2c70bcd3440dedfe447d9e70553bf4dfc93473c12949822bbe",
+      "bytes": 873
+    },
+    {
+      "source_path": "administration-and-security/data-management/import-from-launchdarkly.md",
+      "corpus_path": "administration-and-security/data-management/import-from-launchdarkly.md",
+      "title": "Import from LaunchDarkly",
+      "url": "https://docs.flagsmith.com/administration-and-security/data-management/import-from-launchdarkly",
+      "sha256": "b1168a0227d09da768b71ea2e84b767d78e3a3e69672b3f059971f20668d6a7d",
+      "bytes": 2176
+    },
+    {
+      "source_path": "administration-and-security/data-management/organisations-import-export.md",
+      "corpus_path": "administration-and-security/data-management/organisations-import-export.md",
+      "title": "Organisations Import and Export",
+      "url": "https://docs.flagsmith.com/administration-and-security/data-management/organisations-import-export",
+      "sha256": "57756b067cbe28b57ce9587416d14211c9c9fb0fe24d3d23dad89b1187fe9a99",
+      "bytes": 7751
+    },
+    {
+      "source_path": "administration-and-security/governance-and-compliance/api-usage.md",
+      "corpus_path": "administration-and-security/governance-and-compliance/api-usage.md",
+      "title": "API Usage",
+      "url": "https://docs.flagsmith.com/administration-and-security/governance-and-compliance/api-usage",
+      "sha256": "6babfac8f668441c71b98f3d9e70b4f04e3553fd919502c91ccc4c79f7f09481",
+      "bytes": 575
+    },
+    {
+      "source_path": "administration-and-security/governance-and-compliance/audit-logs.md",
+      "corpus_path": "administration-and-security/governance-and-compliance/audit-logs.md",
+      "title": "Audit Logs",
+      "url": "https://docs.flagsmith.com/administration-and-security/governance-and-compliance/audit-logs",
+      "sha256": "c6bf7ed61e1561143ead67112e804fc7312864337d1f4d014d1ee3034c414216",
+      "bytes": 4485
+    },
+    {
+      "source_path": "administration-and-security/governance-and-compliance/change-requests.md",
+      "corpus_path": "administration-and-security/governance-and-compliance/change-requests.md",
+      "title": "Change Requests",
+      "url": "https://docs.flagsmith.com/administration-and-security/governance-and-compliance/change-requests",
+      "sha256": "b46bc947104d711a0ec2a9db9f8b4cc92db9a1495d61fa4240642bf5c7b4bddc",
+      "bytes": 7021
+    },
+    {
+      "source_path": "administration-and-security/governance-and-compliance/custom-fields.md",
+      "corpus_path": "administration-and-security/governance-and-compliance/custom-fields.md",
+      "title": "Custom Fields",
+      "url": "https://docs.flagsmith.com/administration-and-security/governance-and-compliance/custom-fields",
+      "sha256": "e0f1e399bc6958815a2272b1464808181ad46b33bc769c643d7789f4c793e5ff",
+      "bytes": 5317
+    },
+    {
+      "source_path": "administration-and-security/governance-and-compliance/security.md",
+      "corpus_path": "administration-and-security/governance-and-compliance/security.md",
+      "title": "Security",
+      "url": "https://docs.flagsmith.com/administration-and-security/governance-and-compliance/security",
+      "sha256": "97d9b980ee148775e02c3db568ba1806029885a9f3a137b9f77413a539676fbc",
+      "bytes": 5410
+    },
+    {
+      "source_path": "administration-and-security/governance-and-compliance/system-limits.md",
+      "corpus_path": "administration-and-security/governance-and-compliance/system-limits.md",
+      "title": "System Limits",
+      "url": "https://docs.flagsmith.com/administration-and-security/governance-and-compliance/system-limits",
+      "sha256": "7165fe7fcff3a1632dffe201a1bbbad24c26f570d51c0fa73ad4f85a5723694a",
+      "bytes": 2985
+    },
+    {
+      "source_path": "administration-and-security/index.mdx",
+      "corpus_path": "administration-and-security/index.md",
+      "title": "Administration and Security",
+      "url": "https://docs.flagsmith.com/administration-and-security",
+      "sha256": "350b34c14c0e573152fc8959a7a7109d17a719f58672c688322b606475b727ba",
+      "bytes": 2059
+    },
+    {
+      "source_path": "administration-and-security/platform-configuration/environment-settings.md",
+      "corpus_path": "administration-and-security/platform-configuration/environment-settings.md",
+      "title": "Environment Settings",
+      "url": "https://docs.flagsmith.com/administration-and-security/platform-configuration/environment-settings",
+      "sha256": "89fc9e5ceaecfeec7da22c249859325d0d56f1171e696ca0e0ad2ca476fa8821",
+      "bytes": 4730
+    },
+    {
+      "source_path": "best-practices/defensive-coding.md",
+      "corpus_path": "best-practices/defensive-coding.md",
+      "title": "Defensive Coding and Designing for Failure",
+      "url": "https://docs.flagsmith.com/best-practices/defensive-coding",
+      "sha256": "5a4d98f5ed6e510c23afb8c65409fb44703397e37121c8d12d7024759e403aa3",
+      "bytes": 5687
+    },
+    {
+      "source_path": "best-practices/efficient-api-usage.md",
+      "corpus_path": "best-practices/efficient-api-usage.md",
+      "title": "Efficient API Usage",
+      "url": "https://docs.flagsmith.com/best-practices/efficient-api-usage",
+      "sha256": "ae9c374dd4679a3ffd8f713f8e16f0d2d1f94f29ee9a0b3471143e130cb5ac1c",
+      "bytes": 5330
+    },
+    {
+      "source_path": "best-practices/flag-lifecycle.md",
+      "corpus_path": "best-practices/flag-lifecycle.md",
+      "title": "Feature Flags Lifecycles",
+      "url": "https://docs.flagsmith.com/best-practices/flag-lifecycle",
+      "sha256": "e69e42e3fd2a832b833cfa571e9ad963a4a7f1f7960654b9e2fe2e841f9130bb",
+      "bytes": 4861
+    },
+    {
+      "source_path": "best-practices/integration-approaches.md",
+      "corpus_path": "best-practices/integration-approaches.md",
+      "title": "Integration Approaches",
+      "url": "https://docs.flagsmith.com/best-practices/integration-approaches",
+      "sha256": "50e7050d5d4a187c8cf0646796bd370b5211ab36565ac54b1acbf16a0aac758c",
+      "bytes": 4936
+    },
+    {
+      "source_path": "best-practices/mobile-app-versioning.md",
+      "corpus_path": "best-practices/mobile-app-versioning.md",
+      "title": "Mobile App Versioning",
+      "url": "https://docs.flagsmith.com/best-practices/mobile-app-versioning",
+      "sha256": "253962338f705db2db3ebdfb27aa7b78b2305bc6e9d9ca405e77636c846b3fe4",
+      "bytes": 4910
+    },
+    {
+      "source_path": "best-practices/naming-conventions.md",
+      "corpus_path": "best-practices/naming-conventions.md",
+      "title": "Flag Naming Conventions",
+      "url": "https://docs.flagsmith.com/best-practices/naming-conventions",
+      "sha256": "608010563e6479f40ef28bf984499e16f9362d507f733ae0ff3bb7f6c34e3636",
+      "bytes": 5954
+    },
+    {
+      "source_path": "best-practices/structuring-your-projects.md",
+      "corpus_path": "best-practices/structuring-your-projects.md",
+      "title": "Structuring Your Projects",
+      "url": "https://docs.flagsmith.com/best-practices/structuring-your-projects",
+      "sha256": "6083f2ab4ea91d598ca84be956a698b06d38c54015b2c5b123fc4e23d67750d4",
+      "bytes": 6905
+    },
+    {
+      "source_path": "best-practices/testing-with-flags.md",
+      "corpus_path": "best-practices/testing-with-flags.md",
+      "title": "Testing with Feature Flags",
+      "url": "https://docs.flagsmith.com/best-practices/testing-with-flags",
+      "sha256": "6e69ced8d2079cbdd586cfb8612f1861070e8522568fd88ce42f183334438608",
+      "bytes": 2463
+    },
+    {
+      "source_path": "best-practices/when-to-use-flags.md",
+      "corpus_path": "best-practices/when-to-use-flags.md",
+      "title": "When to use Feature Flags",
+      "url": "https://docs.flagsmith.com/best-practices/when-to-use-flags",
+      "sha256": "de43f1ed6ec0ccf9f4daf584ada70279e889aa7b03f40d2c9f3ec288e59b7dbe",
+      "bytes": 3668
+    },
+    {
+      "source_path": "deployment-self-hosting/administration-and-maintenance/troubleshooting.md",
+      "corpus_path": "deployment-self-hosting/administration-and-maintenance/troubleshooting.md",
+      "title": "Troubleshooting",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/administration-and-maintenance/troubleshooting",
+      "sha256": "407913beea54a79acaac37889bc060b7daf9628735b3c27211f1ea4ae55cc780",
+      "bytes": 1206
+    },
+    {
+      "source_path": "deployment-self-hosting/administration-and-maintenance/upgrades-and-rollbacks.md",
+      "corpus_path": "deployment-self-hosting/administration-and-maintenance/upgrades-and-rollbacks.md",
+      "title": "Upgrades and Rollbacks",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/administration-and-maintenance/upgrades-and-rollbacks",
+      "sha256": "e808a002d52c267ebb1086b5b003f464055cb3770cf6a6932061338c8845347d",
+      "bytes": 9733
+    },
+    {
+      "source_path": "deployment-self-hosting/administration-and-maintenance/using-the-django-admin.md",
+      "corpus_path": "deployment-self-hosting/administration-and-maintenance/using-the-django-admin.md",
+      "title": "Django Admin",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/administration-and-maintenance/using-the-django-admin",
+      "sha256": "4786ca33c8ba9a8f362488e6b7f86d6ae42c57a46c57c18f1bce5c4be1b47701",
+      "bytes": 2817
+    },
+    {
+      "source_path": "deployment-self-hosting/core-configuration/caching-strategies.md",
+      "corpus_path": "deployment-self-hosting/core-configuration/caching-strategies.md",
+      "title": "Caching Strategies",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/core-configuration/caching-strategies",
+      "sha256": "8208ad3dd2a523c5148624377066db9dc04480de47eabbb33669cfd030421c34",
+      "bytes": 5130
+    },
+    {
+      "source_path": "deployment-self-hosting/core-configuration/email-setup.md",
+      "corpus_path": "deployment-self-hosting/core-configuration/email-setup.md",
+      "title": "Email Setup",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/core-configuration/email-setup",
+      "sha256": "ff866b82db352211d69a0e7fb422df0580e991d153c89624eb4e35712e293c73",
+      "bytes": 1714
+    },
+    {
+      "source_path": "deployment-self-hosting/core-configuration/environment-variables.md",
+      "corpus_path": "deployment-self-hosting/core-configuration/environment-variables.md",
+      "title": "Environment Variables",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/core-configuration/environment-variables",
+      "sha256": "c9f0393841123dae854714436fb56315a05a338ce715d61983395bef1f0d203a",
+      "bytes": 9110
+    },
+    {
+      "source_path": "deployment-self-hosting/core-configuration/initial-setup.md",
+      "corpus_path": "deployment-self-hosting/core-configuration/initial-setup.md",
+      "title": "Initial Setup",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/core-configuration/initial-setup",
+      "sha256": "662d2377cb9d2fc3ab2a1b2d7fd96bacde66d266275578c318734869b21e7312",
+      "bytes": 2983
+    },
+    {
+      "source_path": "deployment-self-hosting/core-configuration/licence.md",
+      "corpus_path": "deployment-self-hosting/core-configuration/licence.md",
+      "title": "Enterprise Licence",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/core-configuration/licence",
+      "sha256": "df99d7f309a3a628d5aa5ca81b80d76e62edddfb40d592981595ebceaa39d14c",
+      "bytes": 2707
+    },
+    {
+      "source_path": "deployment-self-hosting/core-configuration/running-flagsmith-on-flagsmith.md",
+      "corpus_path": "deployment-self-hosting/core-configuration/running-flagsmith-on-flagsmith.md",
+      "title": "Running Flagsmith on Flagsmith",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/core-configuration/running-flagsmith-on-flagsmith",
+      "sha256": "4ab7576e9df22977758620fe04e098b251a5edaa83249464b82c7df7ca59f476",
+      "bytes": 7961
+    },
+    {
+      "source_path": "deployment-self-hosting/edge-proxy.md",
+      "corpus_path": "deployment-self-hosting/edge-proxy.md",
+      "title": "Edge Proxy",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/edge-proxy",
+      "sha256": "d88207492a8044ef391d10c6463580f3536d7d88980d143a3946ead4bab1102a",
+      "bytes": 19126
+    },
+    {
+      "source_path": "deployment-self-hosting/enterprise-edition.md",
+      "corpus_path": "deployment-self-hosting/enterprise-edition.md",
+      "title": "Enterprise Edition",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/enterprise-edition",
+      "sha256": "82e23b7b64496d1f3c4cb56d8239ed5196df50dd1528a9b4c057604dc41dec6a",
+      "bytes": 8525
+    },
+    {
+      "source_path": "deployment-self-hosting/hosting-guides/cloud-providers/aptible.md",
+      "corpus_path": "deployment-self-hosting/hosting-guides/cloud-providers/aptible.md",
+      "title": "Aptible",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/cloud-providers/aptible",
+      "sha256": "e9f979dd9fd0edb86b82b0f3c968131ed2033520b9cf6b79c8db5b4bf3c4421a",
+      "bytes": 2991
+    },
+    {
+      "source_path": "deployment-self-hosting/hosting-guides/cloud-providers/aws.md",
+      "corpus_path": "deployment-self-hosting/hosting-guides/cloud-providers/aws.md",
+      "title": "Deploying Flagsmith on AWS",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/cloud-providers/aws",
+      "sha256": "54ff8b7560d7200e6fd5d4d94dfd1fa01d600821d5ed848fafb472406b0cbf9f",
+      "bytes": 1489
+    },
+    {
+      "source_path": "deployment-self-hosting/hosting-guides/cloud-providers/google-cloud.md",
+      "corpus_path": "deployment-self-hosting/hosting-guides/cloud-providers/google-cloud.md",
+      "title": "Deploying Flagsmith on Google Cloud",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/cloud-providers/google-cloud",
+      "sha256": "7dc47223ddb3d073cf1b0d6ec24682dbfb304f1441884235cfb8ba5e3c40ab66",
+      "bytes": 5457
+    },
+    {
+      "source_path": "deployment-self-hosting/hosting-guides/docker.md",
+      "corpus_path": "deployment-self-hosting/hosting-guides/docker.md",
+      "title": "Docker",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker",
+      "sha256": "b92efd113d44d1fc618f7ccc195f7dcd3ca2ce7b7c5a7c173098dac8816a4059",
+      "bytes": 5097
+    },
+    {
+      "source_path": "deployment-self-hosting/hosting-guides/kubernetes-openshift.md",
+      "corpus_path": "deployment-self-hosting/hosting-guides/kubernetes-openshift.md",
+      "title": "Kubernetes and OpenShift",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/kubernetes-openshift",
+      "sha256": "6bbcd6b51c50ee441d789ff449de30aaa7e8c6e2b27e4eb50408745748ccbb3e",
+      "bytes": 54724
+    },
+    {
+      "source_path": "deployment-self-hosting/hosting-guides/manual-installation.md",
+      "corpus_path": "deployment-self-hosting/hosting-guides/manual-installation.md",
+      "title": "Manual Installation",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/manual-installation",
+      "sha256": "b314cc95f8cf225a7f980d9e07587bfda5fedc7382825f1ec9eaa7600273329a",
+      "bytes": 694
+    },
+    {
+      "source_path": "deployment-self-hosting/hosting-guides/one-click-installers.md",
+      "corpus_path": "deployment-self-hosting/hosting-guides/one-click-installers.md",
+      "title": "One-Click Installers",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/one-click-installers",
+      "sha256": "a2c1d3c4338d42a064cdf96fb7be0b6ae324a4f573bf90af4bbcdb639051d0e2",
+      "bytes": 1302
+    },
+    {
+      "source_path": "deployment-self-hosting/index.md",
+      "corpus_path": "deployment-self-hosting/index.md",
+      "title": "Deployment and Self-hosting Overview",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting",
+      "sha256": "4de8ec4d973c7c0d240ac5b71a35303d6dc39869cfa5701b0ab78b316fee1ae1",
+      "bytes": 6045
+    },
+    {
+      "source_path": "deployment-self-hosting/mcp-server.md",
+      "corpus_path": "deployment-self-hosting/mcp-server.md",
+      "title": "MCP Server",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/mcp-server",
+      "sha256": "5afa46a5e143dfd6d8ad9c2412a5238ed183327d3933250b66f1c9283fee1d43",
+      "bytes": 9286
+    },
+    {
+      "source_path": "deployment-self-hosting/observability/_events-catalogue.md",
+      "corpus_path": "deployment-self-hosting/observability/_events-catalogue.md",
+      "title": " Events Catalogue",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/observability/_events-catalogue",
+      "sha256": "24ca68a29bfc8fd7db7f223a9b4868cb98ddd5ab07bd5e51f7a2aac4d8d906fb",
+      "bytes": 21718
+    },
+    {
+      "source_path": "deployment-self-hosting/observability/_metrics-catalogue.md",
+      "corpus_path": "deployment-self-hosting/observability/_metrics-catalogue.md",
+      "title": " Metrics Catalogue",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/observability/_metrics-catalogue",
+      "sha256": "7e0c0fe96f6aeda60a1f913a37566ec6f03bcb054ea0aeac939939d4087ce984",
+      "bytes": 3769
+    },
+    {
+      "source_path": "deployment-self-hosting/observability/events.mdx",
+      "corpus_path": "deployment-self-hosting/observability/events.md",
+      "title": "Events",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/observability/events",
+      "sha256": "fef9eb5c672b31a41cad1026519cd9f6997ec337230e192900ed2ab70edc2559",
+      "bytes": 350
+    },
+    {
+      "source_path": "deployment-self-hosting/observability/metrics.mdx",
+      "corpus_path": "deployment-self-hosting/observability/metrics.md",
+      "title": "Metrics",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/observability/metrics",
+      "sha256": "2d7197c41163459867f6bc7c52961adcb3bc2f0d274eff6ee3e26e0700f2c684",
+      "bytes": 475
+    },
+    {
+      "source_path": "deployment-self-hosting/observability/monitoring.md",
+      "corpus_path": "deployment-self-hosting/observability/monitoring.md",
+      "title": "Monitoring",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/observability/monitoring",
+      "sha256": "cedead0038ff1433becc780aebcdd0054f3b720b7eb6a8c3bead49d163c784f7",
+      "bytes": 3989
+    },
+    {
+      "source_path": "deployment-self-hosting/observability/opentelemetry.md",
+      "corpus_path": "deployment-self-hosting/observability/opentelemetry.md",
+      "title": "OpenTelemetry",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/observability/opentelemetry",
+      "sha256": "17fdc92b0fa0f78a653e633d7277f6008b7658755acb183d2af9996c3a15a866",
+      "bytes": 4325
+    },
+    {
+      "source_path": "deployment-self-hosting/scaling-and-performance/asynchronous-task-processor.md",
+      "corpus_path": "deployment-self-hosting/scaling-and-performance/asynchronous-task-processor.md",
+      "title": "Asynchronous Task Processor",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/scaling-and-performance/asynchronous-task-processor",
+      "sha256": "eed7a5072c14972476b2fda47b7aff83610fa1b630537a3c291f09c6b404ea30",
+      "bytes": 7325
+    },
+    {
+      "source_path": "deployment-self-hosting/scaling-and-performance/load-testing.md",
+      "corpus_path": "deployment-self-hosting/scaling-and-performance/load-testing.md",
+      "title": "Load Testing",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/scaling-and-performance/load-testing",
+      "sha256": "411d671958caa816d41b2d37b75e43e13adf561f1f28c91003019a8cbd7a4247",
+      "bytes": 659
+    },
+    {
+      "source_path": "deployment-self-hosting/scaling-and-performance/sizing-and-scaling.md",
+      "corpus_path": "deployment-self-hosting/scaling-and-performance/sizing-and-scaling.md",
+      "title": "Sizing and Scaling",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/scaling-and-performance/sizing-and-scaling",
+      "sha256": "123897695ee919803605ef927492a15ec7d7931ef7798685082af1b1129416b3",
+      "bytes": 36373
+    },
+    {
+      "source_path": "deployment-self-hosting/scaling-and-performance/using-influxdb-for-analytics.md",
+      "corpus_path": "deployment-self-hosting/scaling-and-performance/using-influxdb-for-analytics.md",
+      "title": "Using InfluxDB for Analytics",
+      "url": "https://docs.flagsmith.com/deployment-self-hosting/scaling-and-performance/using-influxdb-for-analytics",
+      "sha256": "3465091dc99a751c0f8959f02456a189ca76f1799c68a525ccdadc9a74caeac2",
+      "bytes": 8286
+    },
+    {
+      "source_path": "experimentation-ab-testing.md",
+      "corpus_path": "experimentation-ab-testing.md",
+      "title": "A/B Testing with Integrations",
+      "url": "https://docs.flagsmith.com/experimentation-ab-testing",
+      "sha256": "cd9360d8dc5e521350dd4739bb2d1f50170d17fae92ee3748e7e7a4612e2156b",
+      "bytes": 6245
+    },
+    {
+      "source_path": "experimentation/analyse-an-experiment.md",
+      "corpus_path": "experimentation/analyse-an-experiment.md",
+      "title": "Analyse an Experiment",
+      "url": "https://docs.flagsmith.com/experimentation/analyse-an-experiment",
+      "sha256": "790dd9d0c716798a022428248263b4112f9b3418215dedf5e8019b2749dd22f3",
+      "bytes": 2138
+    },
+    {
+      "source_path": "experimentation/connect-a-warehouse/clickhouse.md",
+      "corpus_path": "experimentation/connect-a-warehouse/clickhouse.md",
+      "title": "Connect ClickHouse",
+      "url": "https://docs.flagsmith.com/experimentation/connect-a-warehouse/clickhouse",
+      "sha256": "4715f0f6a5218940721de04e13f283271c8b126e0d37ee0dd11ab80d69a2cb1d",
+      "bytes": 5366
+    },
+    {
+      "source_path": "experimentation/connect-a-warehouse/databricks.md",
+      "corpus_path": "experimentation/connect-a-warehouse/databricks.md",
+      "title": "Connect Databricks",
+      "url": "https://docs.flagsmith.com/experimentation/connect-a-warehouse/databricks",
+      "sha256": "4c27ef33adf17385d1c4803721b40944d7b81e36c076bc60064458668fa65683",
+      "bytes": 10950
+    },
+    {
+      "source_path": "experimentation/connect-a-warehouse/index.md",
+      "corpus_path": "experimentation/connect-a-warehouse/index.md",
+      "title": "Connect a Warehouse",
+      "url": "https://docs.flagsmith.com/experimentation/connect-a-warehouse",
+      "sha256": "3f4e10b2272ebe63e781098a0f519404ba3cc30be07a15ac9e60e8e026c4dea8",
+      "bytes": 2696
+    },
+    {
+      "source_path": "experimentation/connect-a-warehouse/postgresql.md",
+      "corpus_path": "experimentation/connect-a-warehouse/postgresql.md",
+      "title": "Connect PostgreSQL",
+      "url": "https://docs.flagsmith.com/experimentation/connect-a-warehouse/postgresql",
+      "sha256": "34ed70e1011aff7979b69b1a3356d31cdb88f5042de174560e28bbf7f97756a5",
+      "bytes": 9393
+    },
+    {
+      "source_path": "experimentation/create-an-experiment.md",
+      "corpus_path": "experimentation/create-an-experiment.md",
+      "title": "Create an Experiment",
+      "url": "https://docs.flagsmith.com/experimentation/create-an-experiment",
+      "sha256": "29f45891b0087c1eaa5941b333bae2ded237d90e96e5d53565b0d1f79b1c8f64",
+      "bytes": 2582
+    },
+    {
+      "source_path": "experimentation/create-metrics.md",
+      "corpus_path": "experimentation/create-metrics.md",
+      "title": "Create Metrics",
+      "url": "https://docs.flagsmith.com/experimentation/create-metrics",
+      "sha256": "13e2fbf8c7585884d16f6eaf469d29e0f0c4bc1bf9bfbe9c3579affef4742b24",
+      "bytes": 2039
+    },
+    {
+      "source_path": "experimentation/example-paypal-button.md",
+      "corpus_path": "experimentation/example-paypal-button.md",
+      "title": "Example: Testing a PayPal Button",
+      "url": "https://docs.flagsmith.com/experimentation/example-paypal-button",
+      "sha256": "c94a3959e31eeb8a0f06b33e6a31e720d2319c9d53c4e8524082f7bdc1d94489",
+      "bytes": 3032
+    },
+    {
+      "source_path": "experimentation/index.md",
+      "corpus_path": "experimentation/index.md",
+      "title": "Experimentation",
+      "url": "https://docs.flagsmith.com/experimentation",
+      "sha256": "5ca37693b0ffd000b33ac85eb59416243345e64054c8e3c25e76bece288c2af3",
+      "bytes": 2281
+    },
+    {
+      "source_path": "experimentation/run-an-experiment.mdx",
+      "corpus_path": "experimentation/run-an-experiment.md",
+      "title": "Run an Experiment",
+      "url": "https://docs.flagsmith.com/experimentation/run-an-experiment",
+      "sha256": "8e20ee43d07ff9bc17627c36eabdabee3c0c92926b5de95c5958ba883271c269",
+      "bytes": 14400
+    },
+    {
+      "source_path": "experimentation/self-hosting.md",
+      "corpus_path": "experimentation/self-hosting.md",
+      "title": "Self-Hosting and Open Source",
+      "url": "https://docs.flagsmith.com/experimentation/self-hosting",
+      "sha256": "24e134742392a7d9691e39b69ca2308fd03c9b4593844dd1b32aea26923e32fa",
+      "bytes": 3867
+    },
+    {
+      "source_path": "experimentation/set-up-with-a-coding-agent.mdx",
+      "corpus_path": "experimentation/set-up-with-a-coding-agent.md",
+      "title": "Set Up an Experiment with a Coding Agent",
+      "url": "https://docs.flagsmith.com/experimentation/set-up-with-a-coding-agent",
+      "sha256": "9b2bbf75ede42c1a14a49137e9dceeb6e2b28e0f3101660885e77a4f0fc1c42e",
+      "bytes": 8719
+    },
+    {
+      "source_path": "experimentation/statistics.md",
+      "corpus_path": "experimentation/statistics.md",
+      "title": "Statistics Glossary",
+      "url": "https://docs.flagsmith.com/experimentation/statistics",
+      "sha256": "9c6d15854ee1b816c7963a8e8dfb372f05ef649ab40aced1b49721b20ad77a1f",
+      "bytes": 7309
+    },
+    {
+      "source_path": "flagsmith-concepts/data-model.md",
+      "corpus_path": "flagsmith-concepts/data-model.md",
+      "title": "Data Model",
+      "url": "https://docs.flagsmith.com/flagsmith-concepts/data-model",
+      "sha256": "82eadfb2458fcffe37fbf40e644208ee760ef0ff23a330112252a436b1b78087",
+      "bytes": 4405
+    },
+    {
+      "source_path": "flagsmith-concepts/identities.md",
+      "corpus_path": "flagsmith-concepts/identities.md",
+      "title": "Identities",
+      "url": "https://docs.flagsmith.com/flagsmith-concepts/identities",
+      "sha256": "57f7582c50c4560d1cecc6e2207a60faf5123af4d6d1219a96e95599045abe3c",
+      "bytes": 6464
+    },
+    {
+      "source_path": "flagsmith-concepts/platform-architecture.md",
+      "corpus_path": "flagsmith-concepts/platform-architecture.md",
+      "title": "Platform Architecture",
+      "url": "https://docs.flagsmith.com/flagsmith-concepts/platform-architecture",
+      "sha256": "70412945eafa84ee3d405efc07a493a4bae30798c335823e4b771abc1ca89f72",
+      "bytes": 5031
+    },
+    {
+      "source_path": "flagsmith-concepts/segments/index.md",
+      "corpus_path": "flagsmith-concepts/segments/index.md",
+      "title": "Segments",
+      "url": "https://docs.flagsmith.com/flagsmith-concepts/segments",
+      "sha256": "dbf057fc199572a87cf15472d58878c1be11320bd4d3310535e0cce4c9c228fa",
+      "bytes": 11275
+    },
+    {
+      "source_path": "flagsmith-concepts/segments/segment-rule-operators.md",
+      "corpus_path": "flagsmith-concepts/segments/segment-rule-operators.md",
+      "title": "Segment Rule Operators",
+      "url": "https://docs.flagsmith.com/flagsmith-concepts/segments/segment-rule-operators",
+      "sha256": "8d10fb3fb9fa49267faba1146025a54ae070dce16b28f99e5927c17314b6a48b",
+      "bytes": 9599
+    },
+    {
+      "source_path": "flagsmith-concepts/targeting-and-rollouts/index.md",
+      "corpus_path": "flagsmith-concepts/targeting-and-rollouts/index.md",
+      "title": "Targeting and Rollouts",
+      "url": "https://docs.flagsmith.com/flagsmith-concepts/targeting-and-rollouts",
+      "sha256": "fd8754b43692aa3880ccc05fc2c1dcf6441b10b5dfc17695aea30b66880961b9",
+      "bytes": 3269
+    },
+    {
+      "source_path": "getting-started/feature-flags.md",
+      "corpus_path": "getting-started/feature-flags.md",
+      "title": "Feature Flags",
+      "url": "https://docs.flagsmith.com/getting-started/feature-flags",
+      "sha256": "78565a7ee3d6dc2b5f97b6302d51e699cbb7ff2c778bf3b753a9c74d23ae04cc",
+      "bytes": 2676
+    },
+    {
+      "source_path": "getting-started/glossary.md",
+      "corpus_path": "getting-started/glossary.md",
+      "title": "Glossary",
+      "url": "https://docs.flagsmith.com/getting-started/glossary",
+      "sha256": "4c11b352e00f96012f804ff8efbba5f0ca199f8291aab883c45febdca320ff77",
+      "bytes": 3385
+    },
+    {
+      "source_path": "getting-started/quick-start.mdx",
+      "corpus_path": "getting-started/quick-start.md",
+      "title": "Quick Start",
+      "url": "https://docs.flagsmith.com/getting-started/quick-start",
+      "sha256": "5971b35a13adc9cb2d7f3cd42e55d248515386ab54f5437b3cb342af9d3755c2",
+      "bytes": 7389
+    },
+    {
+      "source_path": "getting-started/run-locally-with-a-coding-agent.mdx",
+      "corpus_path": "getting-started/run-locally-with-a-coding-agent.md",
+      "title": "Run Flagsmith Locally with a Coding Agent",
+      "url": "https://docs.flagsmith.com/getting-started/run-locally-with-a-coding-agent",
+      "sha256": "53436c8c73ceebe978f012fe513f23aee6f2578fde4a9ef3a0c9dc1caa7908d3",
+      "bytes": 5818
+    },
+    {
+      "source_path": "integrating-with-flagsmith/_mcp-tool-catalogue-enterprise.md",
+      "corpus_path": "integrating-with-flagsmith/_mcp-tool-catalogue-enterprise.md",
+      "title": " Mcp Tool Catalogue Enterprise",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/_mcp-tool-catalogue-enterprise",
+      "sha256": "136f86bcd0ea0e6545f775ac1991177730a86e87f78686727cb9720a903f9e62",
+      "bytes": 1161
+    },
+    {
+      "source_path": "integrating-with-flagsmith/_mcp-tool-catalogue.md",
+      "corpus_path": "integrating-with-flagsmith/_mcp-tool-catalogue.md",
+      "title": " Mcp Tool Catalogue",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/_mcp-tool-catalogue",
+      "sha256": "c0dc3a944fa6c5ec6b5e844b0144c1020db7c87d0522edf742ee3a284edac10a",
+      "bytes": 14010
+    },
+    {
+      "source_path": "integrating-with-flagsmith/CLI.md",
+      "corpus_path": "integrating-with-flagsmith/CLI.md",
+      "title": "Flagsmith CLI",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/CLI",
+      "sha256": "5026174e6803242322886b8494cdf99dc525da83fc3049c82236d01cf8e7fee3",
+      "bytes": 5038
+    },
+    {
+      "source_path": "integrating-with-flagsmith/flagsmith-api-overview/flags-api/authentication.md",
+      "corpus_path": "integrating-with-flagsmith/flagsmith-api-overview/flags-api/authentication.md",
+      "title": "Authentication",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/flagsmith-api-overview/flags-api/authentication",
+      "sha256": "353bc639baa8afc9ce2825e9bed081e72a63da5f3010bdb14ffb26eb1f724529",
+      "bytes": 984
+    },
+    {
+      "source_path": "integrating-with-flagsmith/flagsmith-api-overview/flags-api/code-examples.md",
+      "corpus_path": "integrating-with-flagsmith/flagsmith-api-overview/flags-api/code-examples.md",
+      "title": "Code Examples",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/flagsmith-api-overview/flags-api/code-examples",
+      "sha256": "e73562a21af3c2266327e3b594ebbff25ca486e00840269867dbd3af28579fbc",
+      "bytes": 1335
+    },
+    {
+      "source_path": "integrating-with-flagsmith/flagsmith-api-overview/flags-api/index.md",
+      "corpus_path": "integrating-with-flagsmith/flagsmith-api-overview/flags-api/index.md",
+      "title": "Flags API Reference",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/flagsmith-api-overview/flags-api",
+      "sha256": "6f52733d932e26d35314a681f53a26ae289c4adb3b073dcf2707486fb5249084",
+      "bytes": 724
+    },
+    {
+      "source_path": "integrating-with-flagsmith/flagsmith-api-overview/index.md",
+      "corpus_path": "integrating-with-flagsmith/flagsmith-api-overview/index.md",
+      "title": "Flagsmith API Overview",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/flagsmith-api-overview",
+      "sha256": "605b87ab0160de541ed3b896b288ed09c092911f04b879b96b763b95f47907bc",
+      "bytes": 1285
+    },
+    {
+      "source_path": "integrating-with-flagsmith/flagsmith-api-overview/management-api/authentication.md",
+      "corpus_path": "integrating-with-flagsmith/flagsmith-api-overview/management-api/authentication.md",
+      "title": "Authentication",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/flagsmith-api-overview/management-api/authentication",
+      "sha256": "4b1404372a92f43cf0809c14075f36b7af5a724679b2d022f8da16d6635e6bf9",
+      "bytes": 4209
+    },
+    {
+      "source_path": "integrating-with-flagsmith/flagsmith-api-overview/management-api/code-examples.md",
+      "corpus_path": "integrating-with-flagsmith/flagsmith-api-overview/management-api/code-examples.md",
+      "title": "Code Examples",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/flagsmith-api-overview/management-api/code-examples",
+      "sha256": "32aa85ba9486909dbfc3cbe24d223b6e862882af73308bd16fc42f3b56cd572f",
+      "bytes": 846
+    },
+    {
+      "source_path": "integrating-with-flagsmith/flagsmith-api-overview/management-api/index.md",
+      "corpus_path": "integrating-with-flagsmith/flagsmith-api-overview/management-api/index.md",
+      "title": "Management API",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/flagsmith-api-overview/management-api",
+      "sha256": "31e9dbd0311768d43fe2eafcafef361569d2227fe19919ed013a396c0436c147",
+      "bytes": 1250
+    },
+    {
+      "source_path": "integrating-with-flagsmith/integration-overview.md",
+      "corpus_path": "integrating-with-flagsmith/integration-overview.md",
+      "title": "Integration Overview",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/integration-overview",
+      "sha256": "a8e0abd36575d924d21aa220616699210e02f5e16394949b00a15caaa8e6e457",
+      "bytes": 3581
+    },
+    {
+      "source_path": "integrating-with-flagsmith/legacy-cli.md",
+      "corpus_path": "integrating-with-flagsmith/legacy-cli.md",
+      "title": "Flagsmith Legacy CLI",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/legacy-cli",
+      "sha256": "8677b6453c53e498c9c1d8025716f9020145affca36a795cd5f8fee63251f6ef",
+      "bytes": 2169
+    },
+    {
+      "source_path": "integrating-with-flagsmith/mcp-server.mdx",
+      "corpus_path": "integrating-with-flagsmith/mcp-server.md",
+      "title": "MCP Server",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/mcp-server",
+      "sha256": "d397b8c1f50cda11a2c13e48c1beaf70c9983c6a64bce108786c1884749e20bf",
+      "bytes": 9176
+    },
+    {
+      "source_path": "integrating-with-flagsmith/openfeature.md",
+      "corpus_path": "integrating-with-flagsmith/openfeature.md",
+      "title": "OpenFeature",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/openfeature",
+      "sha256": "2e2ab9b5a92d33734823f9de0975a6ffa61477887b18bdb334ae1f67441206b0",
+      "bytes": 1918
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/client-side-sdks/android.md",
+      "corpus_path": "integrating-with-flagsmith/sdks/client-side-sdks/android.md",
+      "title": "Flagsmith Android/Kotlin SDK",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/android",
+      "sha256": "c9b6b2b1c328b065eed423a0ce9a2f4aa01fa1eb245e73dbe0d78ee1717f2cf5",
+      "bytes": 7376
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/client-side-sdks/flutter.md",
+      "corpus_path": "integrating-with-flagsmith/sdks/client-side-sdks/flutter.md",
+      "title": "Flagsmith Flutter SDK",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/flutter",
+      "sha256": "8f69e595c24c9cb9625c9735a757ea2590080071f2c9aa025e5db30c1188a4a7",
+      "bytes": 7608
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/client-side-sdks/index.md",
+      "corpus_path": "integrating-with-flagsmith/sdks/client-side-sdks/index.md",
+      "title": "Client-Side SDKs",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks",
+      "sha256": "e3a94ec640a39a18596e926205e6d038a382b98bb6bc28c710780ed9f512b17d",
+      "bytes": 1267
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/client-side-sdks/ios.mdx",
+      "corpus_path": "integrating-with-flagsmith/sdks/client-side-sdks/ios.md",
+      "title": "Flagsmith iOS SDK",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/ios",
+      "sha256": "982df98b0f6c6915e3c83365ea9f50ddf7c1061063881b3157bb1629ad432440",
+      "bytes": 10420
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/client-side-sdks/javascript.md",
+      "corpus_path": "integrating-with-flagsmith/sdks/client-side-sdks/javascript.md",
+      "title": "Flagsmith JavaScript SDK",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript",
+      "sha256": "be38fd4ea933be0c689b8f5e16abbe1557947440867d7e3b51c30aa0de7b6ccd",
+      "bytes": 33753
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/client-side-sdks/nextjs-and-ssr.md",
+      "corpus_path": "integrating-with-flagsmith/sdks/client-side-sdks/nextjs-and-ssr.md",
+      "title": "Flagsmith React SDK",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/nextjs-and-ssr",
+      "sha256": "24051101ca6b5d72431057e78b31d4d421668ce71412729dc010136626611331",
+      "bytes": 7130
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/client-side-sdks/react.md",
+      "corpus_path": "integrating-with-flagsmith/sdks/client-side-sdks/react.md",
+      "title": "Flagsmith React SDK",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/react",
+      "sha256": "b58a40f210064b9a2d612ea042a06fa404e4da759977e62aa3e4a1a56fcb089b",
+      "bytes": 5499
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/index.md",
+      "corpus_path": "integrating-with-flagsmith/sdks/index.md",
+      "title": "SDKs Overview",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks",
+      "sha256": "f56a0a0fab31b5a15999f09826965e66cc1e7efa3c757831e8790e20a78f047d",
+      "bytes": 14965
+    },
+    {
+      "source_path": "integrating-with-flagsmith/sdks/server-side.mdx",
+      "corpus_path": "integrating-with-flagsmith/sdks/server-side.md",
+      "title": "Server Side SDKs",
+      "url": "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side",
+      "sha256": "46411e9cee792e89f08c733e69f16fca6090e5769a333a156d8eca5168668a7c",
+      "bytes": 54502
+    },
+    {
+      "source_path": "managing-flags/code-references.md",
+      "corpus_path": "managing-flags/code-references.md",
+      "title": "Code References",
+      "url": "https://docs.flagsmith.com/managing-flags/code-references",
+      "sha256": "ffeec0ee96756c52b5bb917738ca3d6f921954e41f46c0799440d30219e17ed6",
+      "bytes": 5377
+    },
+    {
+      "source_path": "managing-flags/core-management.md",
+      "corpus_path": "managing-flags/core-management.md",
+      "title": "Basic Flag Management",
+      "url": "https://docs.flagsmith.com/managing-flags/core-management",
+      "sha256": "1536ad4c29cc4af02a3b6ac95fa4bb1ffa7bf7eb1986891524ed5d85b2f48158",
+      "bytes": 6283
+    },
+    {
+      "source_path": "managing-flags/feature-health-metrics.md",
+      "corpus_path": "managing-flags/feature-health-metrics.md",
+      "title": "Feature Health Metrics",
+      "url": "https://docs.flagsmith.com/managing-flags/feature-health-metrics",
+      "sha256": "9418fb94e1f15de42fa9e63ffb92cc10ed57ea44abc4ce2d9e96d4653275943c",
+      "bytes": 3308
+    },
+    {
+      "source_path": "managing-flags/feature-versioning.md",
+      "corpus_path": "managing-flags/feature-versioning.md",
+      "title": "Feature Versioning",
+      "url": "https://docs.flagsmith.com/managing-flags/feature-versioning",
+      "sha256": "504cba887706e305cd78019fe2a54034db528d5ac25f5544441f1f975c621af0",
+      "bytes": 5098
+    },
+    {
+      "source_path": "managing-flags/flag-analytics.md",
+      "corpus_path": "managing-flags/flag-analytics.md",
+      "title": "Flag Analytics",
+      "url": "https://docs.flagsmith.com/managing-flags/flag-analytics",
+      "sha256": "abad6544f060a46818400073fe4780909ed7fddfabdb0e0887ac43399ba22eb9",
+      "bytes": 2000
+    },
+    {
+      "source_path": "managing-flags/flag-dependencies.md",
+      "corpus_path": "managing-flags/flag-dependencies.md",
+      "title": "Flag Dependencies",
+      "url": "https://docs.flagsmith.com/managing-flags/flag-dependencies",
+      "sha256": "bfa1f2380cccb34b0f86f37114e982c54610e2c4be7b28d24bb157d4a973d18c",
+      "bytes": 1603
+    },
+    {
+      "source_path": "managing-flags/release-pipeline.md",
+      "corpus_path": "managing-flags/release-pipeline.md",
+      "title": "Release Pipelines",
+      "url": "https://docs.flagsmith.com/managing-flags/release-pipeline",
+      "sha256": "1c177318ae8d48210b03b62fffc42dc9c29062669c151e405f282c2992cffb15",
+      "bytes": 6668
+    },
+    {
+      "source_path": "managing-flags/rollout/rollout-by-attribute.md",
+      "corpus_path": "managing-flags/rollout/rollout-by-attribute.md",
+      "title": "Rollout by Attribute",
+      "url": "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-attribute",
+      "sha256": "ddb58aabbe7a698599060487f4a894d15887d71ebce620a2829ea1c7aa778bee",
+      "bytes": 2401
+    },
+    {
+      "source_path": "managing-flags/rollout/rollout-by-percentage.md",
+      "corpus_path": "managing-flags/rollout/rollout-by-percentage.md",
+      "title": "Rollout by Percentage",
+      "url": "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage",
+      "sha256": "49196e9b4fa499b53d94b27b37d8a56b24e595ed1530fad34aeaa2d8d2b8b856",
+      "bytes": 3811
+    },
+    {
+      "source_path": "managing-flags/scheduled-flags.md",
+      "corpus_path": "managing-flags/scheduled-flags.md",
+      "title": "Scheduled Flags",
+      "url": "https://docs.flagsmith.com/managing-flags/scheduled-flags",
+      "sha256": "d43854fa2f780a5cc97c2bba39f803082950510c96a5679aa6de35e4c482a938",
+      "bytes": 2538
+    },
+    {
+      "source_path": "managing-flags/stale-flags.md",
+      "corpus_path": "managing-flags/stale-flags.md",
+      "title": "Stale Flag Detection",
+      "url": "https://docs.flagsmith.com/managing-flags/stale-flags",
+      "sha256": "ec8e6e376bf1dd22fa261767c2b985c9199dd1d04b08a3107b0a9a6bfa3a6831",
+      "bytes": 3754
+    },
+    {
+      "source_path": "managing-flags/tagging.md",
+      "corpus_path": "managing-flags/tagging.md",
+      "title": "Tagging",
+      "url": "https://docs.flagsmith.com/managing-flags/tagging",
+      "sha256": "65cc0179360cac4c9a4278325f457ba428bc72c44b98b8b95d4c874c37b7159e",
+      "bytes": 2563
+    },
+    {
+      "source_path": "managing-flags/updating-flags.md",
+      "corpus_path": "managing-flags/updating-flags.md",
+      "title": "Experimental: Updating Flags",
+      "url": "https://docs.flagsmith.com/managing-flags/updating-flags",
+      "sha256": "30ef3e259c47ff60043f5a6aa6071bb1835724a454473b6277b8ab1cda5d9903",
+      "bytes": 10177
+    },
+    {
+      "source_path": "performance/edge-api.md",
+      "corpus_path": "performance/edge-api.md",
+      "title": "Edge API",
+      "url": "https://docs.flagsmith.com/performance/edge-api",
+      "sha256": "16d8832b5ba73fe74edca94d5a06bef4a2007c1fd95aec49731cfb0e2cd6356c",
+      "bytes": 6737
+    },
+    {
+      "source_path": "performance/edge-proxy.md",
+      "corpus_path": "performance/edge-proxy.md",
+      "title": "Edge Proxy",
+      "url": "https://docs.flagsmith.com/performance/edge-proxy",
+      "sha256": "93886c6a98505a6f3c4f35c505442261652f3c528d4b2ec027dd3d8724c5ee86",
+      "bytes": 3322
+    },
+    {
+      "source_path": "performance/real-time-flags.md",
+      "corpus_path": "performance/real-time-flags.md",
+      "title": "Real-time flag updates",
+      "url": "https://docs.flagsmith.com/performance/real-time-flags",
+      "sha256": "748ce37b8f54c07304848ba702c9df9770956ce7e0beccfc5fd97805ce619cf6",
+      "bytes": 4370
+    },
+    {
+      "source_path": "project-and-community/contributing.md",
+      "corpus_path": "project-and-community/contributing.md",
+      "title": "Contributing Guide",
+      "url": "https://docs.flagsmith.com/project-and-community/contributing",
+      "sha256": "3b587f0ac4e1bf2a0885d1c7f72cf8df0f3474ae5d53f0b01dc301aacff25a6e",
+      "bytes": 50
+    },
+    {
+      "source_path": "project-and-community/development.md",
+      "corpus_path": "project-and-community/development.md",
+      "title": "Developer Guides",
+      "url": "https://docs.flagsmith.com/project-and-community/development",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "bytes": 1
+    },
+    {
+      "source_path": "project-and-community/release-notes.md",
+      "corpus_path": "project-and-community/release-notes.md",
+      "title": "Release Notes",
+      "url": "https://docs.flagsmith.com/project-and-community/release-notes",
+      "sha256": "80a32166e5f1aac2a24af04a7faae40b1c031ddb46ecc5fc8f31d9a03dad7a1e",
+      "bytes": 4391
+    },
+    {
+      "source_path": "sdk-api/flagsmith-api.info.mdx",
+      "corpus_path": "sdk-api/flagsmith-api.info.md",
+      "title": "Flagsmith API",
+      "url": "https://docs.flagsmith.com/sdk-api/flagsmith-api.info",
+      "sha256": "6948ec36359d417ca8d0c3dfdfa5309dd6cc20c2705a6eebee7561399a4424d0",
+      "bytes": 957
+    },
+    {
+      "source_path": "sdk-api/sdk-v-1-environment-document.api.mdx",
+      "corpus_path": "sdk-api/sdk-v-1-environment-document.api.md",
+      "title": "sdk_v1_environment_document",
+      "url": "https://docs.flagsmith.com/sdk-api/sdk-v-1-environment-document.api",
+      "sha256": "a0f2c7de3b449071c99357afd21b5f08a257e3822f496a4454c9c35ff1ccbc1f",
+      "bytes": 9327
+    },
+    {
+      "source_path": "sdk-api/sdk-v-1-flags.api.mdx",
+      "corpus_path": "sdk-api/sdk-v-1-flags.api.md",
+      "title": "sdk_v1_flags",
+      "url": "https://docs.flagsmith.com/sdk-api/sdk-v-1-flags.api",
+      "sha256": "0917dffa3c67d4fb18d0133f6d3c04913a067cc850cf9d259a02fe9df5599ce6",
+      "bytes": 1652
+    },
+    {
+      "source_path": "sdk-api/sdk-v-1-get-identities.api.mdx",
+      "corpus_path": "sdk-api/sdk-v-1-get-identities.api.md",
+      "title": "sdk_v1_get_identities",
+      "url": "https://docs.flagsmith.com/sdk-api/sdk-v-1-get-identities.api",
+      "sha256": "2604b8fc2bc7db3c5e2e1ce9536226971ffb0ced0f50bc3b112bc5165dd3a105",
+      "bytes": 2410
+    },
+    {
+      "source_path": "sdk-api/sdk-v-1-post-identities.api.mdx",
+      "corpus_path": "sdk-api/sdk-v-1-post-identities.api.md",
+      "title": "sdk_v1_post_identities",
+      "url": "https://docs.flagsmith.com/sdk-api/sdk-v-1-post-identities.api",
+      "sha256": "415e91f9127eea86c03cd9c99b7cc163d0e8c7a52e65d81a992ab3cbd0b713f6",
+      "bytes": 5025
+    },
+    {
+      "source_path": "sdk-api/sdk.tag.mdx",
+      "corpus_path": "sdk-api/sdk.tag.md",
+      "title": "sdk",
+      "url": "https://docs.flagsmith.com/sdk-api/sdk.tag",
+      "sha256": "5080f1f5c699644e88665d35723d529619e6b6ba7d1f96688d186e06331f8b8d",
+      "bytes": 244
+    },
+    {
+      "source_path": "support/cves-and-vulnerabilities.md",
+      "corpus_path": "support/cves-and-vulnerabilities.md",
+      "title": "CVEs and Vulnerabilities",
+      "url": "https://docs.flagsmith.com/support/cves-and-vulnerabilities",
+      "sha256": "8a9dba5995181b880ab28add39b1614fce0dc9dcbf5c0b05afc6f54ddc7dae9e",
+      "bytes": 3237
+    },
+    {
+      "source_path": "support/faq/account-billing-organisation.mdx",
+      "corpus_path": "support/faq/account-billing-organisation.md",
+      "title": "Account, Billing & Organisation - FAQ",
+      "url": "https://docs.flagsmith.com/support/faq/account-billing-organisation",
+      "sha256": "db56d4cc45ffc8c6608c0f45cf8713622de34b2b83d2c3e83579d6722fbe0758",
+      "bytes": 2941
+    },
+    {
+      "source_path": "support/faq/feature-flags-remote-config.mdx",
+      "corpus_path": "support/faq/feature-flags-remote-config.md",
+      "title": "Feature Flags & Remote Config - FAQ",
+      "url": "https://docs.flagsmith.com/support/faq/feature-flags-remote-config",
+      "sha256": "9e9384d3d5d292d1b86074b81c747cccf2cdd61f53e35c3badb276996e13c9ce",
+      "bytes": 3523
+    },
+    {
+      "source_path": "support/faq/index.mdx",
+      "corpus_path": "support/faq/index.md",
+      "title": "Frequently Asked Questions",
+      "url": "https://docs.flagsmith.com/support/faq",
+      "sha256": "188eb075b7b4d432d9e7086cffacf47dcd6f032841a167310ffef146ae7b7520",
+      "bytes": 1528
+    },
+    {
+      "source_path": "support/faq/infrastructure-api.mdx",
+      "corpus_path": "support/faq/infrastructure-api.md",
+      "title": "Infrastructure & API - FAQ",
+      "url": "https://docs.flagsmith.com/support/faq/infrastructure-api",
+      "sha256": "30c8e5ffc43d7f53517fb13e07188824e342fb61fde9ed5c877020d29fe24b4a",
+      "bytes": 3312
+    },
+    {
+      "source_path": "support/faq/open-source-self-hosted.mdx",
+      "corpus_path": "support/faq/open-source-self-hosted.md",
+      "title": "Open Source & Self-Hosted - FAQ",
+      "url": "https://docs.flagsmith.com/support/faq/open-source-self-hosted",
+      "sha256": "bbec892fc57928484f8fef6503023f38e4b58f809ca824056fb27ca95527c930",
+      "bytes": 1971
+    },
+    {
+      "source_path": "support/faq/sdks-implementation.mdx",
+      "corpus_path": "support/faq/sdks-implementation.md",
+      "title": "SDKs & Implementation - FAQ",
+      "url": "https://docs.flagsmith.com/support/faq/sdks-implementation",
+      "sha256": "beebe0d4fd079b98e24a6efe519f439350a92701884f8f3549f34faa0210be36",
+      "bytes": 2886
+    },
+    {
+      "source_path": "support/faq/security-compliance.mdx",
+      "corpus_path": "support/faq/security-compliance.md",
+      "title": "Security & Compliance - FAQ",
+      "url": "https://docs.flagsmith.com/support/faq/security-compliance",
+      "sha256": "177e6fba9d5b109e26218927cef30b199cc41fdad8abdf15d096ca28ac92820e",
+      "bytes": 1631
+    },
+    {
+      "source_path": "support/faq/segments-targeting.mdx",
+      "corpus_path": "support/faq/segments-targeting.md",
+      "title": "Segments & Targeting - FAQ",
+      "url": "https://docs.flagsmith.com/support/faq/segments-targeting",
+      "sha256": "33f0eda60381b8c54f78b79cd486e26f0d5f718ec6de3f3d771ff4383519d3b3",
+      "bytes": 4531
+    },
+    {
+      "source_path": "support/faq/user-identity-management.mdx",
+      "corpus_path": "support/faq/user-identity-management.md",
+      "title": "User & Identity Management - FAQ",
+      "url": "https://docs.flagsmith.com/support/faq/user-identity-management",
+      "sha256": "3c3f1bcfdad9b13d5001d42ef2caa0edd408852c632c0e6913b1c523866fa0a1",
+      "bytes": 1990
+    },
+    {
+      "source_path": "support/index.mdx",
+      "corpus_path": "support/index.md",
+      "title": "Help and Support",
+      "url": "https://docs.flagsmith.com/support",
+      "sha256": "00b6afb2e1fa0e18a51b6b02b3dd3f9dcd62d94d0f7583c01b154041cfe90d09",
+      "bytes": 6369
+    },
+    {
+      "source_path": "third-party-integrations/analytics/adobe.md",
+      "corpus_path": "third-party-integrations/analytics/adobe.md",
+      "title": "Adobe Analytics Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/analytics/adobe",
+      "sha256": "1486c122ab2dbc5edfb078c91327eafb84e6e2672b65a2def2b7a4f5b409371a",
+      "bytes": 365
+    },
+    {
+      "source_path": "third-party-integrations/analytics/amplitude.md",
+      "corpus_path": "third-party-integrations/analytics/amplitude.md",
+      "title": "Amplitude Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/analytics/amplitude",
+      "sha256": "a6ab10e07b4698a313cfdb0c8db7bbf99f49cc6428764fd75c654d86aec5c5b0",
+      "bytes": 2001
+    },
+    {
+      "source_path": "third-party-integrations/analytics/heap.md",
+      "corpus_path": "third-party-integrations/analytics/heap.md",
+      "title": "Heap Analytics Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/analytics/heap",
+      "sha256": "752e1f31c6e3bc762f124bf375e4ddd106532a74c8d4a8c4a950b4dcb468707c",
+      "bytes": 2924
+    },
+    {
+      "source_path": "third-party-integrations/analytics/mixpanel.md",
+      "corpus_path": "third-party-integrations/analytics/mixpanel.md",
+      "title": "Mixpanel Analytics Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/analytics/mixpanel",
+      "sha256": "c40503c1d589e9a2ea6bd23c0d44e47456f4da0b61c0b57878b2015e4b4ec538",
+      "bytes": 4040
+    },
+    {
+      "source_path": "third-party-integrations/analytics/rudderstack.md",
+      "corpus_path": "third-party-integrations/analytics/rudderstack.md",
+      "title": "RudderStack Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/analytics/rudderstack",
+      "sha256": "d6b027680240a7a4c39c02d8aa75c81f39051e3f9e7cebff001441939edfc257",
+      "bytes": 1859
+    },
+    {
+      "source_path": "third-party-integrations/analytics/segment.md",
+      "corpus_path": "third-party-integrations/analytics/segment.md",
+      "title": "Segment Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/analytics/segment",
+      "sha256": "b87e5e6ffcfa56c6b4b727d20f571b16b00ea5c723d9a501f6331ffad092cb38",
+      "bytes": 1825
+    },
+    {
+      "source_path": "third-party-integrations/backstage.md",
+      "corpus_path": "third-party-integrations/backstage.md",
+      "title": "Backstage",
+      "url": "https://docs.flagsmith.com/third-party-integrations/backstage",
+      "sha256": "20b1f215b15b3047c12e910f5d50dd0069695548c5a1bcfadcf385327b3091c7",
+      "bytes": 3255
+    },
+    {
+      "source_path": "third-party-integrations/ci-cd/index.md",
+      "corpus_path": "third-party-integrations/ci-cd/index.md",
+      "title": "CI/CD Overview",
+      "url": "https://docs.flagsmith.com/third-party-integrations/ci-cd",
+      "sha256": "e597c6e6578bd68f40772c1c4da9602c9c4705490d8a90ea8786592b57ddda5c",
+      "bytes": 427
+    },
+    {
+      "source_path": "third-party-integrations/ci-cd/terraform.md",
+      "corpus_path": "third-party-integrations/ci-cd/terraform.md",
+      "title": "Terraform Provider",
+      "url": "https://docs.flagsmith.com/third-party-integrations/ci-cd/terraform",
+      "sha256": "136bd85c5d0c3b47865b9cd6572b5a59912cffae521f5c6e53f7fd63a277aa1b",
+      "bytes": 4522
+    },
+    {
+      "source_path": "third-party-integrations/cohort-synchronisation/amplitude.md",
+      "corpus_path": "third-party-integrations/cohort-synchronisation/amplitude.md",
+      "title": "Amplitude Cohort Synchronisation",
+      "url": "https://docs.flagsmith.com/third-party-integrations/cohort-synchronisation/amplitude",
+      "sha256": "0fa34f12866277e8d347714793530fb5cc5eaf268a19a452a3b7062524712686",
+      "bytes": 3171
+    },
+    {
+      "source_path": "third-party-integrations/cohort-synchronisation/csv-import.md",
+      "corpus_path": "third-party-integrations/cohort-synchronisation/csv-import.md",
+      "title": "CSV Import",
+      "url": "https://docs.flagsmith.com/third-party-integrations/cohort-synchronisation/csv-import",
+      "sha256": "9729c280c49affe89cd33c5d779e37c2abf3e362781b43610f82ce1fe71d4c2a",
+      "bytes": 2610
+    },
+    {
+      "source_path": "third-party-integrations/cohort-synchronisation/index.md",
+      "corpus_path": "third-party-integrations/cohort-synchronisation/index.md",
+      "title": "Cohort Synchronisation",
+      "url": "https://docs.flagsmith.com/third-party-integrations/cohort-synchronisation",
+      "sha256": "d40306b805ed691abb9fabaf674c842e219231d0e6c6b1121990f98d4961d4c3",
+      "bytes": 5104
+    },
+    {
+      "source_path": "third-party-integrations/index.mdx",
+      "corpus_path": "third-party-integrations/index.md",
+      "title": "Third-Party Integrations",
+      "url": "https://docs.flagsmith.com/third-party-integrations",
+      "sha256": "9f356de9394eb88f500d0e296c11eff1ccacfd992954cdeaaad4493636f0ce59",
+      "bytes": 2730
+    },
+    {
+      "source_path": "third-party-integrations/observability-and-monitoring/appdynamics.md",
+      "corpus_path": "third-party-integrations/observability-and-monitoring/appdynamics.md",
+      "title": "AppDynamics Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/observability-and-monitoring/appdynamics",
+      "sha256": "c68fdd06e09fd0309f9a3c669a490ebf3c90c32869fccd7efd6be2f120d2d0dd",
+      "bytes": 1771
+    },
+    {
+      "source_path": "third-party-integrations/observability-and-monitoring/datadog.md",
+      "corpus_path": "third-party-integrations/observability-and-monitoring/datadog.md",
+      "title": "Datadog Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/observability-and-monitoring/datadog",
+      "sha256": "311d5b263abd8f2198a134a2cd86f3e98c270556cf7b20c76ad6544192ae1e49",
+      "bytes": 1228
+    },
+    {
+      "source_path": "third-party-integrations/observability-and-monitoring/dynatrace.md",
+      "corpus_path": "third-party-integrations/observability-and-monitoring/dynatrace.md",
+      "title": "Dynatrace Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/observability-and-monitoring/dynatrace",
+      "sha256": "380308692eb43ebfb56a731bca797dd0c7cdb1e0bba9a898880fa5513a83a467",
+      "bytes": 1744
+    },
+    {
+      "source_path": "third-party-integrations/observability-and-monitoring/grafana.md",
+      "corpus_path": "third-party-integrations/observability-and-monitoring/grafana.md",
+      "title": "Grafana Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/observability-and-monitoring/grafana",
+      "sha256": "47b6430d66874b07690ad7d6d61a27e726267468116c9822e2c2e748ce042e1f",
+      "bytes": 2961
+    },
+    {
+      "source_path": "third-party-integrations/observability-and-monitoring/new-relic.md",
+      "corpus_path": "third-party-integrations/observability-and-monitoring/new-relic.md",
+      "title": "New Relic Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/observability-and-monitoring/new-relic",
+      "sha256": "9daddbd599a6bcab732591a168d9446e0bccaeefa85db693e90e3110c2aa656d",
+      "bytes": 724
+    },
+    {
+      "source_path": "third-party-integrations/observability-and-monitoring/prometheus.md",
+      "corpus_path": "third-party-integrations/observability-and-monitoring/prometheus.md",
+      "title": "Prometheus Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/observability-and-monitoring/prometheus",
+      "sha256": "fb15b28a32e6375c4f7fee92f1a7a6657045b53b9907b387c1a84a98e4781af1",
+      "bytes": 1758
+    },
+    {
+      "source_path": "third-party-integrations/observability-and-monitoring/sentry.md",
+      "corpus_path": "third-party-integrations/observability-and-monitoring/sentry.md",
+      "title": "Sentry Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/observability-and-monitoring/sentry",
+      "sha256": "07642e37305811d5e4fd928f99545b37f043aafe39b6d3e3bc06e445a9fc5344",
+      "bytes": 3622
+    },
+    {
+      "source_path": "third-party-integrations/project-management/github.md",
+      "corpus_path": "third-party-integrations/project-management/github.md",
+      "title": "GitHub Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/project-management/github",
+      "sha256": "2010a7dcb72390c796c12be829ced55692c3066650e890183d6d455996bb86c2",
+      "bytes": 2920
+    },
+    {
+      "source_path": "third-party-integrations/project-management/gitlab.md",
+      "corpus_path": "third-party-integrations/project-management/gitlab.md",
+      "title": "GitLab Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/project-management/gitlab",
+      "sha256": "d2614745a6a358f830d9b8f5a1c2ee0a39eb7692bff015409d04dfcc8eaf44ff",
+      "bytes": 2637
+    },
+    {
+      "source_path": "third-party-integrations/project-management/jira.md",
+      "corpus_path": "third-party-integrations/project-management/jira.md",
+      "title": "Jira Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/project-management/jira",
+      "sha256": "5ff8924945bbeadbca9902a66b55d8f3dd4d30db4f5fe53608db1aa45259b0d1",
+      "bytes": 1235
+    },
+    {
+      "source_path": "third-party-integrations/project-management/servicenow.md",
+      "corpus_path": "third-party-integrations/project-management/servicenow.md",
+      "title": "ServiceNow Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/project-management/servicenow",
+      "sha256": "a2c491355daf353f5b26ce9e0596a3e09f9231b52952043f8bcd1a9e5132b1e7",
+      "bytes": 231
+    },
+    {
+      "source_path": "third-party-integrations/project-management/slack.md",
+      "corpus_path": "third-party-integrations/project-management/slack.md",
+      "title": "Slack Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/project-management/slack",
+      "sha256": "c9d57baf34bba0bbfc9a0c59c4cf956075e6e19e0aca9fd3a2fcc7a8e32d6452",
+      "bytes": 933
+    },
+    {
+      "source_path": "third-party-integrations/webhook.md",
+      "corpus_path": "third-party-integrations/webhook.md",
+      "title": "Webhook Integration",
+      "url": "https://docs.flagsmith.com/third-party-integrations/webhook",
+      "sha256": "fee2ad6c88715be7bdcde40b5204c281a1aa92fd7c0fb4efc751ad021d7f4af2",
+      "bytes": 3670
+    }
+  ]
+}

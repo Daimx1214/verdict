@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Verdict design tokens - Build Specification Section 9.13 (verbatim values) */
+:root {
+  --paper: #F6F3EC; --surface: #FCFAF5; --surface-2: #EFEBE2; --border: #DAD4C6; --border-strong: #BDB5A2;
+  --ink: #16191D; --ink-2: #4A4F57; --ink-3: #646A72; --accent: #0B6E69; --accent-hover: #095A56; --accent-active: #074744;
+  --accent-subtle: #E1EFEC; --on-accent: #FFFFFF; --ctrl: #3B5B8C; --ctrl-subtle: #E4EAF3; --chal: #8F5A0A; --chal-subtle: #F6E9D3;
+  --success: #276B2B; --success-subtle: #E3F1E4; --warning: #8A5A00; --warning-subtle: #F8EDCF; --danger: #B3261E;
+  --danger-subtle: #F9E3E0; --info: #2B6A8F; --info-subtle: #E1EEF5;
+}
+[data-theme="dark"] {
+  --paper: #121413; --surface: #1A1D1C; --surface-2: #0E100F; --border: #2C312F; --border-strong: #3F4643;
+  --ink: #ECEAE4; --ink-2: #B5B9B5; --ink-3: #8A908C; --accent: #3FB2AA; --accent-hover: #5CC6BE; --accent-active: #7AD4CD;
+  --accent-subtle: #12302E; --on-accent: #07201F; --ctrl: #7FA0D1; --ctrl-subtle: #1B2535; --chal: #E0A94A; --chal-subtle: #33270F;
+  --success: #62B96A; --success-subtle: #15301A; --warning: #E5B454; --warning-subtle: #33290F; --danger: #F0716A;
+  --danger-subtle: #3A1816; --info: #6FB3D6; --info-subtle: #13303F;
+}
+
+@theme inline {
+  --color-paper: var(--paper); --color-surface: var(--surface); --color-surface-2: var(--surface-2);
+  --color-border: var(--border); --color-border-strong: var(--border-strong);
+  --color-ink: var(--ink); --color-ink-2: var(--ink-2); --color-ink-3: var(--ink-3);
+  --color-accent: var(--accent); --color-accent-hover: var(--accent-hover); --color-accent-active: var(--accent-active);
+  --color-accent-subtle: var(--accent-subtle); --color-on-accent: var(--on-accent);
+  --color-ctrl: var(--ctrl); --color-ctrl-subtle: var(--ctrl-subtle);
+  --color-chal: var(--chal); --color-chal-subtle: var(--chal-subtle);
+  --color-success: var(--success); --color-success-subtle: var(--success-subtle);
+  --color-warning: var(--warning); --color-warning-subtle: var(--warning-subtle);
+  --color-danger: var(--danger); --color-danger-subtle: var(--danger-subtle);
+  --color-info: var(--info); --color-info-subtle: var(--info-subtle);
+  --font-display: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --font-sans: "IBM Plex Sans", system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+html { scroll-behavior: smooth; }
+body { background: var(--paper); color: var(--ink); font-family: var(--font-sans); font-size: 16px; line-height: 26px; }
+::selection { background: var(--accent-subtle); color: var(--ink); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+@keyframes verdict-progress { 0% { transform: translateX(-100%);} 100% { transform: translateX(250%);} }
+.progress-indeterminate { animation: verdict-progress 1.2s ease-in-out infinite; }
+@keyframes verdict-fade-up { from { opacity: 0; transform: translateY(6px);} to { opacity: 1; transform: translateY(0);} }
+.fade-up { animation: verdict-fade-up 240ms ease-out both; }
+@keyframes verdict-shimmer { 0% { opacity: .55; } 50% { opacity: 1; } 100% { opacity: .55; } }
+.skeleton { background: var(--surface-2); animation: verdict-shimmer 1.6s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+  html { scroll-behavior: auto; }
+}
+@media print {
+  [data-theme] { --paper: #FFFFFF; --surface: #FFFFFF; --surface-2: #F4F4F4; --ink: #16191D; --ink-2: #333333; --ink-3: #555555; }
+  header, footer, .no-print { display: none !important; }
+}

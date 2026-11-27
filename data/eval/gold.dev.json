@@ -1,0 +1,200 @@
+[
+  {
+    "answerable": true,
+    "category": "setup",
+    "gold_pages": [
+      "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+    ],
+    "id": "dev-01",
+    "question": "How do I run Flagsmith locally with Docker, and where do I access it once it is running?",
+    "reference_answer": "Download the docker-compose.yml from the Flagsmith GitHub repository and run docker-compose up. Once the containers are running, visit http://localhost:8000 and choose Get Started to create your admin account and first organisation; this first account is a superuser."
+  },
+  {
+    "answerable": true,
+    "category": "setup",
+    "gold_pages": [
+      "https://docs.flagsmith.com/getting-started/quick-start"
+    ],
+    "id": "dev-02",
+    "question": "What are the four steps covered by the Flagsmith Quick Start guide?",
+    "reference_answer": "The Quick Start teaches you to create a project and your first flag in the Flagsmith dashboard, import the Flagsmith JavaScript SDK into your web page, connect to the Flagsmith API and retrieve your flags, and update your application's behaviour based on a flag's value."
+  },
+  {
+    "answerable": true,
+    "category": "setup",
+    "gold_pages": [
+      "https://docs.flagsmith.com/getting-started/quick-start"
+    ],
+    "id": "dev-03",
+    "question": "What prerequisites do I need before starting the Flagsmith Quick Start tutorial?",
+    "reference_answer": "You need access to a Flagsmith instance, either the SaaS platform or a self-hosted instance, and a basic understanding of HTML and JavaScript. For the SaaS platform you log in at app.flagsmith.com."
+  },
+  {
+    "answerable": true,
+    "category": "setup",
+    "gold_pages": [
+      "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+    ],
+    "id": "dev-04",
+    "question": "In a self-hosted Docker install, which database does Flagsmith use and how are schema changes applied when upgrading?",
+    "reference_answer": "The REST API stores all of its data in a PostgreSQL database. Schema changes are carried out automatically when upgrading, using Django Migrations."
+  },
+  {
+    "answerable": true,
+    "category": "setup",
+    "gold_pages": [
+      "https://docs.flagsmith.com/deployment-self-hosting/hosting-guides/docker"
+    ],
+    "id": "dev-05",
+    "question": "How do I create another superuser in a Docker self-hosted Flagsmith install?",
+    "reference_answer": "Run docker compose exec flagsmith flagsmith createsuperuser. The Django admin dashboard is then accessible at http://localhost:8000/admin/ with that account."
+  },
+  {
+    "answerable": true,
+    "category": "concepts",
+    "gold_pages": [
+      "https://docs.flagsmith.com/flagsmith-concepts/segments"
+    ],
+    "id": "dev-06",
+    "question": "What is a segment in Flagsmith?",
+    "reference_answer": "A segment is a subset of identities defined by a set of rules that match identity traits. Once defined, you can create segment overrides that control the state of a feature only for identities belonging to that segment."
+  },
+  {
+    "answerable": true,
+    "category": "concepts",
+    "gold_pages": [
+      "https://docs.flagsmith.com/flagsmith-concepts/identities"
+    ],
+    "id": "dev-07",
+    "question": "What are identity traits in Flagsmith and what are they mainly used for?",
+    "reference_answer": "Traits are key/value pairs stored against individual identities for a particular environment. Their main use case is to drive segments, and each individual trait value is limited to a maximum size of 2000 bytes."
+  },
+  {
+    "answerable": true,
+    "category": "concepts",
+    "gold_pages": [
+      "https://docs.flagsmith.com/flagsmith-concepts/data-model"
+    ],
+    "id": "dev-08",
+    "question": "In the Flagsmith data model, what do organisations and projects contain?",
+    "reference_answer": "Organisations allow you and your team members to manage projects and their features, and a user can be a member of multiple organisations. Projects contain one or more environments that share a single set of features."
+  },
+  {
+    "answerable": true,
+    "category": "concepts",
+    "gold_pages": [
+      "https://docs.flagsmith.com/flagsmith-concepts/identities"
+    ],
+    "id": "dev-09",
+    "question": "Why should the identifier I use with the SDK identify call be unguessable, like a GUID?",
+    "reference_answer": "The SDK part of the Flagsmith API is public by design and the environment key is intended to be public. If you used an easily guessed identifier such as an incrementing integer, anyone could enumerate identities and gain public access to the traits associated with those users, so an unguessable, unidentifiable key such as a GUID is strongly recommended."
+  },
+  {
+    "answerable": true,
+    "category": "concepts",
+    "gold_pages": [
+      "https://docs.flagsmith.com/managing-flags/rollout/rollout-by-percentage"
+    ],
+    "id": "dev-10",
+    "question": "How does a percentage split rule decide whether an identity belongs to a segment?",
+    "reference_answer": "Each identity and segment has a unique identifier; the two are merged and hashed, and a floating point value between 0.0 and 1.0 is generated from the hash. That value is evaluated against the percentage split rule, which gives a consistent spread and a consistent experience per identity."
+  },
+  {
+    "answerable": true,
+    "category": "sdk",
+    "gold_pages": [
+      "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+    ],
+    "id": "dev-11",
+    "question": "In the JavaScript SDK, which init option defines which environment's flags are loaded?",
+    "reference_answer": "The environmentID option, which takes your client-side environment key, defines which project environment you get flags for. It is a required option in flagsmith.init."
+  },
+  {
+    "answerable": true,
+    "category": "sdk",
+    "gold_pages": [
+      "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/client-side-sdks/javascript"
+    ],
+    "id": "dev-12",
+    "question": "What do the hasFeature and getValue methods do in the JavaScript SDK?",
+    "reference_answer": "hasFeature(key) returns whether a particular feature is enabled, for example flagsmith.hasFeature('powerUserFeature'). getValue(key) returns the remote configuration value assigned to that feature."
+  },
+  {
+    "answerable": true,
+    "category": "sdk",
+    "gold_pages": [
+      "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+    ],
+    "id": "dev-13",
+    "question": "What is local evaluation mode in Flagsmith server-side SDKs?",
+    "reference_answer": "In local evaluation mode the SDK downloads the Environment Document from the Flagsmith API and evaluates flags locally inside your own infrastructure, polling the API for an updated document. It requires a server-side environment key."
+  },
+  {
+    "answerable": true,
+    "category": "sdk",
+    "gold_pages": [
+      "https://docs.flagsmith.com/integrating-with-flagsmith/sdks/server-side"
+    ],
+    "id": "dev-14",
+    "question": "In local evaluation mode, how often does the SDK refresh the Environment Document by default?",
+    "reference_answer": "The default environment refresh interval is 60 seconds, configurable for example via environment_refresh_interval_seconds in the Python SDK. The SDK spawns a separate thread or equivalent to poll the API for updates at that interval."
+  },
+  {
+    "answerable": true,
+    "category": "sdk",
+    "gold_pages": [
+      "https://docs.flagsmith.com/experimentation/run-an-experiment"
+    ],
+    "id": "dev-15",
+    "question": "Which method records an experiment exposure in the SDK, and from which JavaScript SDK version is experimentation supported?",
+    "reference_answer": "Calling getExperimentFlag for the experiment flag serves the variation and records the exposure for the identified user. Experimentation support in the JavaScript SDK (@flagsmith/flagsmith) is available from version 12.4.0 onwards."
+  },
+  {
+    "answerable": true,
+    "category": "troubleshooting",
+    "gold_pages": [
+      "https://docs.flagsmith.com/deployment-self-hosting/administration-and-maintenance/troubleshooting"
+    ],
+    "id": "dev-16",
+    "question": "My self-hosted frontend is running separately from the API and cannot reach it. What should I check?",
+    "reference_answer": "When the API and frontend run as separate applications, make sure the frontend is pointing to the API. Check the frontend environment variables, particularly API_URL, and the DNS setup between the two services."
+  },
+  {
+    "answerable": true,
+    "category": "troubleshooting",
+    "gold_pages": [
+      "https://docs.flagsmith.com/deployment-self-hosting/administration-and-maintenance/troubleshooting"
+    ],
+    "id": "dev-17",
+    "question": "What is the most common cause of API to database connectivity problems when self-hosting Flagsmith on AWS with RDS?",
+    "reference_answer": "The most common cause is missing Security Group permissions between the API application and the RDS database; the security groups attached to ECS, Fargate or EC2 must allow access to RDS. You should also make sure a DATABASE_URL environment variable is set within the API application."
+  },
+  {
+    "answerable": true,
+    "category": "troubleshooting",
+    "gold_pages": [
+      "https://docs.flagsmith.com/deployment-self-hosting/administration-and-maintenance/troubleshooting"
+    ],
+    "id": "dev-18",
+    "question": "Which endpoint should health checks use for a self-hosted Flagsmith API and frontend?",
+    "reference_answer": "If you are using health checks, use /health as the health-check endpoint for both the API and the frontend."
+  },
+  {
+    "answerable": true,
+    "category": "troubleshooting",
+    "gold_pages": [
+      "https://docs.flagsmith.com/managing-flags/stale-flags"
+    ],
+    "id": "dev-19",
+    "question": "When is a feature considered stale in Flagsmith, and what happens to it?",
+    "reference_answer": "A feature is considered stale when no change has been made to it in any environment for more than the threshold configured on the project, which is 30 days by default. Stale features are automatically tagged with the Stale system tag, shown with an alarm icon and an orange colour."
+  },
+  {
+    "answerable": false,
+    "category": "troubleshooting",
+    "gold_pages": [],
+    "id": "dev-20",
+    "question": "How do I restore a deleted Flagsmith environment from the recycle bin?",
+    "reference_answer": "The Flagsmith documentation does not describe any recycle bin or environment restore feature."
+  }
+]
