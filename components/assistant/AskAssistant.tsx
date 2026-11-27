@@ -4,15 +4,8 @@ import ReactMarkdown from "react-markdown";
 import rehypeSanitize from "rehype-sanitize";
 import { CornerDownLeft, ThumbsUp, ThumbsDown, Copy, Check, ExternalLink, Info, Link as LinkIcon, X } from "lucide-react";
 import { Alert, btnPrimary } from "@/components/ui/primitives";
+import { EXAMPLES } from "@/lib/examples";
 
-export const EXAMPLES = [
-  "How do I create a multivariate flag?",
-  "What is an identity in Flagsmith?",
-  "How do I roll out a feature to 10% of users?",
-  "What is the difference between segments and traits?",
-  "How do I self-host Flagsmith with Docker?",
-  "How do I run an A/B experiment?",
-];
 interface Source { n: number; title: string; headingPath: string; url: string; text: string }
 type Phase = "idle" | "loading" | "streaming" | "complete" | "noanswer" | "error";
 const REASONS = ["Wrong answer", "Missing information", "Out of date", "Hard to understand"];

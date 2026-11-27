@@ -3,7 +3,7 @@ import { ArrowRight, Lock } from "lucide-react";
 import Glyph from "@/components/layout/Glyph";
 import { armData, screeningResults } from "@/lib/lab-data";
 import { btnPrimary, btnSecondary, pct } from "@/components/ui/primitives";
-import { EXAMPLES } from "@/components/assistant/AskAssistant";
+import { EXAMPLES } from "@/lib/examples";
 
 export const dynamic = "force-dynamic";
 export default async function Home() {
