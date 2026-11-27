@@ -9,7 +9,7 @@ environment variables. Keep the Lab on screen during every claim.
 |---|-------|-----------|---------------------------|
 | 1 | Problem | Home page headline | "Teams change how their documentation search works and judge it by feel. This is Verdict: it proves a change helps before it ships." |
 | 2 | The product | /ask: type a question, answer streams, sources, citation hover | "Ask a Flagsmith question. You get a cited answer from the documentation. Every answer is one click from the source." |
-| 3 | Flagsmith core | Flagsmith dashboard: multivariate flag `retrieval_strategy`, two values, 50/50, experiment with the single metric | "The retrieval pipeline is a multivariate flag. During the run, half of visitors got the keyword baseline and half got the challenger. One metric: did the visitor mark the answer helpful." |
+| 3 | Flagsmith core | Flagsmith dashboard: multivariate flag `retrieval_strategy`, two values, 50/50, experiment with the single metric | "The retrieval pipeline is a multivariate flag. During the run, half of the simulated visitors got the keyword baseline and half got the challenger. One metric: did the simulated visitor mark the answer helpful." |
 | 4 | Screening | /lab/candidates funnel | "Before any visitor saw it, eight pipelines were scored offline on forty held-out questions. One cleared every gate." |
 | 5 | The experiment | /lab/experiment: locked protocol, arm cards, interval, SRM, guardrails | "The protocol was locked at the start. Here are the counts, the uncertainty, and the checks that the split was fair." |
 | 6 | Disclosure | Traffic mix bar and /data#traffic | "In this hackathon window the traffic was simulated, and it is labelled as such everywhere. Real and simulated counts are never merged." |

@@ -10,7 +10,7 @@
 Verdict is a public documentation assistant that answers questions about
 Flagsmith's own public documentation. What makes it an experiment rather than a
 demo: Verdict screens its own retrieval improvements offline, tests the winner
-against the current version on live traffic with a Flagsmith multivariate
+against the current version in a live Flagsmith multivariate
 experiment, and ships the winner through the same flag, with no redeploy. Every
 number, including the losing ones, is public in the Lab.
 
@@ -27,7 +27,7 @@ metric is `answer_helpful`: the first time a participant marks an answer
 written before the experiment started and live in [EXPERIMENT.md](EXPERIMENT.md).
 
 **Result:** On the locked metric, the challenger converted 43.8% of exposed
-participants (63 of 144) against the control's 37.7% (60 of 159), a difference
+simulated participants (63 of 144) against the control's 37.7% (60 of 159), a difference
 of +6.0 points with a 95% interval of −5.0 to +17.0. Flagsmith puts the
 challenger's probability of being best at 83%; this application's own
 posterior gives 85.7%. Both are below the pre-registered 95% bar, and the
@@ -38,9 +38,11 @@ G2 (cost), G3 (no-answer rate: 8.5% against the control's 29.4%) and G4
 before the start: keep the control.** The experiment was completed in
 Flagsmith on 27 November 2026 with the control rolled out to 100% through the
 same flag and no redeploy; the live Rollout page shows the decision record and
-the configuration now being served. No sample-ratio mismatch was detected
+the configuration now being served. Screenshots of the Lab at the decision
+point are kept in `public/evidence/` in this repository. No sample-ratio mismatch was detected
 (χ² = 0.74, p = 0.39). The test reached 303 of the planned 800 exposed
-participants, so it was underpowered for effects smaller than the one
+participants, all of them simulated (real visitors in the window: 0), so it
+was underpowered for effects smaller than the one
 observed; the honest summary is "a promising challenger that did not earn the
 rollout", not a proven tie.
 
@@ -238,7 +240,7 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
 - During data collection, a parallelised simulation burst hit the model
   provider's rate limit: about 56% of the day's questions errored, at similar
   rates in both arms, and a slower sequential top-up run followed. Final
-  exposure was 303 of the planned 800 participants. The full record is in
+  exposure was 303 of the planned 800 participants, all simulated. The full record is in
   SIMULATION.md.
 - The experiment was completed on 27 November 2026 with the control rolled
   out to 100%. Flagsmith's own results panel labels the challenger its
