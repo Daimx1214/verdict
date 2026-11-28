@@ -8,8 +8,8 @@ import { COOKIE_NAME, decodeCookie, encodeCookie, newParticipantId, trafficOf } 
 import { hit, ipHash } from "@/lib/privacy/rate-limit";
 import { evaluateFor } from "@/lib/flagsmith/evaluate";
 import { retrieve } from "@/lib/retrieval/strategies";
-import { buildPrompt, NO_ANSWER } from "@/lib/answer/prompt";
-import { streamChat } from "@/lib/answer/provider";
+import { NO_ANSWER } from "@/lib/answer/prompt";
+import { answerWithCompletion } from "@/lib/answer/complete";
 import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
@@ -82,19 +82,17 @@ export async function POST(req: NextRequest) {
           n: i + 1, title: p.chunk.pageTitle, headingPath: p.chunk.headingPath, url: p.chunk.url, text: p.chunk.text,
         }));
         send("meta", { sources, questionId });
-        const { system, user } = buildPrompt(body.question, retrieval.passages.map((p) => ({
-          title: p.chunk.pageTitle, headingPath: p.chunk.headingPath, url: p.chunk.url, text: p.chunk.text,
-        })));
         let full = "";
         let usage = { tokensIn: 0, tokensOut: 0, costUsd: 0 };
         try {
-          const gen = streamChat([{ role: "system", content: system }, { role: "user", content: user }]);
-          for (;;) {
-            const next = await gen.next();
-            if (next.done) { usage = next.value; break; }
-            full += next.value.text;
-            send("delta", { text: next.value.text });
-          }
+          // Buffered generation (completeness pass, 28 November 2026): the
+          // finished, validated answer is emitted as deltas below, so the
+          // client still renders progressively.
+          const answered = await answerWithCompletion(body.question, retrieval.passages.map((p) => ({
+            title: p.chunk.pageTitle, headingPath: p.chunk.headingPath, url: p.chunk.url, text: p.chunk.text,
+          })));
+          full = answered.text;
+          usage = answered.usage;
         } catch {
           if (!full) {
             send("error", { code: "internal", message: "Something went wrong on our side. Your question was not counted." });
@@ -112,6 +110,16 @@ export async function POST(req: NextRequest) {
         full = full.replace(/\[(\d+)\]/g, (m, n) => (Number(n) >= 1 && Number(n) <= maxN ? m : ""));
         // Leak guard (13.3): never emit system prompt fragments.
         if (full.includes("You answer questions about Flagsmith using only")) full = NO_ANSWER;
+        // Emit the finished answer as deltas so the client renders it
+        // progressively, as it did when generation streamed token by token.
+        {
+          let buf = "";
+          for (const piece of full.split(/(?<=\s)/)) {
+            buf += piece;
+            if (buf.length >= 48) { send("delta", { text: buf }); buf = ""; }
+          }
+          if (buf) send("delta", { text: buf });
+        }
         const declined = full.trim().startsWith(NO_ANSWER);
         const totalMs = Date.now() - startedAt;
         if (d) {

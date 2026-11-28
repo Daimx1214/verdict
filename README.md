@@ -275,6 +275,22 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
   number are unchanged;
   the screening and experiment results above were produced before these
   fixes.
+- Further post-experiment changes (28 November 2026, on the owner's
+  explicit order to fix every remaining failure): a completeness pass now
+  follows the draft answer in the answer path. The audit showed the
+  remaining partial answers omitted facts that were already present in
+  the retrieved passages; the pass adds only passage facts the question
+  directly asks about, never turns a decline into an answer, and falls
+  back to the draft on any failure. On the cleanly graded subset of a
+  re-run it fixed the partial answers it targeted with no regressions.
+  A BM25 ranking change tried the same day (camelCase token splitting
+  and page-title weighting) measured exactly neutral on gold-set hits
+  (33/45 before and after on shared clean questions: two gains offset by
+  two losses) and was reverted, so the served ranking is again the
+  ranking the experiment tested. A full clean re-measurement of the
+  shipped configuration was interrupted by the free-tier model quota
+  (HTTP 429) and is being re-run; the 53/60 figure above stands until
+  that run completes.
 
 ## Security notes
 
