@@ -287,10 +287,13 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
   and page-title weighting) measured exactly neutral on gold-set hits
   (33/45 before and after on shared clean questions: two gains offset by
   two losses) and was reverted, so the served ranking is again the
-  ranking the experiment tested. A full clean re-measurement of the
-  shipped configuration was interrupted by the free-tier model quota
-  (HTTP 429) and is being re-run; the 53/60 figure above stands until
-  that run completes.
+  ranking the experiment tested. A full clean re-measurement of the shipped configuration completed on
+  28 November 2026 (the earlier run was interrupted by the free-tier model
+  quota, HTTP 429): 53/60 fully correct — 47 correct answers and 6 correct
+  declines — with 4 partial answers and 3 questions declined where the gold
+  page was not retrieved, and no wrong or invented answers; the two partials
+  the completeness pass targeted stayed partial (they had graded correct only
+  in the morning's partial run), so the pass did not move the total.
 
 ## Security notes
 
