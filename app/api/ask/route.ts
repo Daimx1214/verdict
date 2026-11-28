@@ -7,9 +7,8 @@ import { eq, sql } from "drizzle-orm";
 import { COOKIE_NAME, decodeCookie, encodeCookie, newParticipantId, trafficOf } from "@/lib/privacy/cookie";
 import { hit, ipHash } from "@/lib/privacy/rate-limit";
 import { evaluateFor } from "@/lib/flagsmith/evaluate";
-import { retrieve } from "@/lib/retrieval/strategies";
 import { NO_ANSWER } from "@/lib/answer/prompt";
-import { answerWithCompletion } from "@/lib/answer/complete";
+import { answerFull } from "@/lib/answer/full";
 import { randomUUID } from "crypto";
 
 export const runtime = "nodejs";
@@ -77,22 +76,25 @@ export async function POST(req: NextRequest) {
     async start(controller) {
       const send = (event: string, data: unknown) => controller.enqueue(encoder.encode(`event: ${event}\ndata: ${JSON.stringify(data)}\n\n`));
       try {
-        const retrieval = await retrieve(body.question, evaluation.config);
-        const sources = retrieval.passages.map((p, i) => ({
-          n: i + 1, title: p.chunk.pageTitle, headingPath: p.chunk.headingPath, url: p.chunk.url, text: p.chunk.text,
-        }));
-        send("meta", { sources, questionId });
         let full = "";
         let usage = { tokensIn: 0, tokensOut: 0, costUsd: 0 };
+        let retrieval: Awaited<ReturnType<typeof answerFull>>["retrieval"] | null = null;
+        let sources: { n: number; title: string; headingPath: string; url: string; text: string }[] = [];
         try {
-          // Buffered generation (completeness pass, 28 November 2026): the
-          // finished, validated answer is emitted as deltas below, so the
-          // client still renders progressively.
-          const answered = await answerWithCompletion(body.question, retrieval.passages.map((p) => ({
-            title: p.chunk.pageTitle, headingPath: p.chunk.headingPath, url: p.chunk.url, text: p.chunk.text,
-          })));
+          // Buffered generation (completeness pass + wide context + decline
+          // rescue, 28 November 2026): the finished, validated answer is
+          // emitted as deltas below, so the client still renders
+          // progressively. Meta is sent after generation because the final
+          // passage set is only known once a possible rescue has run; it
+          // still arrives before every delta.
+          const answered = await answerFull(body.question, evaluation.config);
           full = answered.text;
           usage = answered.usage;
+          retrieval = answered.retrieval;
+          sources = retrieval.passages.map((p, i) => ({
+            n: i + 1, title: p.chunk.pageTitle, headingPath: p.chunk.headingPath, url: p.chunk.url, text: p.chunk.text,
+          }));
+          send("meta", { sources, questionId });
         } catch {
           if (!full) {
             send("error", { code: "internal", message: "Something went wrong on our side. Your question was not counted." });
@@ -126,9 +128,9 @@ export async function POST(req: NextRequest) {
           await d.insert(questions).values({
             id: questionId, participantId: pid!, text: body.question, variant: evaluation.variantKey,
             config: evaluation.config, variantSource: evaluation.source,
-            retrieved: retrieval.passages.map((p) => ({ chunk_id: p.chunk.id, rank: p.rank, score: p.score })),
+            retrieved: retrieval!.passages.map((p) => ({ chunk_id: p.chunk.id, rank: p.rank, score: p.score })),
             answer: full, declined, status: "ok", tokensIn: usage.tokensIn, tokensOut: usage.tokensOut,
-            retrievalMs: retrieval.retrievalMs, totalMs, costUsd: String(usage.costUsd),
+            retrievalMs: retrieval!.retrievalMs, totalMs, costUsd: String(usage.costUsd),
           }).catch(() => {});
           // Exposure: first shown answer for this participant, only when the
           // config truly came from Flagsmith (3.3). Written to the outbox in the

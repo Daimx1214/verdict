@@ -294,6 +294,22 @@ each compared against its pre-registered threshold in EXPERIMENT.md.
   page was not retrieved, and no wrong or invented answers; the two partials
   the completeness pass targeted stayed partial (they had graded correct only
   in the morning's partial run), so the pass did not move the total.
+- A second round of post-experiment fixes followed later on 28 November
+  2026, again on the owner's order. The completeness checker now works
+  through the passages fact by fact (including contrasts such as hosted
+  versus self-hosted, prerequisites, versions and configuration values)
+  and also sees the next few ranked passages below the top-3 cut, because
+  several partial answers were missing facts ranked 4-8. Separately, when
+  an answer declines, retrieval is retried once with a wide pool (top 25)
+  and the question is answered again from that pool; a retry that still
+  finds nothing declines again, so genuine gaps in the documentation keep
+  declining. On a targeted re-test of the seven imperfect gold questions
+  plus five controls, five of the seven improved to fully correct and one
+  decline improved to a partial answer, with no regressions and no
+  invented answers among the controls (two correct answers, three correct
+  declines, all unchanged). A full clean re-measurement of this
+  configuration is scheduled before the submission deadline; until it
+  completes, the 53/60 figure above stands as the last full measurement.
 
 ## Security notes
 

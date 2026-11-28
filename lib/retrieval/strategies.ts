@@ -47,7 +47,7 @@ async function rankQuestionFor(question: string): Promise<string> {
   }
   return question;
 }
-export async function retrieve(question: string, cfg: RetrievalConfig): Promise<RetrievalResult> {
+export async function retrieve(question: string, cfg: RetrievalConfig, opts?: { widen?: boolean }): Promise<RetrievalResult> {
   const started = performance.now();
   const index = loadIndex();
   const byId = new Map(index.chunks.map((c, i) => [c.id, i]));
@@ -110,7 +110,7 @@ export async function retrieve(question: string, cfg: RetrievalConfig): Promise<
   // page, the previous chunk, and the following chunk. Retrieval ranking is
   // unchanged; the experiment record was produced before these fixes and is
   // unaffected.
-  const passages: ScoredChunk[] = rawPassages.map((p) => {
+  const passages: ScoredChunk[] = opts?.widen === false ? rawPassages : rawPassages.map((p) => {
     const i = byId.get(p.chunk.id)!;
     const pageBase = p.chunk.url.split("#")[0];
     const samePage = (j: number) =>

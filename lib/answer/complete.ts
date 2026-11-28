@@ -17,11 +17,13 @@ export interface PassageLike {
 }
 
 const COMPLETION_SYSTEM =
-  "You are a completeness checker for a documentation assistant. You are given a question, the numbered passages the assistant used, and its draft answer. If the draft omits a fact from the passages that the question directly asks about, return the complete answer: keep everything correct in the draft and add the missing facts, citing passages as [n] in the same style. Use only facts present in the passages. If the draft is already complete, return it unchanged, word for word. Never remove correct content from the draft. Output only the answer, with no commentary.";
+  "You are a completeness checker for a documentation assistant. You are given a question, the numbered passages the assistant used, and its draft answer. Work through the passages one by one and list every fact that bears on the question: the direct answer, any alternatives or contrasts the passages draw (for example a hosted service versus a self-hosted deployment), prerequisites, version numbers, named items in any list the passages give, and configuration values such as environment variables. If the draft omits any of those facts, return the complete answer: keep everything correct in the draft and add the missing facts, citing passages as [n] in the same style. Use only facts present in the passages. If the draft already covers every such fact, return it unchanged, word for word. Never remove correct content from the draft. Output only the answer, with no commentary.";
 
 export async function answerWithCompletion(
   question: string,
   passages: PassageLike[],
+  extraPassages: PassageLike[] = [],
+  draftTimeoutMs?: number,
 ): Promise<{ text: string; usage: Usage }> {
   const { system, user } = buildPrompt(question, passages);
   const draft = await completeChat(
@@ -29,12 +31,18 @@ export async function answerWithCompletion(
       { role: "system", content: system },
       { role: "user", content: user },
     ],
-    {},
+    { timeoutMs: draftTimeoutMs },
   );
   const text = draft.text.trim();
   if (!text || text.startsWith(NO_ANSWER)) return draft;
   try {
-    const completionUser = `QUESTION\n${question}\n\nPASSAGES\n${passages.map((p, i) => `[${i + 1}] ${p.text}`).join("\n\n")}\n\nDRAFT ANSWER\n${text}`;
+    // The completeness checker may also use a wider context pool than the
+    // draft used (post-experiment fix, 28 November 2026): several partial
+    // answers were missing facts that sat just below the top-3 retrieval
+    // cut. The draft itself is unchanged; the checker only adds facts the
+    // question directly asks about, from whichever passages contain them.
+    const allPassages = [...passages, ...extraPassages];
+    const completionUser = `QUESTION\n${question}\n\nPASSAGES\n${allPassages.map((p, i) => `[${i + 1}] ${p.text}`).join("\n\n")}\n\nDRAFT ANSWER\n${text}`;
     const done = await completeChat(
       [
         { role: "system", content: COMPLETION_SYSTEM },
